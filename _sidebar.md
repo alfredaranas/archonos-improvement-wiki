@@ -12,5 +12,6 @@
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)
   - [Memory System Architecture](archonos-notes/archonos-memory-system-architecture.md)
   - [▶ Memory System Visual Diagram](archonos-notes/archonos-memory-system-architecture.html)
+  - [Memory: Current vs. Improvements](archonos-notes/memory-system-current-vs-improvements.md)
 - **General**
   - [Overview](general/)

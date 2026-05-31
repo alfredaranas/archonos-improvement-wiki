@@ -17,7 +17,21 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 
 <!-- AUTO-GENERATED: cron updates this section -->
 
-_No entries yet — first cron run pending._
+_Seed batch — 6 entries added 2026-05-31_
+
+### Memory Systems
+- [Self-Evolving Agents: Memory Growth vs. Real Learning](memory-systems/self-evolving-agents-memory-vs-learning.md) — ⭐⭐⭐⭐
+
+### Agent Architectures
+- [Multi Agent Systems Explained: How AI Agents & LLMs Work Together](agent-architectures/multi-agent-systems-explained-ibm.md) — ⭐⭐⭐⭐
+- [Agentic AI & Multi-Agent Orchestration: Enterprise Strategy 2026](agent-architectures/multi-agent-orchestration-enterprise-2026.md) — ⭐⭐⭐⭐
+- [AI Agents Full Course 2026: Master Agentic AI](agent-architectures/ai-agents-full-course-2026.md) — ⭐⭐⭐
+
+### ArchonOS Notes
+- [I Built a Self-Improving AI Assistant: Hermes Agent [2026 Guide]](archonos-notes/hermes-agent-self-improving-guide.md) — ⭐⭐⭐⭐⭐
+
+### General
+- [Enterprise Agentic AI Adoption 2025](general/enterprise-agentic-ai-adoption-2025.md) — ⭐⭐⭐
 
 ---
 

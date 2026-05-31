@@ -9,5 +9,6 @@
   - [Overview](production-ai/)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
+  - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)
 - **General**
   - [Overview](general/)

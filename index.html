@@ -420,21 +420,136 @@
       text-shadow: 0 0 30px rgba(0, 255, 65, 0.3) !important;
     }
 
-    /* === RESPONSIVE === */
+    /* === RESPONSIVE / MOBILE === */
+    /* Hide sidebar off-screen on mobile by default */
     @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
       .sidebar {
-        width: 260px;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.25s ease;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
       }
+
+      body.close .sidebar {
+        left: 0;
+      }
+
       .content {
-        margin-left: 0;
-        padding: 20px;
+        margin-left: 0 !important;
+        padding: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transition: margin-left 0.25s ease;
       }
+
+      /* Sidebar overlay when open */
+      .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+      }
+
+      body.close .sidebar-overlay {
+        display: block;
+      }
+
+      /* Hamburger toggle button */
       .sidebar-toggle {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 44px;
+        height: 44px;
         background: var(--bg-secondary);
         border: 1px solid var(--border-color);
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
       }
+
+      .sidebar-toggle:hover {
+        border-color: var(--accent-green);
+        box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
+      }
+
+      .sidebar-toggle .sidebar-toggle-button {
+        width: 20px;
+        height: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
       .sidebar-toggle .sidebar-toggle-button span {
+        display: block;
+        width: 100%;
+        height: 2px;
         background: var(--accent-green);
+        border-radius: 1px;
+        transition: all 0.25s ease;
+      }
+
+      /* Animate to X when open */
+      body.close .sidebar-toggle .sidebar-toggle-button span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      body.close .sidebar-toggle .sidebar-toggle-button span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      body.close .sidebar-toggle .sidebar-toggle-button span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* App name on mobile */
+      .app-name {
+        padding: 12px 16px;
+      }
+
+      .app-name a {
+        font-size: 12px;
+        letter-spacing: 3px;
+      }
+
+      /* Content padding on small screens */
+      .markdown-section h1 {
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+      .markdown-section h2 {
+        font-size: 16px;
+      }
+
+      .markdown-section table {
+        font-size: 11px;
+      }
+
+      .markdown-section th,
+      .markdown-section td {
+        padding: 6px 8px;
       }
     }
 
@@ -503,6 +618,46 @@
             // Style blockquotes with left accent
             document.querySelectorAll('.markdown-section blockquote').forEach(function(bq) {
               bq.style.borderLeftColor = 'var(--accent-blue)';
+            });
+          });
+        },
+        // Mobile sidebar toggle injector
+        function(hook, vm) {
+          hook.mounted(function() {
+            // Only inject on mobile viewport
+            if (window.innerWidth > 768) return;
+
+            // Inject toggle button
+            var toggle = document.createElement('button');
+            toggle.className = 'sidebar-toggle';
+            toggle.setAttribute('aria-label', 'Menu');
+            toggle.innerHTML = '<div class="sidebar-toggle-button"><span></span><span></span><span></span></div>';
+            document.body.appendChild(toggle);
+
+            // Inject overlay
+            var overlay = document.createElement('div');
+            overlay.className = 'sidebar-overlay';
+            document.body.appendChild(overlay);
+
+            // Add close class to start (sidebar hidden)
+            document.body.classList.add('close');
+
+            // Toggle handler
+            toggle.addEventListener('click', function(e) {
+              e.stopPropagation();
+              document.body.classList.toggle('close');
+            });
+
+            // Close sidebar when overlay is clicked
+            overlay.addEventListener('click', function() {
+              document.body.classList.add('close');
+            });
+
+            // Close sidebar when a nav link is clicked
+            document.querySelector('.sidebar').addEventListener('click', function(e) {
+              if (e.target.tagName === 'A') {
+                document.body.classList.add('close');
+              }
             });
           });
         }

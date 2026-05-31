@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArchonOS Memory System Architecture</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 40px;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: #00ff41;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  }
+  
+  .subtitle {
+    color: #6272a4;
+    font-size: 14px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #1e2a3a;
+    padding-bottom: 16px;
+  }
+  
+  .legend {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #8b949e;
+  }
+  
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  /* === MAIN ARCHITECTURE SVG === */
+  .architecture-svg {
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #1e2a3a;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    padding: 8px;
+    box-shadow: 0 0 40px rgba(0, 255, 65, 0.05);
+  }
+  
+  /* === TABLE OF MEMORY LAYERS === */
+  .memory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    font-size: 13px;
+  }
+  
+  .memory-table th {
+    background: #161b22;
+    color: #00a3ff;
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #1e2a3a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+  }
+  
+  .memory-table td {
+    padding: 12px 16px;
+    border: 1px solid #1e2a3a;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  
+  .memory-table tr:hover td {
+    background: #161b22;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .badge-green { background: rgba(0, 255, 65, 0.15); color: #00ff41; border: 1px solid rgba(0, 255, 65, 0.3); }
+  .badge-blue  { background: rgba(0, 163, 255, 0.15); color: #00a3ff; border: 1px solid rgba(0, 163, 255, 0.3); }
+  .badge-amber { background: rgba(255, 184, 108, 0.15); color: #ffb86c; border: 1px solid rgba(255, 184, 108, 0.3); }
+  .badge-red   { background: rgba(255, 85, 85, 0.15); color: #ff5555; border: 1px solid rgba(255, 85, 85, 0.3); }
+  
+  /* === DATA FLOW SECTION === */
+  .flow-section {
+    border: 1px solid #1e2a3a;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #0d1117;
+  }
+  
+  .flow-section h2 {
+    color: #00ff41;
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+  }
+  
+  .flow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .flow-card {
+    background: #161b22;
+    border: 1px solid #1e2a3a;
+    border-radius: 6px;
+    padding: 16px;
+    border-left: 3px solid;
+  }
+  
+  .flow-card h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .flow-card p, .flow-card li {
+    font-size: 12px;
+    color: #8b949e;
+    line-height: 1.6;
+  }
+  
+  .flow-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .flow-card li::before {
+    content: "▸ ";
+    color: #00a3ff;
+  }
+  
+  .flow-card-green { border-left-color: #00ff41; }
+  .flow-card-green h3 { color: #00ff41; }
+  
+  .flow-card-blue { border-left-color: #00a3ff; }
+  .flow-card-blue h3 { color: #00a3ff; }
+  
+  .flow-card-amber { border-left-color: #ffb86c; }
+  .flow-card-amber h3 { color: #ffb86c; }
+  
+  .flow-card-red { border-left-color: #ff5555; }
+  .flow-card-red h3 { color: #ff5555; }
+  
+  /* === CODE BLOCKS === */
+  .code-block {
+    background: #161b22;
+    border: 1px solid #1e2a3a;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin-bottom: 16px;
+    color: #c9d1d9;
+  }
+  
+  .code-block .comment { color: #6272a4; }
+  .code-block .keyword { color: #00ff41; }
+  .code-block .string { color: #ffb86c; }
+  .code-block .blue { color: #00a3ff; }
+  .code-block .red { color: #ff5555; }
+  
+  .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  
+  .status-dot-green { background: #00ff41; box-shadow: 0 0 8px rgba(0, 255, 65, 0.5); }
+  .status-dot-amber { background: #ffb86c; box-shadow: 0 0 8px rgba(255, 184, 108, 0.5); }
+  
+  @media (max-width: 768px) {
+    body { padding: 16px; }
+    .flow-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>▣ ARCHONOS MEMORY SYSTEM</h1>
+<div class="subtitle">Complete architecture — six memory layers, data flow paths, and search topology</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="background:#00ff41;box-shadow:0 0 8px rgba(0,255,65,0.5)"></span> SupaBrain Cloud</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#00a3ff;box-shadow:0 0 8px rgba(0,163,255,0.5)"></span> Hermes Local</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#ffb86c;box-shadow:0 0 8px rgba(255,184,108,0.5)"></span> Local Vault</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#ff5555;box-shadow:0 0 8px rgba(255,85,85,0.5)"></span> State / Session</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#6272a4;box-shadow:0 0 8px rgba(98,114,164,0.5)"></span> Data Flow</div>
+</div>
+
+<!-- VISUAL ARCHITECTURE DIAGRAM -->
+<svg class="architecture-svg" viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-green"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow-blue"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a0e14"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="620" fill="url(#bg-grad)" rx="8"/>
+
+  <!-- Title -->
+  <text x="550" y="40" fill="#00ff41" font-size="16" font-family="'JetBrains Mono',monospace" font-weight="700" text-anchor="middle" filter="url(#glow-green)" letter-spacing="4">A R C H O N O S &nbsp; M E M O R Y &nbsp; S T A C K</text>
+
+  <!-- Layer 1: SupaBrain (top) -->
+  <rect x="60" y="65" width="980" height="100" rx="6" fill="none" stroke="#00ff41" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="60" y="65" width="980" height="22" rx="6" fill="rgba(0,255,65,0.08)"/>
+  <text x="80" y="80" fill="#00ff41" font-size="11" font-family="'JetBrains Mono',monospace" font-weight="600" filter="url(#glow-green)">LAYER 1 — CLUSTER MEMORY (CLOUD)</text>
+  <text x="360" y="80" fill="#6272a4" font-size="10" font-family="'JetBrains Mono',monospace">Supabase → jpputhjyrnrqwzphjywq.supabase.co</text>
+
+  <!-- suprabrain box -->
+  <rect x="100" y="95" width="380" height="55" rx="4" fill="rgba(0,255,65,0.06)" stroke="#00ff41" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="115" y="113" fill="#00ff41" font-size="12" font-family="'JetBrains Mono',monospace" font-weight="600">suprabrain</text>
+  <text x="115" y="128" fill="#8b949e" font-size="10" font-family="'JetBrains Mono',monospace">Long-term knowledge store</text>
+  <text x="115" y="141" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">title | content | agent_id | source | tags | created_at</text>
+
+  <!-- agent_memory box -->
+  <rect x="520" y="95" width="380" height="55" rx="4" fill="rgba(0,255,65,0.04)" stroke="#00ff41" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="535" y="113" fill="#00ff41" font-size="12" font-family="'JetBrains Mono',monospace" font-weight="600">agent_memory</text>
+  <text x="535" y="128" fill="#8b949e" font-size="10" font-family="'JetBrains Mono',monospace">Working memory / audit trail</text>
+  <text x="535" y="141" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">title | content | agent_id | source | created_at</text>
+
+  <!-- Arrow from suprabrain to agent_memory -->
+  <line x1="480" y1="122" x2="518" y2="122" stroke="#6272a4" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Layer 2: Hermes Memory -->
+  <rect x="60" y="180" width="980" height="100" rx="6" fill="none" stroke="#00a3ff" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="60" y="180" width="980" height="22" rx="6" fill="rgba(0,163,255,0.08)"/>
+  <text x="80" y="195" fill="#00a3ff" font-size="11" font-family="'JetBrains Mono',monospace" font-weight="600" filter="url(#glow-blue)">LAYER 2 — AGENT MEMORY (LOCAL SQLITE)</text>
+  <text x="380" y="195" fill="#6272a4" font-size="10" font-family="'JetBrains Mono',monospace">~/.hermes/state.db (146MB)</text>
+
+  <!-- memory table box -->
+  <rect x="100" y="210" width="280" height="55" rx="4" fill="rgba(0,163,255,0.06)" stroke="#00a3ff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="115" y="228" fill="#00a3ff" font-size="12" font-family="'JetBrains Mono',monospace" font-weight="600">agent memory</text>
+  <text x="115" y="243" fill="#8b949e" font-size="10" font-family="'JetBrains Mono',monospace">Hermes' durable notes store</text>
+  <text x="115" y="256" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">2200-char limit · nudge every 10 min</text>
+
+  <!-- user_profile box -->
+  <rect x="420" y="210" width="280" height="55" rx="4" fill="rgba(0,163,255,0.04)" stroke="#00a3ff" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="435" y="228" fill="#00a3ff" font-size="12" font-family="'JetBrains Mono',monospace" font-weight="600">user profile</text>
+  <text x="435" y="243" fill="#8b949e" font-size="10" font-family="'JetBrains Mono',monospace">User preferences & identity</text>
+  <text x="435" y="256" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">1375-char limit · flush every 6 turns</text>
+
+  <!-- session store box -->
+  <rect x="740" y="210" width="260" height="55" rx="4" fill="rgba(0,163,255,0.04)" stroke="#00a3ff" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="755" y="228" fill="#00a3ff" font-size="12" font-family="'JetBrains Mono',monospace" font-weight="600">session store</text>
+  <text x="755" y="243" fill="#8b949e" font-size="10" font-family="'JetBrains Mono',monospace">Chat history · FTS5 searchable</text>
+  <text x="755" y="256" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">SQLite · 1000+ sessions</text>
+
+  <!-- Layer 3: Local Vault -->
+  <rect x="60" y="295" width="980" height="85" rx="6" fill="none" stroke="#ffb86c" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="60" y="295" width="980" height="22" rx="6" fill="rgba(255,184,108,0.08)"/>
+  <text x="80" y="310" fill="#ffb86c" font-size="11" font-family="'JetBrains Mono',monospace" font-weight="600">LAYER 3 — LOCAL VAULT (FILESYSTEM)</text>
+  <text x="380" y="310" fill="#6272a4" font-size="10" font-family="'JetBrains Mono',monospace">~/vault/ → git → vault-private (GitHub)</text>
+
+  <rect x="100" y="325" width="180" height="40" rx="4" fill="rgba(255,184,108,0.06)" stroke="#ffb86c" stroke-width="1"/>
+  <text x="115" y="340" fill="#ffb86c" font-size="11" font-family="'JetBrains Mono',monospace">_meta/</text>
+  <text x="115" y="354" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">capture guide, sort log</text>
+
+  <rect x="300" y="325" width="180" height="40" rx="4" fill="rgba(255,184,108,0.06)" stroke="#ffb86c" stroke-width="1"/>
+  <text x="315" y="340" fill="#ffb86c" font-size="11" font-family="'JetBrains Mono',monospace">archonos/</text>
+  <text x="315" y="354" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">system notes, docs</text>
+
+  <rect x="500" y="325" width="180" height="40" rx="4" fill="rgba(255,184,108,0.06)" stroke="#ffb86c" stroke-width="1"/>
+  <text x="515" y="340" fill="#ffb86c" font-size="11" font-family="'JetBrains Mono',monospace">claude-artifacts/</text>
+  <text x="515" y="354" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">chat exports</text>
+
+  <rect x="700" y="325" width="180" height="40" rx="4" fill="rgba(255,184,108,0.06)" stroke="#ffb86c" stroke-width="1"/>
+  <text x="715" y="340" fill="#ffb86c" font-size="11" font-family="'JetBrains Mono',monospace">pentest/</text>
+  <text x="715" y="354" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">recon, writeups, lab</text>
+
+  <!-- Layer 4: State & Kanban -->
+  <rect x="60" y="395" width="980" height="85" rx="6" fill="none" stroke="#ff5555" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="60" y="395" width="980" height="22" rx="6" fill="rgba(255,85,85,0.08)"/>
+  <text x="80" y="410" fill="#ff5555" font-size="11" font-family="'JetBrains Mono',monospace" font-weight="600">LAYER 4 — STATE & TASK MEMORY</text>
+  <text x="380" y="410" fill="#6272a4" font-size="10" font-family="'JetBrains Mono',monospace">~/.hermes/state/ + ~/.hermes/state.db</text>
+
+  <rect x="100" y="425" width="350" height="40" rx="4" fill="rgba(255,85,85,0.06)" stroke="#ff5555" stroke-width="1"/>
+  <text x="115" y="440" fill="#ff5555" font-size="11" font-family="'JetBrains Mono',monospace">state/ directory</text>
+  <text x="115" y="454" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">~50 JSON files · cron tracking · research pipeline state</text>
+
+  <rect x="480" y="425" width="350" height="40" rx="4" fill="rgba(255,85,85,0.06)" stroke="#ff5555" stroke-width="1"/>
+  <text x="495" y="440" fill="#ff5555" font-size="11" font-family="'JetBrains Mono',monospace">kanban.db</text>
+  <text x="495" y="454" fill="#6272a4" font-size="9" font-family="'JetBrains Mono',monospace">106KB · SQLite · task workflow state</text>
+
+  <!-- CONSUMERS section -->
+  <rect x="60" y="495" width="980" height="55" rx="6" fill="none" stroke="#6272a4" stroke-width="1" stroke-opacity="0.3"/>
+  <rect x="60" y="495" width="980" height="22" rx="6" fill="rgba(98,114,164,0.08)"/>
+  <text x="80" y="510" fill="#6272a4" font-size="11" font-family="'JetBrains Mono',monospace">CONSUMERS</text>
+
+  <rect x="100" y="522" width="140" height="20" rx="4" fill="rgba(0,255,65,0.08)" stroke="#00ff41" stroke-width="0.8"/>
+  <text x="120" y="536" fill="#00ff41" font-size="10" font-family="'JetBrains Mono',monospace">Claude.ai</text>
+  <rect x="260" y="522" width="140" height="20" rx="4" fill="rgba(0,163,255,0.08)" stroke="#00a3ff" stroke-width="0.8"/>
+  <text x="275" y="536" fill="#00a3ff" font-size="10" font-family="'JetBrains Mono',monospace">Hermes Agent</text>
+  <rect x="420" y="522" width="140" height="20" rx="4" fill="rgba(255,184,108,0.08)" stroke="#ffb86c" stroke-width="0.8"/>
+  <text x="445" y="536" fill="#ffb86c" font-size="10" font-family="'JetBrains Mono',monospace">Obsidian</text>
+  <rect x="580" y="522" width="140" height="20" rx="4" fill="rgba(255,85,85,0.08)" stroke="#ff5555" stroke-width="0.8"/>
+  <text x="595" y="536" fill="#ff5555" font-size="10" font-family="'JetBrains Mono',monospace">Cron Jobs</text>
+  <rect x="740" y="522" width="160" height="20" rx="4" fill="rgba(98,114,164,0.08)" stroke="#6272a4" stroke-width="0.8"/>
+  <text x="760" y="536" fill="#c9d1d9" font-size="10" font-family="'JetBrains Mono',monospace">MCP Tools</text>
+
+  <!-- Vertical connection lines -->
+  <line x1="290" y1="165" x2="290" y2="180" stroke="#6272a4" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="290" y1="280" x2="290" y2="295" stroke="#6272a4" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="290" y1="380" x2="290" y2="395" stroke="#6272a4" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="290" y1="480" x2="290" y2="495" stroke="#6272a4" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Archon boxes on right side -->
+  <text x="940" y="120" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">All archons write here</text>
+  <text x="940" y="145" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">Oracle · Yoda · Sentinel</text>
+
+  <text x="940" y="240" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">Per-session context</text>
+  <text x="940" y="255" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">Injected every turn</text>
+
+  <text x="940" y="345" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">Oracle writes only</text>
+  <text x="940" y="360" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">Obsidian reads via git</text>
+
+  <text x="940" y="450" fill="#8b949e" font-size="9" font-family="'JetBrains Mono',monospace">Cron pipeline tracking</text>
+
+  <!-- Search annotation -->
+  <rect x="920" y="555" width="150" height="45" rx="4" fill="rgba(255,184,108,0.08)" stroke="#ffb86c" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="930" y="570" fill="#ffb86c" font-size="9" font-family="'JetBrains Mono',monospace">⚠ SEARCH CAP</text>
+  <text x="930" y="584" fill="#6272a4" font-size="8" font-family="'JetBrains Mono',monospace">ILIKE only — no vector</text>
+  <text x="930" y="595" fill="#6272a4" font-size="8" font-family="'JetBrains Mono',monospace">no FTS · no pgvector</text>
+</svg>
+
+<!-- SIX LAYERS TABLE -->
+<h2 style="color:#00a3ff;font-size:16px;margin:32px 0 16px;text-transform:uppercase;letter-spacing:3px;">▸ MEMORY LAYERS — DETAILED INVENTORY</h2>
+
+<table class="memory-table">
+  <thead>
+    <tr>
+      <th style="width:18%">Layer</th>
+      <th style="width:12%">Type</th>
+      <th style="width:12%">Location</th>
+      <th style="width:18%">Storage</th>
+      <th style="width:20%">Search</th>
+      <th style="width:20%">Used By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="badge badge-green">suprabrain</span></td>
+      <td>Long-term knowledge</td>
+      <td>Supabase cloud</td>
+      <td>PostgreSQL table<br><span style="color:#6272a4;font-size:11px;">id, title, content, agent_id, source, tags, created_at</span></td>
+      <td><span class="badge badge-amber">ILIKE pattern match</span><br><span style="color:#6272a4;font-size:11px;">No pgvector · No FTS</span></td>
+      <td>Claude.ai MCP<br>All archons<br>Cron jobs</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-green">agent_memory</span></td>
+      <td>Working memory / audit</td>
+      <td>Supabase cloud</td>
+      <td>PostgreSQL table<br><span style="color:#6272a4;font-size:11px;">Similar schema to suprabrain</span></td>
+      <td><span class="badge badge-amber">ILIKE pattern match</span></td>
+      <td>MCP server auto-logs<br>yoda_shell audit<br>Service restarts</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-blue">agent memory</span></td>
+      <td>Hermes durable notes</td>
+      <td>Local SQLite</td>
+      <td><code>state.db</code> (146MB)<br><span style="color:#6272a4;font-size:11px;">2200-char limit per entry</span></td>
+      <td>Injected every turn</td>
+      <td>Hermes Agent<br>Oracle/Sentinel sessions</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-blue">user profile</span></td>
+      <td>User preferences</td>
+      <td>Local SQLite</td>
+      <td><code>state.db</code><br><span style="color:#6272a4;font-size:11px;">1375-char limit</span></td>
+      <td>Injected every turn</td>
+      <td>Hermes Agent</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-blue">session store</span></td>
+      <td>Chat history</td>
+      <td>Local SQLite</td>
+      <td><code>state.db</code><br><span style="color:#6272a4;font-size:11px;">FTS5 indexed</span></td>
+      <td><span class="badge badge-green">FTS5 full-text search</span><br><span style="color:#6272a4;font-size:11px;">session_search tool</span></td>
+      <td>Hermes Agent<br>session_search tool</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-amber">local vault</span></td>
+      <td>Write-only archive</td>
+      <td><code>~/vault/</code></td>
+      <td>Git repo → GitHub<br><span style="color:#6272a4;font-size:11px;">Markdown files in 6 categories</span></td>
+      <td><span class="badge badge-green">ripgrep</span><br><span style="color:#6272a4;font-size:11px;">vault-search skill</span></td>
+      <td>Oracle writes<br>Alfred reads via Obsidian</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-red">state/ dir</span></td>
+      <td>Cron pipeline state</td>
+      <td><code>~/.hermes/state/</code></td>
+      <td>~50 JSON files</td>
+      <td>Manual file read</td>
+      <td>Cron jobs<br>Research pipelines</td>
+    </tr>
+    <tr>
+      <td><span class="badge badge-red">kanban.db</span></td>
+      <td>Task workflow</td>
+      <td>Local SQLite</td>
+      <td><code>kanban.db</code> (106KB)</td>
+      <td>Dashboard UI</td>
+      <td>Hermes Kanban</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- SEARCH MATRIX -->
+<div class="flow-section">
+  <h2>▸ SEARCH CAPABILITIES MATRIX</h2>
+  <div class="flow-grid">
+    <div class="flow-card flow-card-green">
+      <h3>⚡ Strong: Session Store</h3>
+      <ul>
+        <li>FTS5 full-text search across 1000+ sessions</li>
+        <li>Supports boolean operators, phrase matching</li>
+        <li>Bookend discovery + scroll pagination</li>
+        <li>Role filtering (user/assistant/tool)</li>
+      </ul>
+    </div>
+    <div class="flow-card flow-card-green">
+      <h3>⚡ Strong: Local Vault</h3>
+      <ul>
+        <li>ripgrep (search_files tool) — fast regex</li>
+        <li>Content search + file name search</li>
+        <li>Context lines, file counts, file-only modes</li>
+      </ul>
+    </div>
+    <div class="flow-card flow-card-amber">
+      <h3>⚠ Weak: SupaBrain Cloud</h3>
+      <ul>
+        <li>ILIKE pattern matching only — no vector embeddings</li>
+        <li>No pgvector index deployed</li>
+        <li>No PostgreSQL FTS tsvector/tsquery</li>
+        <li>No semantic/embedding search at all</li>
+        <li><strong>Biggest improvement opportunity</strong></li>
+      </ul>
+    </div>
+    <div class="flow-card flow-card-red">
+      <h3>❌ Missing: Cross-Layer Search</h3>
+      <ul>
+        <li>No unified search across layers</li>
+        <li>Cannot search SupaBrain + vault + sessions simultaneously</li>
+        <li>Each layer has its own query interface</li>
+        <li>No memory consolidation cron</li>
+        <li>No memory hit-rate telemetry</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- DATA FLOW -->
+<div class="flow-section">
+  <h2>▸ DATA FLOW PATHS</h2>
+  <div class="flow-grid">
+    <div class="flow-card flow-card-green">
+      <h3>📥 WRITE PATH (Oracle → Cloud)</h3>
+      <p>Session insight → supabrain_write() → Supabase suprabrain table → available to all archons via MCP</p>
+      <div style="margin-top:12px;font-size:11px;color:#6272a4;">
+        <span style="color:#00ff41">Oracle</span> → <span style="color:#00a3ff">MCP supabrain_write</span> → <span style="color:#00ff41">suprabrain</span>
+      </div>
+    </div>
+    <div class="flow-card flow-card-blue">
+      <h3>📤 READ PATH (Cloud → Claude)</h3>
+      <p>Supabase suprabrain → MCP supabrain_search/supabrain_recent → Claude.ai reads inline</p>
+      <div style="margin-top:12px;font-size:11px;color:#6272a4;">
+        <span style="color:#00ff41">suprabrain</span> → <span style="color:#00a3ff">ILIKE search</span> → <span style="color:#ffb86c">Claude.ai MCP</span>
+      </div>
+    </div>
+    <div class="flow-card flow-card-amber">
+      <h3>📝 VAULT SYNC (Local → GitHub)</h3>
+      <p>Oracle writes ~/vault/notes.md → git commit/push → vault-private (GitHub) → Obsidian pulls</p>
+      <div style="margin-top:12px;font-size:11px;color:#6272a4;">
+        <span style="color:#ffb86c">Oracle vault-write</span> → <span style="color:#ff5555">git push</span> → <span style="color:#00a3ff">GitHub</span> → <span style="color:#ffb86c">Obsidian</span>
+      </div>
+    </div>
+    <div class="flow-card flow-card-red">
+      <h3>🔄 CONSOLIDATION</h3>
+      <p><span style="color:#ff5555">None active.</span> No cron job distills agent_memory → suprabrain. No memory compression pipeline. Each entry stands alone forever.</p>
+      <div style="margin-top:12px;font-size:11px;color:#6272a4;">
+        <span style="color:#ff5555">agent_memory</span> → <span style="color:#6272a4">no compression</span> → <span style="color:#6272a4">never promoted to suprabrain</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCHEMA REFERENCE -->
+<div class="flow-section">
+  <h2>▸ SUPABASE TABLE SCHEMA</h2>
+  <div class="code-block">
+<span class="comment">-- suprabrain entries: persistent cross-archon knowledge</span>
+<span class="keyword">CREATE TABLE</span> suprabrain (
+    id          <span class="blue">UUID</span> <span class="keyword">PRIMARY KEY</span>,
+    title       <span class="blue">TEXT</span> <span class="keyword">NOT NULL</span>,
+    content     <span class="blue">TEXT</span> <span class="keyword">NOT NULL</span>,
+    agent_id    <span class="blue">TEXT</span> <span class="keyword">DEFAULT</span> <span class="string">'claude-chat'</span>,
+    source      <span class="blue">TEXT</span> <span class="keyword">DEFAULT</span> <span class="string">'claude-chat'</span>,
+    tags        <span class="blue">JSONB</span>,
+    created_at  <span class="blue">TIMESTAMPTZ</span> <span class="keyword">DEFAULT NOW()</span>,
+    updated_at  <span class="blue">TIMESTAMPTZ</span>
+);
+
+<span class="comment">-- agent_memory: working memory, audit logs</span>
+<span class="keyword">CREATE TABLE</span> agent_memory (
+    id          <span class="blue">UUID</span> <span class="keyword">PRIMARY KEY</span>,
+    title       <span class="blue">TEXT</span>,
+    content     <span class="blue">TEXT</span>,
+    agent_id    <span class="blue">TEXT</span>,
+    source      <span class="blue">TEXT</span>,
+    created_at  <span class="blue">TIMESTAMPTZ</span> <span class="keyword">DEFAULT NOW()</span>
+);
+  </div>
+</div>
+
+<!-- KEY FINDINGS -->
+<div class="flow-section">
+  <h2>▸ KEY FINDINGS — FOR IMPROVEMENT PLANNING</h2>
+  <div class="flow-grid">
+    <div class="flow-card flow-card-green">
+      <h3>1. No Vector Search</h3>
+      <p>Supabase has pgvector extension available but it's not deployed on suprabrain or agent_memory. All cloud search is ILIKE pattern matching (slow, no semantics).</p>
+    </div>
+    <div class="flow-card flow-card-green">
+      <h3>2. No FTS on Cloud</h3>
+      <p>No PostgreSQL tsvector/tsquery indexes on suprabrain. Session store has FTS5 (SQLite), but cloud store doesn't.</p>
+    </div>
+    <div class="flow-card flow-card-amber">
+      <h3>3. No Memory Consolidation</h3>
+      <p>Agent_memory entries accumulate forever. No cron compresses/distills working memory into long-term suprabrain entries. The Hermes Agent video's "compression of repeated interactions" pattern is unimplemented.</p>
+    </div>
+    <div class="flow-card flow-card-amber">
+      <h3>4. No Hit-Rate Telemetry</h3>
+      <p>No metric tracks whether SupaBrain lookups actually changed agent behavior. Can't data-driven decide on retrieval strategy improvements.</p>
+    </div>
+    <div class="flow-card flow-card-red">
+      <h3>5. No Cross-Layer Search</h3>
+      <p>Vault (ripgrep), sessions (FTS5), and SupaBrain (ILIKE) each have different search interfaces. No unified query.</p>
+    </div>
+    <div class="flow-card flow-card-red">
+      <h3>6. Tags Are Unused</h3>
+      <p>Tags column exists in suprabrain schema but is inconsistently populated. No tag-based filtering or browsing.</p>
+    </div>
+  </div>
+</div>
+
+<!-- STATUS FOOTER -->
+<div style="margin-top:32px;padding-top:16px;border-top:1px solid #1e2a3a;color:#6272a4;font-size:11px;text-align:center;">
+  <span class="status-dot status-dot-green"></span> Last updated: 2026-05-31
+  <span style="margin:0 16px">|</span>
+  <span class="status-dot status-dot-amber"></span> Schema snapshot: current production
+  <span style="margin:0 16px">|</span>
+  Source: archonos-mcp.py · hermes config.yaml · filesystem audit
+</div>
+
+</div>
+</body>
+</html>

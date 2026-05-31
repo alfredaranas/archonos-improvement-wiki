@@ -29,6 +29,7 @@ _Seed batch — 6 entries added 2026-05-31_
 
 ### ArchonOS Notes
 - [I Built a Self-Improving AI Assistant: Hermes Agent [2026 Guide]](archonos-notes/hermes-agent-self-improving-guide.md) — ⭐⭐⭐⭐⭐
+- [ArchonOS Memory System Architecture](archonos-notes/archonos-memory-system-architecture.md) — Full inventory of all 6 memory layers
 
 ### General
 - [Enterprise Agentic AI Adoption 2025](general/enterprise-agentic-ai-adoption-2025.md) — ⭐⭐⭐

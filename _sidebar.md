@@ -10,5 +10,7 @@
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)
+  - [Memory System Architecture](archonos-notes/archonos-memory-system-architecture.md)
+  - [▶ Memory System Visual Diagram](archonos-notes/archonos-memory-system-architecture.html)
 - **General**
   - [Overview](general/)

@@ -1,0 +1,1633 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TubeOnAI Developer API",
+    "version": "1.0.0",
+    "description": "Developer-friendly REST API for summarizing and transcribing content at scale.\n\n## Supported Sources\n\n| Source | Type | Description |\n|--------|------|-------------|\n| **YouTube** | `youtube` | YouTube videos (public and unlisted) |\n| **Article** | `article` | Web articles, blog posts, news, Twitter/X posts |\n| **Podcast** | `podcast` | Podcast episodes (RSS feeds, Spotify, Apple) |\n| **Document** | `document` | PDF, DOCX, TXT files, Google Drive, Google Sheets |\n| **Audio** | `audio` | MP3, WAV, M4A audio files, SoundCloud tracks |\n| **Rumble** | `rumble` | Rumble videos |\n| **Video** | `video` | TikTok, Instagram, Vimeo, Facebook, Dailymotion, Twitch, direct video URLs |\n| **PowerPoint** | `powerpoint` | PPTX, PPT presentation files |\n\n## Quick Start\n\n1. Generate an API key in [Settings → Developer](https://web.tubeonai.com/settings/developer)\n2. Include it in the `Authorization` header: `Bearer toai_sk_your_key`\n3. Submit content URLs (or upload files) to create summaries\n4. Poll `/progress` or receive a webhook when processing completes\n\n## Rate Limits\n\n- **60 requests/minute** per API key (configurable per key)\n- Concurrent processing limits based on your plan\n\nEvery response includes an `X-Request-ID` header that mirrors the `request_id` field in the JSON body — use it when contacting support.\n\n## Response envelope\n\nAll successful JSON responses follow this shape (`UsageBlock` and `Links` are first-class schemas you can reference from generated SDKs):\n\n```json\n{\n  \"success\": true,\n  \"message\": \"...\",          // optional\n  \"data\": { ... },            // endpoint-specific\n  \"request_id\": \"req_...\",\n  \"usage\": {                   // UsageBlock — when a workflow is dispatched or credits are charged\n    \"credits_reserved\": 10,    // when processing is queued\n    \"credits_used\": 0,         // when result comes from cache\n    \"remaining_credits\": 99996\n  },\n  \"_links\": { ... }            // Links — HATEOAS hyperlinks on progress and repurpose endpoints\n}\n```\n\nErrors follow (`error_code` is enumerated by the `ErrorCode` schema):\n\n```json\n{\n  \"success\": false,\n  \"message\": \"Human-readable reason\",\n  \"error_code\": \"validation_error\",\n  \"errors\": { \"field\": [\"detail\"] },   // only on 422\n  \"request_id\": \"req_...\"                // present when authenticated\n}\n```\n\n## Content status values\n\nThe API normalizes internal statuses to these values in every response:\n\n| API status | Meaning |\n|------------|---------|\n| `pending` | Queued, not yet picked up |\n| `processing` | Actively being worked on |\n| `completed` | Ready — summary/transcription available |\n| `failed` | Processing ended with an error (see `error` and `error_code`) |\n\n## Webhook events\n\nIf you supply `webhook_url` when creating a summary, TubeOnAI POSTs the following events to that URL while the job runs. Each delivery is a [`WebhookEventPayload`](#tag/Webhooks). Endpoints must respond with `2xx` within 10 seconds; the worker retries up to 3 times with `10s/30s/60s` backoff on failure. Private/internal IP ranges are blocked.\n\n| Event | When it fires | Notes |\n|-------|---------------|-------|\n| `summary.processing` | Status transitions to `processing` | Includes `started_at` |\n| `summary.progress`   | Every change to `processing_progress` while still `processing` | Includes `progress` (0–100) |\n| `summary.completed`  | Status transitions to `completed` (summary ready) | Includes `summary`, `key_points`, `word_count`, and `language` when translated |\n| `summary.failed`     | Status transitions to `failed` | Includes `error`, `error_text`, `failed_at` |\n| `webhook.test`       | Delivered only by `POST /webhooks/test` | Used to validate your endpoint before going live |\n\nTranscription and repurpose webhooks are not currently emitted — poll the `/progress` or `/repurpose/{id}` endpoints for those workflows.\n\n## Tone case\n\nThe `options.tone` enum on `POST /summaries` is documented in Title Case (`Neutral`, `Professional`, `Casual`, `Humor`, `Academic`). The backend accepts these values case-insensitively (e.g. `professional` and `PROFESSIONAL` are normalized to `Professional` server-side), so existing integrations sending lowercase keep working. The `tone` enum on `POST /repurpose` is a separate, lowercase-only enum (`professional`, `casual`, `academic`, `persuasive`, `informative`).\n",
+    "contact": {
+      "name": "TubeOnAI API Support",
+      "email": "support@tubeonai.com",
+      "url": "https://help.tubeonai.com"
+    },
+    "license": {
+      "name": "Proprietary",
+      "url": "https://tubeonai.com/terms-of-service/"
+    }
+  },
+  "servers": [
+    { "url": "https://app.tubeonai.com",     "description": "Production" },
+    { "url": "https://dev-app.tubeonai.com", "description": "Development" },
+    { "url": "http://localhost:8080",         "description": "Local" }
+  ],
+  "security": [{ "BearerAuth": [] }],
+  "tags": [
+    { "name": "Summaries",        "description": "Create, retrieve, list, and delete content summaries" },
+    { "name": "Transcriptions",   "description": "Create and retrieve transcription-only requests" },
+    { "name": "Prompts",          "description": "Manage reusable prompts for content repurposing" },
+    { "name": "Repurpose",        "description": "Repurpose summaries into different formats" },
+    { "name": "Credits & Usage",  "description": "Track API usage, credit balance, and transaction history" },
+    { "name": "Webhooks",         "description": "Test webhook endpoints" }
+  ],
+  "paths": {
+    "/api/developer/v1/summaries": {
+      "post": {
+        "tags": ["Summaries"],
+        "summary": "Create Summary",
+        "description": "Create a new summary request from a URL or uploaded file.\n\n**URL content** — send `application/json` with at least a `url`. Content type is auto-detected from the URL if `type` is omitted; it is correct for YouTube, TikTok, Instagram, Vimeo, Facebook, Spotify, Apple Podcasts, SoundCloud, Google Drive, and many other public platforms.\n\n**File upload** — send `multipart/form-data` with a `file` part. Max file size **50 MB**. Supported MIME types: PDF, DOC, DOCX, PPT, PPTX, TXT, MP3, WAV, M4A, MP4, MOV, AVI, WEBM.\n\n**Idempotency** — backend deduplicates by `(user_id, url)`, which is what produces the `cached: true` (200) and `duplicate_request: true` (409) responses. Sending an optional `Idempotency-Key` header is recommended for clients that retry on network failure; the value is recorded for traceability today and gives us room to tighten dedup semantics later without breaking integrators.\n\n**Webhooks** — if you set `webhook_url` in the request body, the events `summary.processing`, `summary.progress`, `summary.completed`, and `summary.failed` are POSTed to that URL as the job runs. The callback payload shape is documented under the `callbacks` section below and on the [Webhook events](#section/Webhook-events) reference table in the intro.\n\n**Response codes**\n- `202` Accepted — new workflow queued\n- `200` OK — matched an existing record (`cached: true`)\n- `409` Conflict — a concurrent request won the duplicate race (`duplicate_request: true`)\n- `402` Payment Required — wallet balance is zero or below `required_credits`\n- `422` Validation — body failed validation\n",
+        "operationId": "createSummary",
+        "parameters": [
+          { "$ref": "#/components/parameters/IdempotencyKey" }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/CreateSummaryRequest" },
+              "examples": {
+                "youtube":  { "summary": "YouTube (detailed)", "value": { "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "type": "youtube", "options": { "detail_level": "detailed" } } },
+                "article":  { "summary": "Article",             "value": { "url": "https://example.com/blog/post", "type": "article" } },
+                "with_prompt_id": { "summary": "Saved prompt",   "value": { "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "type": "youtube", "prompt_id": "019d9a17-aaad-732a-bee2-1aee799e6e27" } },
+                "with_inline_prompt": { "summary": "Inline custom prompt", "value": { "url": "https://example.com/doc.pdf", "type": "document", "options": { "custom_prompt": "Summarize as 3 bullet actions" } } },
+                "with_webhook": { "summary": "With webhook delivery", "value": { "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "webhook_url": "https://example.com/webhooks/tubeonai" } }
+              }
+            },
+            "multipart/form-data": { "schema": { "$ref": "#/components/schemas/CreateSummaryFileRequest" } }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Summary queued for processing",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SummaryAcceptedResponse" },
+                "examples": {
+                  "youtube_url": {
+                    "summary": "YouTube URL queued",
+                    "value": {
+                      "success": true,
+                      "message": "Summary request created successfully. Processing will begin shortly.",
+                      "data": {
+                        "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                        "status": "pending",
+                        "title": "Rick Astley - Never Gonna Give You Up",
+                        "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+                        "duration": 213,
+                        "source": "youtube",
+                        "estimated_credits": 10,
+                        "estimated_time": "2-5 minutes",
+                        "webhook_url": null
+                      },
+                      "request_id": "req_9f4c2b6a1e",
+                      "usage": { "credits_reserved": 10, "remaining_credits": 99990 }
+                    }
+                  },
+                  "file_upload": {
+                    "summary": "File upload queued",
+                    "value": {
+                      "success": true,
+                      "message": "Summary request created successfully. Processing will begin shortly.",
+                      "data": {
+                        "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                        "status": "pending",
+                        "source": "document",
+                        "filename": "annual-report-2026.pdf",
+                        "estimated_credits": 10,
+                        "estimated_time": "2-4 minutes",
+                        "webhook_url": "https://example.com/webhooks/tubeonai"
+                      },
+                      "request_id": "req_9f4c2b6a1e",
+                      "usage": { "credits_reserved": 10, "remaining_credits": 99990 }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Matched existing record — `cached:true`. Body reflects current status.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SummaryCachedResponse" },
+                "examples": {
+                  "cached_completed": {
+                    "summary": "Cache hit — completed summary returned (`cached: true`)",
+                    "value": {
+                      "success": true,
+                      "message": "Summary retrieved from cache.",
+                      "data": {
+                        "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                        "status": "completed",
+                        "title": "Rick Astley - Never Gonna Give You Up",
+                        "source": "youtube",
+                        "created_at": "2026-04-21T13:02:45+00:00",
+                        "cached": true,
+                        "summary": "An 80s pop classic by Rick Astley...",
+                        "key_points": ["Released 1987", "Rickrolling meme origin"],
+                        "transcription": "We're no strangers to love...",
+                        "duration": 213,
+                        "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+                        "word_count": 248,
+                        "completed_at": "2026-04-21T13:06:11+00:00"
+                      },
+                      "request_id": "req_9f4c2b6a1e",
+                      "usage": { "credits_used": 0, "remaining_credits": 99990 }
+                    }
+                  },
+                  "cached_processing": {
+                    "summary": "Cache hit — existing job still processing",
+                    "value": {
+                      "success": true,
+                      "message": "Request matches an existing processing job.",
+                      "data": {
+                        "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                        "status": "processing",
+                        "title": "Rick Astley - Never Gonna Give You Up",
+                        "source": "youtube",
+                        "created_at": "2026-04-21T13:02:45+00:00",
+                        "cached": true,
+                        "estimated_time": "2-5 minutes"
+                      },
+                      "request_id": "req_9f4c2b6a1e",
+                      "usage": { "credits_used": 0, "remaining_credits": 99990 }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Duplicate request race condition — existing record returned (`duplicate_request: true`).",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SummaryDuplicateResponse" },
+                "examples": {
+                  "duplicate_race": {
+                    "summary": "Concurrent request created the same record first",
+                    "value": {
+                      "success": true,
+                      "message": "This content is already being processed. Returning existing request.",
+                      "data": {
+                        "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                        "status": "pending",
+                        "source": "youtube",
+                        "title": "Rick Astley - Never Gonna Give You Up",
+                        "estimated_time": "2-5 minutes",
+                        "duplicate_request": true
+                      },
+                      "request_id": "req_9f4c2b6a1e",
+                      "usage": { "credits_reserved": 0, "remaining_credits": 99990 }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "402": {
+            "description": "Insufficient credits to process this request.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/PaymentRequiredResponse" },
+                "examples": {
+                  "insufficient_credits": {
+                    "summary": "Wallet balance below required credits",
+                    "value": {
+                      "success": false,
+                      "message": "Insufficient credits for this operation.",
+                      "error_code": "insufficient_credits",
+                      "required_credits": 10,
+                      "available_credits": 3,
+                      "request_id": "req_9f4c2b6a1e"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": { "$ref": "#/components/responses/ValidationError" }
+        },
+        "callbacks": {
+          "summaryWebhook": {
+            "{$request.body#/webhook_url}": {
+              "post": {
+                "summary": "Webhook delivery — `summary.*` event",
+                "description": "POSTed to the URL supplied in `webhook_url`. The request body is a `WebhookEventPayload` with one of `summary.processing`, `summary.progress`, `summary.completed`, or `summary.failed` in the `event` field. Endpoints should respond with `2xx` within 10 seconds; the job retries up to 3 times with backoff (10s, 30s, 60s) on failure.",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": { "$ref": "#/components/schemas/WebhookEventPayload" },
+                      "examples": {
+                        "processing": {
+                          "summary": "summary.processing",
+                          "value": {
+                            "event": "summary.processing",
+                            "data": {
+                              "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                              "status": "processing",
+                              "request_id": "req_9f4c2b6a1e",
+                              "message": "Processing has started",
+                              "started_at": "2026-04-21T13:02:46+00:00"
+                            },
+                            "timestamp": "2026-04-21T13:02:46+00:00"
+                          }
+                        },
+                        "progress": {
+                          "summary": "summary.progress",
+                          "value": {
+                            "event": "summary.progress",
+                            "data": {
+                              "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                              "status": "processing",
+                              "request_id": "req_9f4c2b6a1e",
+                              "progress": 42,
+                              "message": "Processing in progress: 42%"
+                            },
+                            "timestamp": "2026-04-21T13:04:12+00:00"
+                          }
+                        },
+                        "completed": {
+                          "summary": "summary.completed",
+                          "value": {
+                            "event": "summary.completed",
+                            "data": {
+                              "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                              "status": "completed",
+                              "request_id": "req_9f4c2b6a1e",
+                              "title": "Rick Astley - Never Gonna Give You Up",
+                              "summary": "An 80s pop classic...",
+                              "key_points": ["Released 1987", "Rickrolling meme origin"],
+                              "duration": 213,
+                              "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+                              "word_count": 248,
+                              "completed_at": "2026-04-21T13:06:11+00:00"
+                            },
+                            "timestamp": "2026-04-21T13:06:12+00:00"
+                          }
+                        },
+                        "failed": {
+                          "summary": "summary.failed",
+                          "value": {
+                            "event": "summary.failed",
+                            "data": {
+                              "id": "019d9a17-c2d4-7322-bf8e-7d8e2a5b41ab",
+                              "status": "failed",
+                              "request_id": "req_9f4c2b6a1e",
+                              "error": "Content unavailable",
+                              "error_text": "The video is unavailable or has been removed.",
+                              "failed_at": "2026-04-21T13:04:33+00:00"
+                            },
+                            "timestamp": "2026-04-21T13:04:33+00:00"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "responses": {
+                  "2XX": { "description": "Webhook accepted. TubeOnAI considers any 2xx response a successful delivery." }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": ["Summaries"],
+        "summary": "List Summaries",
+        "description": "List all summaries available to the authenticated user (both API- and app-created).",
+        "operationId": "listSummaries",
+        "parameters": [
+          { "name": "status", "in": "query", "schema": { "type": "string", "enum": ["pending", "processing", "completed", "failed"] } },
+          { "name": "source", "in": "query", "schema": { "type": "string", "enum": ["youtube", "article", "podcast", "document", "audio", "rumble", "video", "powerpoint"] } },
+          { "$ref": "#/components/parameters/Limit" },
+          { "$ref": "#/components/parameters/Offset" }
+        ],
+        "responses": {
+          "200": { "description": "List of summaries", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SummaryListResponse" } } } },
+          "422": { "$ref": "#/components/responses/ValidationError" }
+        }
+      }
+    },
+    "/api/developer/v1/summaries/{uuid}": {
+      "get": {
+        "tags": ["Summaries"],
+        "summary": "Get Summary",
+        "operationId": "getSummary",
+        "parameters": [{ "$ref": "#/components/parameters/SummaryUuid" }],
+        "responses": {
+          "200": { "description": "Summary details", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SummaryResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      },
+      "delete": {
+        "tags": ["Summaries"],
+        "summary": "Delete Summary",
+        "description": "Detach the summary from the authenticated user's library. Uploaded source files are also removed from storage.",
+        "operationId": "deleteSummary",
+        "parameters": [{ "$ref": "#/components/parameters/SummaryUuid" }],
+        "responses": {
+          "200": { "description": "Deleted", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/MessageResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      }
+    },
+    "/api/developer/v1/summaries/{uuid}/progress": {
+      "get": {
+        "tags": ["Summaries"],
+        "summary": "Get Summary Progress",
+        "description": "Real-time progress for a summary workflow. Poll every 5–10 seconds while `is_processing` is true, or use `webhook_url` for push notifications.",
+        "operationId": "getSummaryProgress",
+        "parameters": [{ "$ref": "#/components/parameters/SummaryUuid" }],
+        "responses": {
+          "200": { "description": "Progress", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ProgressResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      }
+    },
+    "/api/developer/v1/transcriptions": {
+      "post": {
+        "tags": ["Transcriptions"],
+        "summary": "Create Transcription",
+        "description": "Create a transcription-only request. Cheaper than a full summary when the transcript alone is sufficient.\n\nSupports `application/json` (URL) and `multipart/form-data` (file). Like `POST /summaries`, this endpoint deduplicates by `(user_id, url)` and accepts an optional `Idempotency-Key` header — see the [Summaries idempotency note](#operation/createSummary).",
+        "operationId": "createTranscription",
+        "parameters": [
+          { "$ref": "#/components/parameters/IdempotencyKey" }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json":    { "schema": { "$ref": "#/components/schemas/CreateTranscriptionRequest" } },
+            "multipart/form-data": { "schema": { "$ref": "#/components/schemas/CreateTranscriptionFileRequest" } }
+          }
+        },
+        "responses": {
+          "202": { "description": "Transcription queued", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/TranscriptionAcceptedResponse" } } } },
+          "200": { "description": "Cached / existing record", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/TranscriptionCachedResponse" } } } },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "402": { "$ref": "#/components/responses/PaymentRequired" },
+          "422": { "$ref": "#/components/responses/ValidationError" }
+        }
+      },
+      "get": {
+        "tags": ["Transcriptions"],
+        "summary": "List Transcriptions",
+        "description": "Returns videos (transcription-only or summary+transcription) created via the current API key that have a transcription available.",
+        "operationId": "listTranscriptions",
+        "parameters": [
+          { "name": "status", "in": "query", "schema": { "type": "string", "enum": ["pending", "processing", "completed", "failed"] } },
+          { "name": "source", "in": "query", "schema": { "type": "string", "enum": ["youtube", "podcast", "audio", "video"] } },
+          { "$ref": "#/components/parameters/Limit" },
+          { "$ref": "#/components/parameters/Offset" }
+        ],
+        "responses": {
+          "200": { "description": "List", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/TranscriptionListResponse" } } } },
+          "422": { "$ref": "#/components/responses/ValidationError" }
+        }
+      }
+    },
+    "/api/developer/v1/transcriptions/{uuid}": {
+      "get": {
+        "tags": ["Transcriptions"],
+        "summary": "Get Transcription",
+        "operationId": "getTranscription",
+        "parameters": [{ "$ref": "#/components/parameters/TranscriptionUuid" }],
+        "responses": {
+          "200": { "description": "Transcription details", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/TranscriptionResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      }
+    },
+    "/api/developer/v1/transcriptions/{uuid}/progress": {
+      "get": {
+        "tags": ["Transcriptions"],
+        "summary": "Get Transcription Progress",
+        "description": "Only works on resources created as transcription-only. Calling it on a summary returns `400 invalid_request`.",
+        "operationId": "getTranscriptionProgress",
+        "parameters": [{ "$ref": "#/components/parameters/TranscriptionUuid" }],
+        "responses": {
+          "200": { "description": "Progress", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ProgressResponse" } } } },
+          "400": { "description": "Resource is not a transcription-only request", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      }
+    },
+    "/api/developer/v1/prompts": {
+      "get": {
+        "tags": ["Prompts"],
+        "summary": "List Prompts",
+        "operationId": "listPrompts",
+        "parameters": [
+          { "name": "source", "in": "query", "schema": { "type": "string", "enum": ["app", "api", "all"], "default": "all" } },
+          { "$ref": "#/components/parameters/LimitPrompt" },
+          { "$ref": "#/components/parameters/Offset" }
+        ],
+        "responses": { "200": { "description": "Prompt list", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PromptListResponse" } } } } }
+      },
+      "post": {
+        "tags": ["Prompts"],
+        "summary": "Create Prompt",
+        "operationId": "createPrompt",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreatePromptRequest" } } } },
+        "responses": {
+          "201": { "description": "Created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PromptResponse" } } } },
+          "422": { "description": "Validation error or prompt limit reached", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/api/developer/v1/prompts/{id}": {
+      "get": {
+        "tags": ["Prompts"],
+        "summary": "Get Prompt",
+        "operationId": "getPrompt",
+        "parameters": [{ "$ref": "#/components/parameters/PromptId" }],
+        "responses": {
+          "200": { "description": "Prompt", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PromptResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      },
+      "put": {
+        "tags": ["Prompts"],
+        "summary": "Update Prompt",
+        "operationId": "updatePrompt",
+        "parameters": [{ "$ref": "#/components/parameters/PromptId" }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UpdatePromptRequest" } } } },
+        "responses": {
+          "200": { "description": "Updated", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PromptResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      },
+      "delete": {
+        "tags": ["Prompts"],
+        "summary": "Delete Prompt",
+        "operationId": "deletePrompt",
+        "parameters": [{ "$ref": "#/components/parameters/PromptId" }],
+        "responses": {
+          "200": { "description": "Deleted", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/MessageResponse" } } } },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      }
+    },
+    "/api/developer/v1/repurpose": {
+      "get": {
+        "tags": ["Repurpose"],
+        "summary": "List Repurpose Content",
+        "operationId": "listRepurpose",
+        "parameters": [
+          { "name": "source",     "in": "query", "schema": { "type": "string", "enum": ["app", "api", "all"], "default": "all" } },
+          { "name": "summary_id", "in": "query", "schema": { "type": "string", "format": "uuid" } },
+          { "$ref": "#/components/parameters/LimitPrompt" },
+          { "$ref": "#/components/parameters/Offset" }
+        ],
+        "responses": { "200": { "description": "List", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/RepurposeListResponse" } } } } }
+      },
+      "post": {
+        "tags": ["Repurpose"],
+        "summary": "Create Repurpose",
+        "description": "Repurpose an existing summary. Provide EITHER `prompt_id` (saved prompt) OR `prompt` (inline text). When `save_prompt=true` the inline prompt is persisted and `prompt_title` becomes required.",
+        "operationId": "createRepurpose",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreateRepurposeRequest" } } } },
+        "responses": {
+          "202": { "description": "Queued", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/RepurposeAcceptedResponse" } } } },
+          "200": { "description": "Cached result or already-processing request", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/RepurposeCachedResponse" } } } },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "402": { "$ref": "#/components/responses/PaymentRequired" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" },
+          "422": { "description": "Validation error or prompt limit reached", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/api/developer/v1/repurpose/{id}": {
+      "get": {
+        "tags": ["Repurpose"],
+        "summary": "Get Repurpose",
+        "description": "`{id}` accepts three forms:\n\n1. **Summary UUID** — returns all repurposes for that summary (`RepurposesBySummaryResponse`).\n2. **Repurpose ID** (integer) — returns one repurpose (`RepurposeSingleResponse`).\n3. **Prompt ID** + `?summary_id=` query — same as (2), resolved via prompt+summary join (works even after the prompt is deleted).\n",
+        "operationId": "getRepurpose",
+        "parameters": [
+          { "name": "id",         "in": "path",  "required": true, "schema": { "type": "string" }, "description": "Summary UUID, repurpose ID, or prompt ID" },
+          { "name": "summary_id", "in": "query", "required": false, "schema": { "type": "string", "format": "uuid" }, "description": "Required only when `id` is a prompt ID" }
+        ],
+        "responses": {
+          "200": {
+            "description": "Repurpose(s)",
+            "content": { "application/json": { "schema": { "oneOf": [ { "$ref": "#/components/schemas/RepurposeSingleResponse" }, { "$ref": "#/components/schemas/RepurposesBySummaryResponse" } ] } } }
+          },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "404": { "$ref": "#/components/responses/NotFound" }
+        }
+      }
+    },
+    "/api/developer/v1/usage": {
+      "get": {
+        "tags": ["Credits & Usage"],
+        "summary": "Get Usage Statistics",
+        "operationId": "getUsage",
+        "parameters": [
+          { "name": "period",   "in": "query", "schema": { "type": "string", "enum": ["today", "week", "month", "all"],  "default": "month" } },
+          { "name": "group_by", "in": "query", "schema": { "type": "string", "enum": ["day", "week", "month"],           "default": "day" } },
+          { "name": "source",   "in": "query", "schema": { "type": "string", "enum": ["api", "app", "all"],              "default": "all" } }
+        ],
+        "responses": { "200": { "description": "Usage", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UsageResponse" } } } } }
+      }
+    },
+    "/api/developer/v1/credits/balance": {
+      "get": {
+        "tags": ["Credits & Usage"],
+        "summary": "Get Credit Balance",
+        "operationId": "getCredits",
+        "responses": {
+          "200": { "description": "Balance", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreditBalanceResponse" } } } },
+          "400": { "description": "Wallet not initialised", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+        }
+      }
+    },
+    "/api/developer/v1/credits/history": {
+      "get": {
+        "tags": ["Credits & Usage"],
+        "summary": "Get Credit History",
+        "operationId": "getCreditHistory",
+        "parameters": [
+          { "name": "type",   "in": "query", "schema": { "type": "string", "enum": ["usage", "credit", "debit", "refund", "all"], "default": "all" } },
+          { "name": "source", "in": "query", "schema": { "type": "string", "enum": ["api", "app", "all"],                         "default": "all" } },
+          { "$ref": "#/components/parameters/Limit" },
+          { "$ref": "#/components/parameters/Offset" }
+        ],
+        "responses": { "200": { "description": "History", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CreditHistoryResponse" } } } } }
+      }
+    },
+    "/api/developer/v1/webhooks/test": {
+      "post": {
+        "tags": ["Webhooks"],
+        "summary": "Test Webhook",
+        "description": "Sends a test payload to a webhook URL. The server blocks private/internal IP ranges and non-URL values.\n\nExample payload delivered to your endpoint:\n```json\n{\n  \"event\":\"webhook.test\",\n  \"data\":{\"message\":\"...\",\"request_id\":\"req_...\",\"user_id\":123},\n  \"timestamp\":\"2026-01-07T12:34:56+00:00\"\n}\n```",
+        "operationId": "testWebhook",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/TestWebhookRequest" } } } },
+        "responses": {
+          "200": { "description": "Endpoint responded 2xx", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/WebhookTestSuccess" } } } },
+          "400": { "description": "Endpoint unreachable or returned non-2xx", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/WebhookTestFailure" } } } },
+          "422": { "$ref": "#/components/responses/ValidationError" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "API Key",
+        "description": "Send your TubeOnAI API key (`toai_sk_...`) as `Authorization: Bearer <key>`. Generate keys at [Settings → Developer](https://web.tubeonai.com/settings/developer)."
+      }
+    },
+    "parameters": {
+      "SummaryUuid":       { "name": "uuid", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" }, "description": "Summary (video) UUID" },
+      "TranscriptionUuid": { "name": "uuid", "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" }, "description": "Transcription (video) UUID" },
+      "PromptId":          { "name": "id",   "in": "path", "required": true, "schema": { "type": "string", "format": "uuid" }, "description": "Prompt UUID" },
+      "Limit":             { "name": "limit", "in": "query", "description": "Page size. Use together with `offset` to paginate; the response includes a `pagination` envelope (`PaginationMeta`).", "schema": { "type": "integer", "minimum": 1, "maximum": 100, "default": 20 } },
+      "LimitPrompt":       { "name": "limit", "in": "query", "description": "Page size for prompt/repurpose listings. Use together with `offset`; default is higher than other list endpoints.", "schema": { "type": "integer", "minimum": 1, "maximum": 100, "default": 50 } },
+      "Offset":            { "name": "offset","in": "query", "description": "Number of records to skip. Pair with `limit` to fetch the next page (`offset + limit`).", "schema": { "type": "integer", "minimum": 0, "default": 0 } },
+      "IdempotencyKey":    {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": false,
+        "description": "Optional client-supplied key (UUID or any opaque string up to 128 chars) that identifies a single create attempt. The backend already deduplicates summary requests by `(user_id, url)` — which is what produces the `cached: true` / `409 duplicate_request` responses — and this header is recorded for traceability so a future change to dedup behavior won't break integrators relying on idempotent retries. Recommended for any client that retries network failures.",
+        "schema": { "type": "string", "maxLength": 128, "example": "5a3c61a4-2bd1-4f0a-b9d0-7a4e0f0b5c2e" }
+      }
+    },
+    "schemas": {
+      "CreateSummaryRequest": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url":  { "type": "string", "format": "uri", "description": "URL of the content to summarize." },
+          "type": {
+            "type": "string",
+            "enum": ["youtube", "article", "podcast", "document", "audio", "rumble", "video", "powerpoint"],
+            "description": "Optional — auto-detected from the URL when omitted."
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "detail_level":          { "type": "string", "enum": ["concise", "detailed", "comprehensive"], "default": "detailed" },
+              "tone":                  { "type": "string", "enum": ["Neutral", "Professional", "Casual", "Humor", "Academic"], "default": "Neutral", "description": "Summary tone. Sent as Title Case; the backend accepts these values case-insensitively (e.g. `professional` is normalized to `Professional`)." },
+              "custom_prompt":         { "type": "string", "maxLength": 1000, "description": "Inline custom prompt. If provided and the user has room below their prompt limit, a saved prompt is auto-created; otherwise the prompt is used inline." },
+              "include_transcription": { "type": "boolean", "default": true },
+              "include_timestamps":    { "type": "boolean", "default": false },
+              "include_chapters":      { "type": "boolean", "default": true },
+              "language":              { "type": "string",  "maxLength": 10, "description": "BCP-47 / ISO 639-1 code (e.g. `en`, `es`, `fr`)." }
+            }
+          },
+          "prompt_id":   { "type": "string", "format": "uuid", "description": "Saved prompt to apply. Must belong to the authenticated user. Mutually exclusive with `options.custom_prompt`." },
+          "webhook_url": { "type": "string", "format": "uri", "description": "Public HTTPS URL to receive a completion webhook. Private/internal IPs are rejected." }
+        }
+      },
+      "CreateSummaryFileRequest": {
+        "type": "object",
+        "required": ["file"],
+        "description": "Multipart file upload. Max 50 MB. Supported: PDF, DOC, DOCX, PPT, PPTX, TXT, MP3, WAV, M4A, MP4, MOV, AVI, WEBM.",
+        "properties": {
+          "file":                         { "type": "string", "format": "binary" },
+          "type":                         { "type": "string", "enum": ["document", "powerpoint", "audio", "video"], "description": "Auto-detected from MIME type when omitted." },
+          "options[detail_level]":        { "type": "string", "enum": ["concise", "detailed", "comprehensive"], "default": "detailed" },
+          "options[tone]":                { "type": "string", "enum": ["Neutral", "Professional", "Casual", "Humor", "Academic"], "default": "Neutral", "description": "Title Case; accepted case-insensitively." },
+          "options[custom_prompt]":       { "type": "string", "maxLength": 1000 },
+          "options[include_transcription]": { "type": "boolean", "default": true },
+          "options[include_timestamps]":  { "type": "boolean", "default": false },
+          "options[include_chapters]":    { "type": "boolean", "default": true },
+          "options[language]":            { "type": "string" },
+          "prompt_id":                    { "type": "string", "format": "uuid" },
+          "webhook_url":                  { "type": "string", "format": "uri" }
+        }
+      },
+
+      "CreateTranscriptionRequest": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url":  { "type": "string", "format": "uri" },
+          "type": { "type": "string", "enum": ["youtube", "podcast", "audio", "video"], "description": "Auto-detected when omitted. Transcription is only supported for these sources." },
+          "options": {
+            "type": "object",
+            "properties": {
+              "output_format":      { "type": "string", "enum": ["text", "srt", "vtt", "json"], "default": "text" },
+              "language":           { "type": "string", "maxLength": 10 },
+              "include_timestamps": { "type": "boolean", "default": true },
+              "include_speakers":   { "type": "boolean", "default": false }
+            }
+          },
+          "webhook_url": { "type": "string", "format": "uri" }
+        }
+      },
+      "CreateTranscriptionFileRequest": {
+        "type": "object",
+        "required": ["file"],
+        "description": "Audio/video file upload for transcription. Max 50 MB.",
+        "properties": {
+          "file":                          { "type": "string", "format": "binary" },
+          "type":                          { "type": "string", "enum": ["audio", "video"] },
+          "options[output_format]":        { "type": "string", "enum": ["text", "srt", "vtt", "json"], "default": "text" },
+          "options[language]":             { "type": "string" },
+          "options[include_timestamps]":   { "type": "boolean", "default": true },
+          "options[include_speakers]":     { "type": "boolean", "default": false },
+          "webhook_url":                   { "type": "string", "format": "uri" }
+        }
+      },
+
+      "UsageBlock": {
+        "type": "object",
+        "description": "Credit accounting block attached to responses when a workflow is dispatched or a cached result is served. Either `credits_reserved` (job queued) or `credits_used` (cached result / charge settled) is present, plus `remaining_credits`.",
+        "properties": {
+          "credits_reserved":  { "type": "integer", "description": "Credits held from the wallet for this job. Released on success/refund with the actual usage recorded. Present when a new workflow was dispatched." },
+          "credits_used":      { "type": "integer", "description": "Credits spent on this call (0 when result is cached)." },
+          "remaining_credits": { "type": "integer", "description": "Wallet balance after this call." }
+        }
+      },
+      "Links": {
+        "type": "object",
+        "description": "HATEOAS-style hyperlinks attached to responses that have follow-up resources. Each value is an absolute URL on the API host.",
+        "properties": {
+          "self":         { "type": "string", "format": "uri", "description": "The created/affected resource." },
+          "result":       { "type": "string", "format": "uri", "description": "Where to fetch the final processed output." },
+          "summary":      { "type": "string", "format": "uri", "description": "The originating summary, when the response is a sub-resource (e.g. a repurpose)." },
+          "check_status": { "type": "string", "format": "uri", "description": "Endpoint to poll for status — returned on accepted repurpose jobs." }
+        }
+      },
+
+      "SummaryAcceptedResponse": {
+        "type": "object",
+        "required": ["success", "data", "request_id"],
+        "properties": {
+          "success":    { "type": "boolean", "example": true },
+          "message":    { "type": "string", "example": "Summary request created successfully. Processing will begin shortly." },
+          "data": {
+            "type": "object",
+            "description": "URL-created jobs include title/duration/thumbnail (pre-fetched for YouTube). File-uploaded jobs include `filename` instead of `title`.",
+            "properties": {
+              "id":                { "type": "string", "format": "uuid" },
+              "status":            { "type": "string", "enum": ["pending"] },
+              "source":            { "type": "string" },
+              "title":             { "type": "string", "nullable": true },
+              "filename":          { "type": "string", "nullable": true, "description": "Original filename (file uploads only)" },
+              "thumbnail":         { "type": "string", "format": "uri", "nullable": true },
+              "duration":          { "type": "integer", "nullable": true },
+              "estimated_credits": { "type": "integer" },
+              "estimated_time":    { "type": "string", "example": "2-5 minutes" },
+              "webhook_url":       { "type": "string", "format": "uri", "nullable": true },
+              "is_retry":          { "type": "boolean", "description": "Present when the accepted job is a retry of a previously failed video." },
+              "has_transcript":    { "type": "boolean", "description": "Present when an existing transcription is reused, skipping re-transcription." }
+            }
+          },
+          "request_id": { "type": "string" },
+          "usage":      { "$ref": "#/components/schemas/UsageBlock" }
+        }
+      },
+      "SummaryCachedResponse": {
+        "type": "object",
+        "required": ["success", "data", "request_id"],
+        "properties": {
+          "success": { "type": "boolean", "example": true },
+          "message": { "type": "string", "example": "Summary retrieved from cache." },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":             { "type": "string", "format": "uuid" },
+              "status":         { "type": "string", "enum": ["pending", "processing", "completed", "failed"] },
+              "title":          { "type": "string" },
+              "source":         { "type": "string" },
+              "created_at":     { "type": "string", "format": "date-time" },
+              "cached":         { "type": "boolean", "example": true },
+              "summary":        { "type": "string",  "nullable": true, "description": "Present when `status=completed`." },
+              "summary_as_md":  { "type": "string",  "nullable": true, "description": "Markdown variant (returned by variant-match cache)." },
+              "key_points":     { "nullable": true,  "description": "Array of key bullet points, may be null." },
+              "transcription":  { "type": "string",  "nullable": true },
+              "duration":       { "type": "integer", "nullable": true },
+              "thumbnail":      { "type": "string",  "format": "uri", "nullable": true },
+              "word_count":     { "type": "integer" },
+              "completed_at":   { "type": "string",  "format": "date-time", "nullable": true },
+              "estimated_time": { "type": "string",  "nullable": true, "description": "Present when `status` is pending/processing." },
+              "variant": {
+                "type": "object",
+                "description": "Present only when cache hit matched a specific model/detail_level/tone/prompt combo.",
+                "properties": {
+                  "detail_level":   { "type": "string" },
+                  "tone":           { "type": "string" },
+                  "model":          { "type": "string", "nullable": true },
+                  "user_prompt_id": { "type": "string", "format": "uuid", "nullable": true }
+                }
+              }
+            }
+          },
+          "request_id": { "type": "string" },
+          "usage":      { "$ref": "#/components/schemas/UsageBlock" }
+        }
+      },
+      "SummaryDuplicateResponse": {
+        "type": "object",
+        "description": "Returned as 409 when concurrent requests race to create the same content.",
+        "properties": {
+          "success": { "type": "boolean", "example": true },
+          "message": { "type": "string" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":                 { "type": "string", "format": "uuid" },
+              "status":             { "type": "string" },
+              "source":             { "type": "string" },
+              "title":              { "type": "string" },
+              "estimated_time":     { "type": "string" },
+              "duplicate_request":  { "type": "boolean", "example": true }
+            }
+          },
+          "request_id": { "type": "string" },
+          "usage":      { "$ref": "#/components/schemas/UsageBlock" }
+        }
+      },
+      "SummaryResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":                   { "type": "string", "format": "uuid" },
+              "status":               { "type": "string", "enum": ["pending", "processing", "completed", "failed"] },
+              "title":                { "type": "string" },
+              "source":               { "type": "string" },
+              "url":                  { "type": "string", "format": "uri" },
+              "created_at":           { "type": "string", "format": "date-time" },
+              "summary":              { "type": "string", "nullable": true },
+              "key_points":           { "nullable": true },
+              "transcription":        { "type": "string", "nullable": true },
+              "duration":             { "type": "integer", "nullable": true },
+              "thumbnail":            { "type": "string", "format": "uri", "nullable": true },
+              "word_count":           { "type": "integer" },
+              "completed_at":         { "type": "string", "format": "date-time", "nullable": true },
+              "credits_used":         { "type": "integer", "description": "Present when the video's metadata recorded credit usage." },
+              "error":                { "type": "string", "description": "Present when `status=failed`." },
+              "error_code":           { "type": "string", "enum": ["content_unavailable", "processing_failed"], "description": "Present when `status=failed`. Subset of the global `ErrorCode` enum applicable to a finalized failed video." },
+              "estimated_completion": { "type": "string", "format": "date-time", "nullable": true, "description": "Present when `status` is pending/processing." }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "SummaryListResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id":         { "type": "string", "format": "uuid" },
+                "status":     { "type": "string" },
+                "title":      { "type": "string" },
+                "source":     { "type": "string" },
+                "url":        { "type": "string", "format": "uri", "nullable": true },
+                "duration":   { "type": "integer", "nullable": true },
+                "created_at": { "type": "string", "format": "date-time" }
+              }
+            }
+          },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "request_id": { "type": "string" }
+        }
+      },
+
+      "TranscriptionAcceptedResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":                { "type": "string", "format": "uuid" },
+              "status":            { "type": "string", "enum": ["pending"] },
+              "source":            { "type": "string" },
+              "filename":          { "type": "string", "nullable": true },
+              "estimated_credits": { "type": "integer" },
+              "estimated_time":    { "type": "string" },
+              "webhook_url":       { "type": "string", "format": "uri", "nullable": true },
+              "is_retry":          { "type": "boolean" }
+            }
+          },
+          "request_id": { "type": "string" },
+          "usage":      { "$ref": "#/components/schemas/UsageBlock" }
+        }
+      },
+      "TranscriptionCachedResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string", "example": "Transcription retrieved from cache." },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":            { "type": "string", "format": "uuid" },
+              "status":        { "type": "string", "enum": ["pending", "processing", "completed", "failed"] },
+              "title":         { "type": "string" },
+              "source":        { "type": "string" },
+              "transcription": {
+                "description": "Format depends on `options.output_format`. Plain string for `text`/`srt`/`vtt`, object for `json`.",
+                "oneOf": [
+                  { "type": "string" },
+                  { "type": "object", "properties": { "text": { "type": "string" }, "segments": { "type": "array", "items": { "type": "object" } }, "language": { "type": "string" } } }
+                ]
+              },
+              "duration":      { "type": "integer", "nullable": true },
+              "language":      { "type": "string" },
+              "word_count":    { "type": "integer" },
+              "created_at":    { "type": "string", "format": "date-time" },
+              "cached":        { "type": "boolean", "example": true },
+              "estimated_time":{ "type": "string", "description": "Only when still pending/processing." }
+            }
+          },
+          "request_id": { "type": "string" },
+          "usage":      { "$ref": "#/components/schemas/UsageBlock" }
+        }
+      },
+      "TranscriptionResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":                   { "type": "string", "format": "uuid" },
+              "status":               { "type": "string", "enum": ["pending", "processing", "completed", "failed"] },
+              "title":                { "type": "string" },
+              "source":               { "type": "string" },
+              "url":                  { "type": "string", "format": "uri", "nullable": true },
+              "created_at":           { "type": "string", "format": "date-time" },
+              "transcription":        { "oneOf": [ { "type": "string" }, { "type": "object" } ], "nullable": true },
+              "duration":             { "type": "integer", "nullable": true },
+              "language":             { "type": "string", "nullable": true },
+              "word_count":           { "type": "integer" },
+              "completed_at":         { "type": "string", "format": "date-time", "nullable": true },
+              "credits_used":         { "type": "integer" },
+              "error":                { "type": "string" },
+              "error_code":           { "type": "string", "enum": ["content_unavailable", "processing_failed"] },
+              "estimated_completion": { "type": "string", "format": "date-time", "nullable": true }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "TranscriptionListResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id":                  { "type": "string", "format": "uuid" },
+                "status":              { "type": "string" },
+                "title":               { "type": "string" },
+                "source":              { "type": "string" },
+                "url":                 { "type": "string", "format": "uri", "nullable": true },
+                "duration":            { "type": "integer", "nullable": true },
+                "created_at":          { "type": "string", "format": "date-time" },
+                "transcription_only":  { "type": "boolean", "description": "True when the record was created via `/transcriptions` (not a side-effect of a summary)." },
+                "word_count":          { "type": "integer", "description": "Only present on completed records." }
+              }
+            }
+          },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "request_id": { "type": "string" }
+        }
+      },
+
+      "ProgressResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean", "example": true },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":            { "type": "string", "format": "uuid" },
+              "type":          { "type": "string", "enum": ["summary", "transcription"] },
+              "status":        { "type": "string", "enum": ["pending", "processing", "completed", "failed"] },
+              "is_processing": { "type": "boolean" },
+              "progress":      { "$ref": "#/components/schemas/ProgressCurrent", "nullable": true },
+              "history":       { "type": "array", "items": { "$ref": "#/components/schemas/ProgressHistoryEntry" } },
+              "estimated_completion": { "type": "string", "format": "date-time", "nullable": true },
+              "started_at":    { "type": "string", "format": "date-time", "nullable": true },
+              "video": {
+                "type": "object",
+                "properties": {
+                  "title":      { "type": "string" },
+                  "source":     { "type": "string" },
+                  "duration":   { "type": "integer", "nullable": true },
+                  "created_at": { "type": "string", "format": "date-time" }
+                }
+              }
+            }
+          },
+          "request_id": { "type": "string" },
+          "_links":     { "$ref": "#/components/schemas/Links" }
+        }
+      },
+      "ProgressCurrent": {
+        "type": "object",
+        "description": "Latest progress snapshot from Redis.",
+        "properties": {
+          "percentage":    { "type": "integer", "minimum": 0, "maximum": 100 },
+          "type":          { "type": "string", "description": "Progress channel — `summary`, `timestamp`, `mindmap`, or `custom-prompt`." },
+          "stage":         { "type": "string", "nullable": true },
+          "stage_label":   { "type": "string", "nullable": true },
+          "message":       { "type": "string", "nullable": true },
+          "current_chunk": { "type": "integer", "nullable": true },
+          "total_chunks":  { "type": "integer", "nullable": true },
+          "updated_at":    { "type": "string", "format": "date-time", "nullable": true }
+        }
+      },
+      "ProgressHistoryEntry": {
+        "type": "object",
+        "description": "One event in the filtered-current-run history.",
+        "properties": {
+          "stage":         { "type": "string" },
+          "stage_label":   { "type": "string" },
+          "percentage":    { "type": "integer" },
+          "message":       { "type": "string" },
+          "timestamp":     { "type": "string", "format": "date-time" },
+          "current_chunk": { "type": "integer" },
+          "total_chunks":  { "type": "integer" }
+        }
+      },
+
+      "CreatePromptRequest": {
+        "type": "object",
+        "required": ["title", "prompt"],
+        "properties": {
+          "title":  { "type": "string", "maxLength": 255 },
+          "prompt": { "type": "string", "maxLength": 5000 }
+        }
+      },
+      "UpdatePromptRequest": {
+        "type": "object",
+        "properties": {
+          "title":  { "type": "string", "maxLength": 255 },
+          "prompt": { "type": "string", "maxLength": 5000 }
+        }
+      },
+      "PromptResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":         { "type": "string", "format": "uuid" },
+              "title":      { "type": "string" },
+              "prompt":     { "type": "string" },
+              "source":     { "type": "string", "enum": ["app", "api"] },
+              "created_at": { "type": "string", "format": "date-time" },
+              "updated_at": { "type": "string", "format": "date-time" }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "PromptListResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id":         { "type": "string", "format": "uuid" },
+                "title":      { "type": "string" },
+                "prompt":     { "type": "string" },
+                "source":     { "type": "string", "enum": ["app", "api"] },
+                "created_at": { "type": "string", "format": "date-time" },
+                "updated_at": { "type": "string", "format": "date-time" }
+              }
+            }
+          },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "request_id": { "type": "string" }
+        }
+      },
+
+      "CreateRepurposeRequest": {
+        "type": "object",
+        "required": ["summary_id"],
+        "description": "Provide `prompt_id` OR `prompt` (one of the two is required). Use `save_prompt:true` (with `prompt_title`) to persist an inline prompt.",
+        "properties": {
+          "summary_id":              { "type": "string", "format": "uuid" },
+          "prompt_id":               { "type": "string", "format": "uuid", "description": "Mutually exclusive with `prompt`." },
+          "prompt":                  { "type": "string", "maxLength": 2000, "description": "Mutually exclusive with `prompt_id`." },
+          "save_prompt":             { "type": "boolean", "default": false },
+          "prompt_title":            { "type": "string", "maxLength": 255, "description": "Required when `save_prompt=true`." },
+          "format":                  { "type": "string", "enum": ["blog", "twitter", "linkedin", "email", "bullet_points", "custom"] },
+          "tone":                    { "type": "string", "enum": ["professional", "casual", "academic", "persuasive", "informative"] },
+          "additional_instructions": { "type": "string", "maxLength": 1000 }
+        }
+      },
+      "RepurposeAcceptedResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "prompt_id":      { "type": "string", "format": "uuid" },
+              "prompt_title":   { "type": "string" },
+              "summary_id":     { "type": "string", "format": "uuid" },
+              "status":         { "type": "string", "enum": ["pending"] },
+              "source":         { "type": "string", "enum": ["api"] },
+              "format":         { "type": "string" },
+              "tone":           { "type": "string" },
+              "estimated_time": { "type": "string", "example": "30-60 seconds" }
+            }
+          },
+          "_links":     { "$ref": "#/components/schemas/Links" },
+          "request_id": { "type": "string" }
+        }
+      },
+      "RepurposeCachedResponse": {
+        "type": "object",
+        "description": "Returned either as still-processing (no content yet) or completed (with `cached:true` and `content`).",
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string", "nullable": true },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":             { "type": "integer" },
+              "prompt_id":      { "type": "string", "format": "uuid" },
+              "summary_id":     { "type": "string", "format": "uuid" },
+              "status":         { "type": "string", "enum": ["pending", "processing", "completed"] },
+              "source":         { "type": "string", "enum": ["api", "app"] },
+              "format":         { "type": "string" },
+              "tone":           { "type": "string" },
+              "estimated_time": { "type": "string" },
+              "content":        { "type": "string", "description": "Only when `status=completed`." },
+              "word_count":     { "type": "integer" },
+              "created_at":     { "type": "string", "format": "date-time" },
+              "cached":         { "type": "boolean", "example": true }
+            }
+          },
+          "_links":     { "$ref": "#/components/schemas/Links" },
+          "request_id": { "type": "string" },
+          "usage":      { "$ref": "#/components/schemas/UsageBlock" }
+        }
+      },
+      "RepurposeSingleResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id":            { "type": "integer" },
+              "prompt_id":     { "type": "string", "format": "uuid" },
+              "status":        { "type": "string", "enum": ["processing", "completed"] },
+              "source":        { "type": "string", "enum": ["api", "app"] },
+              "summary_id":    { "type": "string", "format": "uuid" },
+              "summary_title": { "type": "string" },
+              "created_at":    { "type": "string", "format": "date-time" },
+              "content":       { "type": "string", "description": "Only when `status=completed`." },
+              "word_count":    { "type": "integer" },
+              "completed_at":  { "type": "string", "format": "date-time" }
+            }
+          },
+          "_links":     { "$ref": "#/components/schemas/Links" },
+          "request_id": { "type": "string" }
+        }
+      },
+      "RepurposesBySummaryResponse": {
+        "type": "object",
+        "description": "Returned when the path parameter resolves to a summary (video) UUID.",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "summary_id":    { "type": "string", "format": "uuid" },
+              "summary_title": { "type": "string" },
+              "repurposes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id":           { "type": "integer" },
+                    "prompt_id":    { "type": "string", "format": "uuid" },
+                    "prompt_title": { "type": "string" },
+                    "source":       { "type": "string", "enum": ["api", "app"] },
+                    "status":       { "type": "string", "enum": ["processing", "completed"] },
+                    "created_at":   { "type": "string", "format": "date-time" },
+                    "content":      { "type": "string" },
+                    "word_count":   { "type": "integer" },
+                    "completed_at": { "type": "string", "format": "date-time" }
+                  }
+                }
+              },
+              "total": { "type": "integer" }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "RepurposeListResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id":            { "type": "integer" },
+                "summary_id":    { "type": "string", "format": "uuid" },
+                "summary_title": { "type": "string" },
+                "prompt_id":     { "type": "string", "format": "uuid" },
+                "prompt_title":  { "type": "string" },
+                "source":        { "type": "string", "enum": ["api", "app"] },
+                "status":        { "type": "string", "enum": ["processing", "completed"] },
+                "word_count":    { "type": "integer", "nullable": true },
+                "created_at":    { "type": "string", "format": "date-time" },
+                "completed_at":  { "type": "string", "format": "date-time", "nullable": true }
+              }
+            }
+          },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "request_id": { "type": "string" }
+        }
+      },
+
+      "UsageResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "statistics": {
+                "type": "object",
+                "properties": {
+                  "total_requests":      { "type": "integer", "description": "Lifetime usage count of the authenticated API key (or sum across all keys under user auth)." },
+                  "total_credits_used":  { "type": "integer" },
+                  "successful_requests": { "type": "integer" },
+                  "failed_requests":     { "type": "integer" },
+                  "refunded_requests":   { "type": "integer" }
+                }
+              },
+              "usage_over_time": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "period":       { "type": "string", "description": "`YYYY-MM-DD`, `Week NN`, or `Month YYYY` depending on `group_by`." },
+                    "requests":     { "type": "integer" },
+                    "credits_used": { "type": "integer" }
+                  }
+                }
+              },
+              "recent_requests": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id":            { "type": "integer" },
+                    "video_id":      { "type": "string", "format": "uuid" },
+                    "feature":       { "type": "string" },
+                    "credits_used":  { "type": "integer" },
+                    "tokens_used":   { "type": "integer", "nullable": true },
+                    "model":         { "type": "string", "nullable": true },
+                    "status":        { "type": "string" },
+                    "content_title": { "type": "string", "nullable": true },
+                    "created_at":    { "type": "string", "format": "date-time" }
+                  }
+                }
+              },
+              "filters": {
+                "type": "object",
+                "properties": {
+                  "period": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              },
+              "api_key": {
+                "type": "object",
+                "description": "Included when authenticated via an API key.",
+                "properties": {
+                  "name":         { "type": "string" },
+                  "created_at":   { "type": "string", "format": "date-time" },
+                  "last_used_at": { "type": "string", "format": "date-time", "nullable": true },
+                  "rate_limit":   { "type": "integer" },
+                  "expires_at":   { "type": "string", "format": "date-time", "nullable": true }
+                }
+              },
+              "api_keys_summary": {
+                "type": "object",
+                "description": "Included when authenticated with user session (not API key).",
+                "properties": {
+                  "total_keys":    { "type": "integer" },
+                  "active_keys":   { "type": "integer" },
+                  "total_usage":   { "type": "integer" },
+                  "last_used_at":  { "type": "string", "format": "date-time", "nullable": true }
+                }
+              }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "CreditBalanceResponse": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "balance": {
+                "type": "object",
+                "properties": {
+                  "available":        { "type": "integer" },
+                  "lifetime_credits": { "type": "integer" },
+                  "lifetime_spent":   { "type": "integer" },
+                  "is_locked":        { "type": "boolean" }
+                }
+              },
+              "usage": {
+                "type": "object",
+                "properties": {
+                  "today":      { "type": "object", "properties": { "total": { "type": "integer" }, "api": { "type": "integer", "description": "Developer-API-only credits" } } },
+                  "this_month": { "type": "object", "properties": { "total": { "type": "integer" }, "api": { "type": "integer" } } }
+                }
+              },
+              "package": {
+                "type": "object",
+                "properties": {
+                  "name":           { "type": "string" },
+                  "credits":        { "type": "integer" },
+                  "expires_at":     { "type": "string", "format": "date-time", "nullable": true },
+                  "next_refill_at": { "type": "string", "format": "date-time", "nullable": true }
+                }
+              },
+              "limits": {
+                "type": "object",
+                "properties": {
+                  "max_file_size_mb":      { "type": "integer", "example": 50 },
+                  "max_video_duration":    { "type": "integer", "description": "Seconds. 600 for free users, 3600 otherwise." },
+                  "concurrent_requests":   { "type": "integer", "example": 5 },
+                  "rate_limit_per_minute": { "type": "integer", "example": 60 }
+                }
+              }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "CreditHistoryResponse": {
+        "type": "object",
+        "description": "Row shape differs by `type`: `usage`/`refund` items come from `CreditUsageLog`; `credit`/`debit` items come from `CreditLedger`. Amounts are always signed (positive=credit, negative=debit).",
+        "properties": {
+          "success": { "type": "boolean" },
+          "data": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                { "$ref": "#/components/schemas/CreditHistoryUsageRow" },
+                { "$ref": "#/components/schemas/CreditHistoryLedgerRow" }
+              ]
+            }
+          },
+          "pagination": { "$ref": "#/components/schemas/PaginationMeta" },
+          "filters":    { "type": "object", "properties": { "type": { "type": "string" }, "source": { "type": "string" } } },
+          "request_id": { "type": "string" }
+        }
+      },
+      "CreditHistoryUsageRow": {
+        "type": "object",
+        "properties": {
+          "id":            { "type": "integer" },
+          "type":          { "type": "string", "enum": ["usage"] },
+          "feature":       { "type": "string" },
+          "credits":       { "type": "integer", "description": "Negative number (debit)." },
+          "model":         { "type": "string", "nullable": true },
+          "content_title": { "type": "string", "nullable": true },
+          "video_id":      { "type": "string", "format": "uuid", "nullable": true },
+          "source":        { "type": "string", "enum": ["api", "app"] },
+          "status":        { "type": "string" },
+          "created_at":    { "type": "string", "format": "date-time" }
+        }
+      },
+      "CreditHistoryLedgerRow": {
+        "type": "object",
+        "properties": {
+          "id":          { "type": "integer" },
+          "type":        { "type": "string", "enum": ["credit", "debit"] },
+          "credits":     { "type": "integer", "description": "Signed: positive for credit, negative for debit." },
+          "description": { "type": "string" },
+          "reference":   { "type": "string", "nullable": true },
+          "balance":     { "type": "integer", "description": "Wallet balance after this entry." },
+          "created_at":  { "type": "string", "format": "date-time" }
+        }
+      },
+
+      "TestWebhookRequest": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "url": { "type": "string", "format": "uri", "maxLength": 2048, "description": "Must be a public URL (private/internal ranges are rejected)." }
+        }
+      },
+      "WebhookEventName": {
+        "type": "string",
+        "description": "Event name carried in the `event` field of every webhook delivery. See the [Webhook events](#section/Webhook-events) reference table for the full catalog.",
+        "enum": [
+          "summary.processing",
+          "summary.progress",
+          "summary.completed",
+          "summary.failed",
+          "webhook.test"
+        ]
+      },
+      "WebhookEventPayload": {
+        "type": "object",
+        "description": "Envelope POSTed to a customer-supplied `webhook_url` when a `summary.*` event fires, and to a test URL by `POST /webhooks/test` for `webhook.test`. The `data` block is event-specific (see `oneOf` below). Validate the `event` field first, then branch on it.",
+        "required": ["event", "data", "timestamp"],
+        "properties": {
+          "event":     { "$ref": "#/components/schemas/WebhookEventName" },
+          "timestamp": { "type": "string", "format": "date-time", "description": "ISO 8601 timestamp at which the webhook job was dispatched (TubeOnAI side, not your endpoint)." },
+          "data": {
+            "oneOf": [
+              { "$ref": "#/components/schemas/WebhookDataSummaryProcessing" },
+              { "$ref": "#/components/schemas/WebhookDataSummaryProgress" },
+              { "$ref": "#/components/schemas/WebhookDataSummaryCompleted" },
+              { "$ref": "#/components/schemas/WebhookDataSummaryFailed" },
+              { "$ref": "#/components/schemas/WebhookDataTest" }
+            ]
+          }
+        }
+      },
+      "WebhookDataSummaryProcessing": {
+        "type": "object",
+        "description": "`data` block for `summary.processing`.",
+        "properties": {
+          "id":         { "type": "string", "format": "uuid" },
+          "status":     { "type": "string", "enum": ["processing"] },
+          "request_id": { "type": "string", "nullable": true },
+          "message":    { "type": "string", "example": "Processing has started" },
+          "started_at": { "type": "string", "format": "date-time" }
+        }
+      },
+      "WebhookDataSummaryProgress": {
+        "type": "object",
+        "description": "`data` block for `summary.progress`. Fired on each `processing_progress` change while status is `processing`.",
+        "properties": {
+          "id":         { "type": "string", "format": "uuid" },
+          "status":     { "type": "string", "enum": ["processing"] },
+          "request_id": { "type": "string", "nullable": true },
+          "progress":   { "type": "integer", "minimum": 0, "maximum": 100 },
+          "message":    { "type": "string", "example": "Processing in progress: 42%" }
+        }
+      },
+      "WebhookDataSummaryCompleted": {
+        "type": "object",
+        "description": "`data` block for `summary.completed`. Includes the rendered summary and any translation that was applied for the requesting user's preferred language.",
+        "properties": {
+          "id":           { "type": "string", "format": "uuid" },
+          "status":       { "type": "string", "enum": ["completed"] },
+          "request_id":   { "type": "string", "nullable": true },
+          "title":        { "type": "string" },
+          "summary":      { "type": "string", "nullable": true },
+          "key_points":   { "description": "Array of bullet points; may be null.", "nullable": true },
+          "duration":     { "type": "integer", "nullable": true },
+          "thumbnail":    { "type": "string", "format": "uri", "nullable": true },
+          "word_count":   { "type": "integer" },
+          "completed_at": { "type": "string", "format": "date-time", "nullable": true },
+          "language":     { "type": "string", "description": "Present only when the summary was translated into the user's preferred language." }
+        }
+      },
+      "WebhookDataSummaryFailed": {
+        "type": "object",
+        "description": "`data` block for `summary.failed`.",
+        "properties": {
+          "id":         { "type": "string", "format": "uuid" },
+          "status":     { "type": "string", "enum": ["failed"] },
+          "request_id": { "type": "string", "nullable": true },
+          "error":      { "type": "string", "description": "Internal error reason (`error_details`)." },
+          "error_text": { "type": "string", "nullable": true, "description": "Human-friendly error message." },
+          "failed_at":  { "type": "string", "format": "date-time" }
+        }
+      },
+      "WebhookDataTest": {
+        "type": "object",
+        "description": "`data` block for `webhook.test` (delivered by `POST /webhooks/test`).",
+        "properties": {
+          "message":    { "type": "string", "example": "This is a test webhook from TubeOnAI Developer API" },
+          "request_id": { "type": "string" },
+          "user_id":    { "type": "integer" }
+        }
+      },
+      "WebhookTestSuccess": {
+        "type": "object",
+        "properties": {
+          "success": { "type": "boolean" },
+          "message": { "type": "string", "example": "Webhook test sent successfully." },
+          "data": {
+            "type": "object",
+            "properties": {
+              "url":           { "type": "string", "format": "uri" },
+              "response_code": { "type": "integer" },
+              "response_time": { "type": "number", "nullable": true, "description": "Transfer time in seconds." }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "WebhookTestFailure": {
+        "type": "object",
+        "properties": {
+          "success":    { "type": "boolean", "example": false },
+          "message":    { "type": "string" },
+          "error_code": { "allOf": [{ "$ref": "#/components/schemas/ErrorCode" }], "example": "webhook_connection_failed" },
+          "data": {
+            "type": "object",
+            "properties": {
+              "url":           { "type": "string", "format": "uri" },
+              "response_code": { "type": "integer", "description": "Only when endpoint responded with non-2xx." },
+              "response_body": { "type": "string", "description": "Truncated to 500 chars. Only when endpoint responded with non-2xx." },
+              "error":         { "type": "string", "description": "Only when connection failed." }
+            }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+
+      "PaginationMeta": {
+        "type": "object",
+        "description": "Pagination envelope returned on every list endpoint (`/summaries`, `/transcriptions`, `/prompts`, `/repurpose`, `/credits/history`). The window over the result set is described by `limit`/`offset`; use `has_more` to decide whether to request the next page.",
+        "properties": {
+          "total":    { "type": "integer", "description": "Total matching records across all pages." },
+          "limit":    { "description": "Echoed from the query param — may appear as a string when passed as a URL parameter.", "oneOf": [ { "type": "integer" }, { "type": "string" } ] },
+          "offset":   { "description": "Echoed from the query param.", "oneOf": [ { "type": "integer" }, { "type": "string" } ] },
+          "has_more": { "type": "boolean", "description": "True when `offset + limit < total`. Increment `offset` by `limit` to fetch the next page." }
+        }
+      },
+      "MessageResponse": {
+        "type": "object",
+        "properties": {
+          "success":    { "type": "boolean", "example": true },
+          "message":    { "type": "string" },
+          "request_id": { "type": "string" }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "success":    { "type": "boolean", "example": false },
+          "message":    { "type": "string" },
+          "error_code": { "$ref": "#/components/schemas/ErrorCode" },
+          "request_id": { "type": "string" }
+        }
+      },
+      "ErrorCode": {
+        "type": "string",
+        "description": "Machine-readable error identifier emitted by the Developer API. Use this (not `message`) for branching logic. Authentication failures (`401`) and rate-limit failures (`429`) are returned without an `error_code` field — see the `UnauthorizedResponse` and `RateLimitedResponse` schemas.",
+        "enum": [
+          "validation_error",
+          "insufficient_credits",
+          "duplicate_request",
+          "not_found",
+          "invalid_request",
+          "unsupported_content_type",
+          "file_too_large",
+          "video_no_audio_track",
+          "audio_file_invalid",
+          "content_unavailable",
+          "processing_failed",
+          "webhook_connection_failed",
+          "wallet_not_found",
+          "internal_error"
+        ]
+      },
+      "ValidationErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success":    { "type": "boolean", "example": false },
+          "message":    { "type": "string" },
+          "error_code": { "allOf": [{ "$ref": "#/components/schemas/ErrorCode" }], "example": "validation_error" },
+          "errors": {
+            "type": "object",
+            "additionalProperties": { "type": "array", "items": { "type": "string" } }
+          },
+          "request_id": { "type": "string" }
+        }
+      },
+      "PaymentRequiredResponse": {
+        "type": "object",
+        "properties": {
+          "success":           { "type": "boolean", "example": false },
+          "message":           { "type": "string" },
+          "error_code":        { "allOf": [{ "$ref": "#/components/schemas/ErrorCode" }], "example": "insufficient_credits" },
+          "required_credits":  { "type": "integer", "description": "Present when the check was quantitative." },
+          "available_credits": { "type": "integer" },
+          "request_id":        { "type": "string" }
+        }
+      },
+      "UnauthorizedResponse": {
+        "type": "object",
+        "description": "Auth failures do NOT include `error_code` or `request_id`.",
+        "properties": {
+          "success": { "type": "boolean", "example": false },
+          "message": { "type": "string" }
+        }
+      },
+      "RateLimitedResponse": {
+        "type": "object",
+        "description": "Returned with `Retry-After` header.",
+        "properties": {
+          "success":     { "type": "boolean", "example": false },
+          "message":     { "type": "string" },
+          "retry_after": { "type": "integer", "description": "Seconds." }
+        }
+      }
+    },
+    "responses": {
+      "NotFound": {
+        "description": "Resource not found",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "Forbidden": {
+        "description": "Access denied",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "BadRequest": {
+        "description": "Bad request (invalid file type, unsupported content, etc.)",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "PaymentRequired": {
+        "description": "Insufficient credits",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/PaymentRequiredResponse" } } }
+      },
+      "ValidationError": {
+        "description": "Validation error",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ValidationErrorResponse" } } }
+      },
+      "Unauthorized": {
+        "description": "Missing or invalid API key",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UnauthorizedResponse" } } }
+      },
+      "RateLimited": {
+        "description": "Rate limit exceeded",
+        "headers": {
+          "Retry-After": { "schema": { "type": "integer" }, "description": "Seconds to wait" }
+        },
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/RateLimitedResponse" } } }
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
 - [Home](/)
+- **📋 TODO Tracker**
+  - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
   - [Overview](memory-systems/)
 - **Agent Architectures**
@@ -13,6 +15,7 @@
   - [Memory System Architecture](archonos-notes/archonos-memory-system-architecture.md)
   - [▶ Memory System Visual Diagram](archonos-notes/archonos-memory-system-architecture.html)
   - [Memory: Current vs. Improvements](archonos-notes/memory-system-current-vs-improvements.md)
+  - [📋 Improvement TODO](archonos-notes/improvement-todo.md)
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)
   - [TubeOnAI OpenAPI JSON](resources/tubeonai-openapi.json)

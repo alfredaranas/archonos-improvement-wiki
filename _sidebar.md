@@ -4,6 +4,7 @@
 - **Memory Systems**
   - [Overview](memory-systems/)
   - [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md)
+  - [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md)
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)

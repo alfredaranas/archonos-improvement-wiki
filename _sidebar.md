@@ -5,6 +5,7 @@
   - [Overview](memory-systems/)
 - **Agent Architectures**
   - [Overview](agent-architectures/)
+  - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
 - **Tool Use & MCP**
   - [Overview](tool-use/)
 - **Production AI**

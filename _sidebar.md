@@ -6,6 +6,7 @@
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
+  - [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md)
 - **Tool Use & MCP**
   - [Overview](tool-use/)
 - **Production AI**

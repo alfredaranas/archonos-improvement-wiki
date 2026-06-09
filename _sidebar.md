@@ -3,6 +3,7 @@
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
   - [Overview](memory-systems/)
+  - [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md)
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)

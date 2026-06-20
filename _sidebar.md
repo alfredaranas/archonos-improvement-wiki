@@ -5,12 +5,19 @@
   - [Overview](memory-systems/)
   - [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md)
   - [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md)
+  - [I Built The Best Claude Memory System (Beats Hermes)](memory-systems/i-built-the-best-claude-memory-system-beats-hermes.md)
+  - [The Four Types of Memory Every AI Agent Needs](memory-systems/four-types-of-memory-every-ai-agent-needs.md)
+  - [Claude Can Now Dream - Memory of Agentic AI Explained](memory-systems/claude-dream-memory-of-agentic-ai.md)
+  - [ChatGPT's Memory Update Explained](memory-systems/chatgpt-memory-update-explained.md)
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
   - [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md)
+  - [Intelligent Java Apps: Agent Patterns, MCP, and AI-Native Design](agent-architectures/intelligent-java-apps-agent-patterns-mcp.md)
+  - [Plan Before You Build: Deterministic Planning Patterns for AI Agents](agent-architectures/deterministic-planning-patterns-ai-agents.md)
 - **Tool Use & MCP**
   - [Overview](tool-use/)
+  - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
 - **Production AI**
   - [Overview](production-ai/)
 - **ArchonOS Notes**
@@ -19,6 +26,7 @@
   - [Memory System Architecture](archonos-notes/archonos-memory-system-architecture.md)
   - [▶ Memory System Visual Diagram](archonos-notes/archonos-memory-system-architecture.html)
   - [Memory: Current vs. Improvements](archonos-notes/memory-system-current-vs-improvements.md)
+  - [Hermes Agentic OS (2026)](archonos-notes/hermes-agentic-os-just-watch.md)
   - [📋 Improvement TODO](archonos-notes/improvement-todo.md)
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)

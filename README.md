@@ -14,6 +14,14 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-06-13** [I Built The Best Claude Memory System (Beats Hermes)](memory-systems/i-built-the-best-claude-memory-system-beats-hermes.md) — Simon Scrapes — ⭐⭐⭐⭐⭐
+- **2026-06-13** [The Four Types of Memory Every AI Agent Needs](memory-systems/four-types-of-memory-every-ai-agent-needs.md) — IBM Technology — ⭐⭐⭐⭐⭐
+- **2026-06-13** [Claude Can Now Dream - Memory of Agentic AI Explained](memory-systems/claude-dream-memory-of-agentic-ai.md) — Piyush Garg — ⭐⭐⭐⭐
+- **2026-06-13** [ChatGPT's Memory Update Explained](memory-systems/chatgpt-memory-update-explained.md) — The AI Advantage — ⭐⭐⭐
+- **2026-06-13** [Intelligent Java Apps: Agent Patterns, MCP, and AI-Native Design](agent-architectures/intelligent-java-apps-agent-patterns-mcp.md) — Developer Summit — ⭐⭐⭐⭐⭐
+- **2026-06-13** [Plan Before You Build: Deterministic Planning Patterns for AI Agents](agent-architectures/deterministic-planning-patterns-ai-agents.md) — Spring I/O — ⭐⭐⭐⭐⭐
+- **2026-06-13** [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md) — Vijayaragavan — ⭐⭐⭐⭐
+- **2026-06-13** [Hermes Agentic OS is Insane... just watch (2026)](archonos-notes/hermes-agentic-os-just-watch.md) — Jack Roberts — ⭐⭐⭐⭐⭐
 - **2026-06-09** [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md) — Emergent Mind
 - **2026-06-09** [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md) — Emergent Mind
 - **2026-06-09** [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md) — EverestAn - AI Agent Research

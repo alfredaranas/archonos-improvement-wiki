@@ -9,17 +9,24 @@
   - [The Four Types of Memory Every AI Agent Needs](memory-systems/four-types-of-memory-every-ai-agent-needs.md)
   - [Claude Can Now Dream - Memory of Agentic AI Explained](memory-systems/claude-dream-memory-of-agentic-ai.md)
   - [ChatGPT's Memory Update Explained](memory-systems/chatgpt-memory-update-explained.md)
+  - [Agentic RAG in Production: Orchestration, Evaluation & ROI](memory-systems/agentic-rag-in-production-orchestration-evaluation-u0026-roi-IC_WfkgKESU.md)
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
   - [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md)
   - [Intelligent Java Apps: Agent Patterns, MCP, and AI-Native Design](agent-architectures/intelligent-java-apps-agent-patterns-mcp.md)
   - [Plan Before You Build: Deterministic Planning Patterns for AI Agents](agent-architectures/deterministic-planning-patterns-ai-agents.md)
+  - [AI Signals x LangChain Community #32: Agents, RAG, and Production AI Workflows](agent-architectures/ai-signals-x-langchain-community-32-agents-rag-and-productio-Gi2JBlzO-1A.md)
+  - [Building Enterprise Multi-Agent AI: LangGraph vs LangChain Explained](agent-architectures/building-enterprise-multi-agent-ai-langgraph-vs-langchain-ex-Unm37cQ70k0.md)
+  - [Orchestrating Intelligence: Multi-Agentic Design Patterns for Production AI](agent-architectures/orchestrating-intelligence-multi-agentic-design-patterns-for-vZb0Si1p64o.md)
+  - [Multi-Agent Orchestration Explained](agent-architectures/multi-agent-orchestration-explained-how-agentic-ai-systems-c-AoDdcWXlDyg.md)
 - **Tool Use & MCP**
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
+  - [Engineering Agentic RAG as a Tool](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md)
 - **Production AI**
   - [Overview](production-ai/)
+  - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)
@@ -27,6 +34,9 @@
   - [▶ Memory System Visual Diagram](archonos-notes/archonos-memory-system-architecture.html)
   - [Memory: Current vs. Improvements](archonos-notes/memory-system-current-vs-improvements.md)
   - [Hermes Agentic OS (2026)](archonos-notes/hermes-agentic-os-just-watch.md)
+  - [I Built the Ultimate Multi-Agent Workflow w/ Hermes Agent Kanban Board](archonos-notes/i-built-the-ultimate-multi-agent-workflow-w-hermes-agent-kan-EKVRqcpTT6s.md)
+  - [Building AI Agent Systems and Scaling Challenges in Agentic AI (IBM)](archonos-notes/building-ai-agent-systems-and-scaling-challenges-in-agentic--fCHe_fOqlYA.md)
+  - [OpenCode Internals: Architecture Patterns for Production AI Agents](archonos-notes/opencode-internals-architecture-patterns-for-production-ai-a-PqMvdmtlLWQ.md)
   - [📋 Improvement TODO](archonos-notes/improvement-todo.md)
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)

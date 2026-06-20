@@ -14,6 +14,16 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-06-20** [OpenCode Internals: Architecture Patterns for Production AI Agents](archonos-notes/opencode-internals-architecture-patterns-for-production-ai-a-PqMvdmtlLWQ.md) — AgenticEngineering — ⭐⭐⭐⭐⭐
+- **2026-06-20** [Building AI Agent Systems and Scaling Challenges in Agentic AI (IBM)](archonos-notes/building-ai-agent-systems-and-scaling-challenges-in-agentic--fCHe_fOqlYA.md) — IBM Technology — ⭐⭐⭐⭐⭐
+- **2026-06-20** [I Built the Ultimate Multi-Agent Workflow w/ Hermes Agent Kanban Board](archonos-notes/i-built-the-ultimate-multi-agent-workflow-w-hermes-agent-kan-EKVRqcpTT6s.md) — Tonbi's AI Garage — ⭐⭐⭐⭐⭐
+- **2026-06-20** [Engineering Agentic RAG as a Tool (Part 2)](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md) — Unfold Data Science — ⭐⭐⭐⭐⭐
+- **2026-06-20** [Orchestrating Intelligence: Multi-Agentic Design Patterns for Production AI](agent-architectures/orchestrating-intelligence-multi-agentic-design-patterns-for-vZb0Si1p64o.md) — Developer Summit / Mary Grygleski — ⭐⭐⭐⭐⭐
+- **2026-06-20** [AI Signals x LangChain Community #32: Agents, RAG, and Production AI Workflows](agent-architectures/ai-signals-x-langchain-community-32-agents-rag-and-productio-Gi2JBlzO-1A.md) — AI Signals — ⭐⭐⭐⭐⭐
+- **2026-06-20** [Building Enterprise Multi-Agent AI: LangGraph vs LangChain Explained](agent-architectures/building-enterprise-multi-agent-ai-langgraph-vs-langchain-ex-Unm37cQ70k0.md) — AsembleAI — ⭐⭐⭐⭐
+- **2026-06-20** [Multi-Agent Orchestration Explained](agent-architectures/multi-agent-orchestration-explained-how-agentic-ai-systems-c-AoDdcWXlDyg.md) — TechLambda — ⭐⭐⭐⭐
+- **2026-06-20** [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md) — The Ravit Show — ⭐⭐⭐⭐⭐
+- **2026-06-20** [Agentic RAG in Production: Orchestration, Evaluation & ROI](memory-systems/agentic-rag-in-production-orchestration-evaluation-u0026-roi-IC_WfkgKESU.md) — Developer Summit / Rohit Bhardwaj — ⭐⭐⭐⭐
 - **2026-06-13** [I Built The Best Claude Memory System (Beats Hermes)](memory-systems/i-built-the-best-claude-memory-system-beats-hermes.md) — Simon Scrapes — ⭐⭐⭐⭐⭐
 - **2026-06-13** [The Four Types of Memory Every AI Agent Needs](memory-systems/four-types-of-memory-every-ai-agent-needs.md) — IBM Technology — ⭐⭐⭐⭐⭐
 - **2026-06-13** [Claude Can Now Dream - Memory of Agentic AI Explained](memory-systems/claude-dream-memory-of-agentic-ai.md) — Piyush Garg — ⭐⭐⭐⭐

@@ -14,6 +14,16 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-06-27** [Hermes Agent V0.17 Explained: Multi-Agent AI, Security, and Automation](archonos-notes/hermes-agent-v017-explained-multi-agent-ai-security-and-automation-Ko4kjQutOQs.md) — Alex Hitt — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Jonathan Frankle, Databricks | Databricks Data+AI Summit 2026](production-ai/jonathan-frankle-databricks-databricks-dataai-summit-2026-0dxhNtOed8c.md) — SiliconANGLE theCUBE — ⭐⭐⭐⭐⭐
+- **2026-06-27** [EP02: The Agentic Loop: Where 27% of the Claude Certification Lives](tool-use/ep02-the-agentic-loop-where-27-of-the-claude-certification-lives-LTgjnnkYOtA.md) — Vivek Amilkanthawar — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Agentic AI Orchestration for Enterprise Workflows: A 2026 Implementati](production-ai/agentic-ai-orchestration-for-enterprise-workflows-a-2026-implementati-6w5ySE2BoZw.md) — Aetherlink — ⭐⭐⭐⭐⭐
+- **2026-06-27** [LangGraph vs CrewAI vs AutoGen: The Ultimate 2026 AI Agent Framework Comparison](agent-architectures/langgraph-vs-crewai-vs-autogen-the-ultimate-2026-ai-agent-framework-comparison-RvmQQIGToks.md) — The Daily Inquiry — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Multi-Agent AI System in C# & OpenAI | LLM Router, Parallel Agents, Aggregator Pattern](agent-architectures/multi-agent-ai-system-in-c-openai-llm-router-parallel-agents-aggregator-pattern-VeGrL4Ax3eI.md) — SynapseEdge Technology — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Claude AI - Part 18 - Function/tool calling patterns, Integrating APIs with agents and RAG](tool-use/claude-ai-part-18-functiontool-calling-patterns-integrating-apis-with-agents-and-2zu_I2Rqgso.md) — TechBytes by Sam — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Samuel Jaja - Building Production Multi-Agent RAG Systems on Serverless AWS | Pydata London 26](production-ai/samuel-jaja-building-production-multi-agent-rag-systems-on-serverless-aws-pydata-M4j1otT6Leg.md) — PyData — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Complete Agentic AI Course - AI Agents, RAG, Embeddings, Architectures, Framework, VectorDB & Memory](general/complete-agentic-ai-course-ai-agents-rag-embeddings-architectures-framework-vect-Pn95eOlw5qk.md) — Tejas AI — ⭐⭐⭐⭐⭐
+- **2026-06-27** [Multi-Agent in Copilot Studio: Child vs Connected Agents — 2026 Tutorial](agent-architectures/multi-agent-in-copilot-studio-child-vs-connected-agents-2026-tutorial-jldsogt0VX4.md) — Corporate Programming — ⭐⭐⭐⭐⭐
 - **2026-06-20** [OpenCode Internals: Architecture Patterns for Production AI Agents](archonos-notes/opencode-internals-architecture-patterns-for-production-ai-a-PqMvdmtlLWQ.md) — AgenticEngineering — ⭐⭐⭐⭐⭐
 - **2026-06-20** [Building AI Agent Systems and Scaling Challenges in Agentic AI (IBM)](archonos-notes/building-ai-agent-systems-and-scaling-challenges-in-agentic--fCHe_fOqlYA.md) — IBM Technology — ⭐⭐⭐⭐⭐
 - **2026-06-20** [I Built the Ultimate Multi-Agent Workflow w/ Hermes Agent Kanban Board](archonos-notes/i-built-the-ultimate-multi-agent-workflow-w-hermes-agent-kan-EKVRqcpTT6s.md) — Tonbi's AI Garage — ⭐⭐⭐⭐⭐

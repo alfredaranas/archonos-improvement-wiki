@@ -9,35 +9,38 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%22 0 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
   <link rel="stylesheet" href="vendor/fonts/jetbrains-mono.css">
   <style>
     /* ============================================================
-       ARCHONOS IMPROVEMENT WIKI — CYBERPUNK THEME
-       Colors derived from Alfred's dashboard screenshot
-       Background: #0d1117  |  Green: #00ff41  |  Blue: #00a3ff
-       Amber: #ffb86c       |  Red: #ff5555     |  Slate: #6272a4
+       ARCHONOS IMPROVEMENT WIKI — CYBERPUNK THEME (v3.0)
+       Bloomberg-terminal dashboard layout · Original cyberpunk DNA
+       Background: #0a0e14 | Green: #00ff41 | Blue: #00a3ff
+       Amber: #ffb86c     | Red: #ff5555  | Purple: #c792ea
        ============================================================ */
 
     :root {
-      --bg-primary: #0d1117;
-      --bg-secondary: #161b22;
-      --bg-tertiary: #1c2333;
+      --bg-primary: #0a0e14;
+      --bg-secondary: #0d1117;
+      --bg-tertiary: #161b22;
+      --bg-elevated: #1c2333;
       --border-color: #1e2a3a;
       --border-light: #2d3a4a;
-      --text-primary: #c9d1d9;
+      --text-primary: #e6edf3;
       --text-secondary: #8b949e;
       --text-muted: #6272a4;
       --accent-green: #00ff41;
-      --accent-green-dim: rgba(0, 255, 65, 0.12);
+      --accent-green-dim: rgba(0, 255, 65, 0.10);
       --accent-blue: #00a3ff;
-      --accent-blue-dim: rgba(0, 163, 255, 0.12);
+      --accent-blue-dim: rgba(0, 163, 255, 0.10);
       --accent-amber: #ffb86c;
-      --accent-amber-dim: rgba(255, 184, 108, 0.12);
+      --accent-amber-dim: rgba(255, 184, 108, 0.10);
       --accent-red: #ff5555;
-      --accent-red-dim: rgba(255, 85, 85, 0.12);
+      --accent-red-dim: rgba(255, 85, 85, 0.10);
+      --accent-purple: #c792ea;
+      --accent-purple-dim: rgba(199, 146, 234, 0.10);
       --font-mono: 'JetBrains Mono', monospace;
-      --sidebar-width: 300px;
+      --sidebar-width: 280px;
     }
 
     /* === BASE === */
@@ -49,68 +52,82 @@
       background: var(--bg-primary);
       color: var(--text-primary);
       font-family: var(--font-mono);
-      font-size: 14px;
-      line-height: 1.7;
+      font-size: 13px;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* === SIDEBAR === */
+    /* Hide docsify's default GitHub corner — replaced by our topbar button */
+    .github-corner, .github-banner { display: none !important; }
+
+    /* === SCROLLBAR === */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    a { color: var(--accent-blue); text-decoration: none; }
+    a:hover { color: var(--accent-green); }
+
+    /* === SIDEBAR (refined) === */
     .sidebar {
       background: var(--bg-secondary);
       border-right: 1px solid var(--border-color);
       width: var(--sidebar-width);
       overflow-y: auto;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
     }
 
-    .sidebar-nav {
-      padding: 16px 0;
-    }
-
-    .sidebar-nav li {
-      list-style: none;
-      margin: 0;
-    }
-
-    .sidebar-nav ul {
-      padding: 0;
-      margin: 0;
-    }
+    .sidebar-nav { padding: 16px 0; }
+    .sidebar-nav li { list-style: none; margin: 0; }
+    .sidebar-nav ul { padding: 0; margin: 0; }
 
     .sidebar ul li a {
       color: var(--text-secondary);
       font-size: 12px;
       font-family: var(--font-mono);
-      padding: 4px 20px;
+      padding: 5px 20px;
       border-left: 2px solid transparent;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       display: block;
       text-decoration: none;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.3px;
     }
-
     .sidebar ul li a:hover {
       color: var(--accent-green);
       background: var(--accent-green-dim);
       border-left-color: var(--accent-green);
     }
-
     .sidebar ul li a.active {
       color: var(--accent-green);
       border-left-color: var(--accent-green);
       background: var(--accent-green-dim);
     }
 
-    /* Sidebar section headers (strong tags in sidebar) */
+    /* Sidebar section headers */
     .sidebar-nav > ul > li > strong {
-      display: block;
-      color: var(--accent-blue);
-      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      padding: 12px 20px 4px;
+      letter-spacing: 2px;
+      padding: 14px 20px 4px;
       font-weight: 600;
     }
-
+    .sidebar-nav > ul > li > strong::after {
+      content: attr(data-count);
+      font-size: 9px;
+      background: var(--bg-elevated);
+      color: var(--text-muted);
+      padding: 1px 6px;
+      border-radius: 3px;
+      letter-spacing: 0;
+    }
     .sidebar-nav > ul > li > strong ~ ul li a {
       padding-left: 32px;
     }
@@ -118,30 +135,44 @@
     /* Sidebar app name */
     .app-name {
       border-bottom: 1px solid var(--border-color);
-      padding: 16px 20px;
-      text-align: left;
+      padding: 18px 20px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-
+    .app-name .dot {
+      width: 8px; height: 8px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
     .app-name a {
       color: var(--accent-green);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-decoration: none;
       text-shadow: 0 0 20px rgba(0, 255, 65, 0.25);
     }
-
-    .app-name a:hover {
-      color: var(--accent-green);
+    .app-name .version {
+      margin-left: auto;
+      font-size: 9px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
     }
 
-    /* Sidebar search box */
+    /* Sidebar search */
     .sidebar-search {
       padding: 12px 16px;
       border-bottom: 1px solid var(--border-color);
     }
-
     .sidebar-search input {
       background: var(--bg-primary);
       border: 1px solid var(--border-color);
@@ -152,43 +183,29 @@
       width: 100%;
       border-radius: 4px;
       outline: none;
-      transition: border-color 0.2s;
+      transition: border-color 0.15s;
     }
-
     .sidebar-search input:focus {
       border-color: var(--accent-blue);
       box-shadow: 0 0 8px rgba(0, 163, 255, 0.2);
     }
+    .sidebar-search input::placeholder { color: var(--text-muted); }
 
-    .sidebar-search input::placeholder {
-      color: var(--text-muted);
-    }
-
-    /* Search results in sidebar */
+    /* Search results */
     .search {
       background: var(--bg-primary);
       border-bottom: 1px solid var(--border-color);
     }
-
-    .search .search-keyword {
-      color: var(--accent-amber);
-      font-style: normal;
-    }
-
-    .search li a {
-      color: var(--text-secondary);
-    }
-
+    .search .search-keyword { color: var(--accent-amber); font-style: normal; }
+    .search li a { color: var(--text-secondary); }
     .search li a:hover {
       color: var(--accent-green);
       background: var(--accent-green-dim);
     }
-
     .search .matching-post {
       border-bottom: 1px solid var(--border-color);
       padding: 8px 16px;
     }
-
     .search .matching-post h2 {
       font-size: 13px;
       color: var(--accent-blue);
@@ -198,397 +215,608 @@
     /* === MAIN CONTENT === */
     .content {
       margin-left: var(--sidebar-width);
-      max-width: 900px;
-      padding: 40px 60px;
+      padding: 0;
       background: var(--bg-primary);
     }
 
-    /* === HEADINGS === */
+    /* === HEADINGS (existing docsify pages) === */
+    .markdown-section {
+      padding: 40px 60px;
+      max-width: 920px;
+    }
     .markdown-section h1 {
       color: var(--accent-green);
       font-size: 24px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 12px;
-      margin: 32px 0 16px;
+      margin: 0 0 24px;
     }
-
     .markdown-section h2 {
       color: var(--accent-blue);
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       margin: 28px 0 12px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border-color);
     }
-
     .markdown-section h3 {
       color: var(--accent-amber);
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       letter-spacing: 1px;
       margin: 24px 0 10px;
     }
-
     .markdown-section h4 {
       color: var(--text-primary);
-      font-size: 14px;
-      font-weight: 600;
-      margin: 20px 0 8px;
-    }
-
-    /* === LINKS === */
-    .markdown-section a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: all 0.2s;
-    }
-
-    .markdown-section a:hover {
-      color: var(--accent-green);
-      border-bottom-color: var(--accent-green);
-    }
-
-    /* === PARAGRAPHS === */
-    .markdown-section p {
-      color: var(--text-primary);
-      line-height: 1.8;
-      margin: 0 0 14px;
-    }
-
-    /* === LISTS === */
-    .markdown-section ul,
-    .markdown-section ol {
-      padding-left: 24px;
-      margin: 10px 0 16px;
-    }
-
-    .markdown-section li {
-      color: var(--text-primary);
-      margin: 4px 0;
-      line-height: 1.7;
-    }
-
-    .markdown-section li::marker {
-      color: var(--accent-blue);
-    }
-
-    /* === CODE BLOCKS === */
-    .markdown-section pre {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 16px 20px;
-      overflow-x: auto;
-      margin: 16px 0;
-      position: relative;
-    }
-
-    .markdown-section code {
-      font-family: var(--font-mono);
       font-size: 13px;
-      line-height: 1.6;
-      color: var(--accent-green);
+      font-weight: 600;
+      margin: 18px 0 8px;
     }
-
-    .markdown-section pre code {
-      color: var(--text-primary);
-      background: none;
+    .markdown-section p {
+      color: var(--text-secondary);
+      margin: 12px 0;
     }
-
-    /* Inline code */
-    .markdown-section p code,
-    .markdown-section li code {
+    .markdown-section a { color: var(--accent-blue); }
+    .markdown-section a:hover { color: var(--accent-green); }
+    .markdown-section ul, .markdown-section ol {
+      color: var(--text-secondary);
+      padding-left: 20px;
+    }
+    .markdown-section li { margin: 4px 0; }
+    .markdown-section blockquote {
+      border-left: 3px solid var(--accent-blue);
       background: var(--bg-tertiary);
+      padding: 12px 16px;
+      margin: 16px 0;
+      color: var(--text-secondary);
+    }
+    .markdown-section code {
+      background: var(--bg-elevated);
       color: var(--accent-amber);
       padding: 2px 6px;
       border-radius: 3px;
       font-size: 12px;
-      border: 1px solid var(--border-color);
     }
-
-    /* === BLOCKQUOTES === */
-    .markdown-section blockquote {
-      border-left: 3px solid var(--accent-blue);
+    .markdown-section pre {
       background: var(--bg-secondary);
-      margin: 16px 0;
-      padding: 12px 20px;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .markdown-section blockquote p {
-      color: var(--text-secondary);
-      margin: 0;
-      font-size: 13px;
-    }
-
-    /* === TABLES === */
-    .markdown-section table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-      font-size: 13px;
-    }
-
-    .markdown-section th {
-      background: var(--bg-secondary);
-      color: var(--accent-blue);
-      padding: 10px 14px;
-      text-align: left;
       border: 1px solid var(--border-color);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 11px;
+      border-top: 2px solid var(--accent-green);
+      border-radius: 4px;
+      padding: 14px 18px;
+      overflow-x: auto;
     }
-
-    .markdown-section td {
-      padding: 10px 14px;
-      border: 1px solid var(--border-color);
+    .markdown-section pre code {
+      background: transparent;
       color: var(--text-primary);
+      padding: 0;
     }
-
-    .markdown-section tr:hover td {
+    .markdown-section table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+      font-size: 12px;
+    }
+    .markdown-section table th {
+      background: var(--bg-elevated);
+      color: var(--accent-green);
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+    .markdown-section table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+    .markdown-section table tr:hover td {
       background: var(--bg-tertiary);
     }
 
-    /* === HORIZONTAL RULES === */
-    .markdown-section hr {
-      border: none;
-      border-top: 1px solid var(--border-color);
-      margin: 24px 0;
+    /* ============================================================
+       DASHBOARD HOME PAGE — Bloomberg-terminal style
+       Only renders on '/' route via custom docsify plugin below
+       ============================================================ */
+
+    .dashboard {
+      padding: 32px 48px;
+      max-width: 1400px;
     }
 
-    /* === TASKLIST CHECKBOXES === */
-    .markdown-section input[type="checkbox"] {
-      accent-color: var(--accent-green);
-      margin-right: 6px;
+    /* TOP BAR */
+    .dash-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 32px;
     }
-
-    /* === STRONG / EMPHASIS === */
-    .markdown-section strong {
-      color: var(--accent-green);
-      font-weight: 600;
-    }
-
-    .markdown-section em {
-      color: var(--accent-amber);
-    }
-
-    /* === IMAGES === */
-    .markdown-section img {
-      max-width: 100%;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-      margin: 16px 0;
-    }
-
-    /* === SCROLLBAR === */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg-primary);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--border-color);
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--border-light);
-    }
-
-    /* === COVER PAGE (if used) === */
-    section.cover {
-      background: var(--bg-primary) !important;
-    }
-
-    section.cover h1 {
-      color: var(--accent-green) !important;
-      text-shadow: 0 0 30px rgba(0, 255, 65, 0.3) !important;
-    }
-
-    /* === RESPONSIVE / MOBILE === */
-    /* Hide sidebar off-screen on mobile by default */
-    @media (max-width: 768px) {
-      body {
-        overflow-x: hidden;
-      }
-
-      .sidebar {
-        position: fixed;
-        top: 0;
-        left: -300px;
-        width: 280px;
-        height: 100vh;
-        z-index: 1000;
-        transition: left 0.25s ease;
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
-        overflow-y: auto;
-      }
-
-      body.close .sidebar {
-        left: 0;
-      }
-
-      .content {
-        margin-left: 0 !important;
-        padding: 20px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        transition: margin-left 0.25s ease;
-      }
-
-      /* Sidebar overlay when open */
-      .sidebar-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 999;
-      }
-
-      body.close .sidebar-overlay {
-        display: block;
-      }
-
-      /* Hamburger toggle button */
-      .sidebar-toggle {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        width: 44px;
-        height: 44px;
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        cursor: pointer;
-        z-index: 1001;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        transition: all 0.2s ease;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-      }
-
-      .sidebar-toggle:hover {
-        border-color: var(--accent-green);
-        box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
-      }
-
-      .sidebar-toggle .sidebar-toggle-button {
-        width: 20px;
-        height: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .sidebar-toggle .sidebar-toggle-button span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: var(--accent-green);
-        border-radius: 1px;
-        transition: all 0.25s ease;
-      }
-
-      /* Animate to X when open */
-      body.close .sidebar-toggle .sidebar-toggle-button span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-
-      body.close .sidebar-toggle .sidebar-toggle-button span:nth-child(2) {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-
-      body.close .sidebar-toggle .sidebar-toggle-button span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
-
-      /* App name on mobile */
-      .app-name {
-        padding: 12px 16px;
-      }
-
-      .app-name a {
-        font-size: 12px;
-        letter-spacing: 3px;
-      }
-
-      /* Content padding on small screens */
-      .markdown-section h1 {
-        font-size: 20px;
-        letter-spacing: 2px;
-      }
-
-      .markdown-section h2 {
-        font-size: 16px;
-      }
-
-      .markdown-section table {
-        font-size: 11px;
-      }
-
-      .markdown-section th,
-      .markdown-section td {
-        padding: 6px 8px;
-      }
-    }
-
-    /* === PROGRESS BAR (page load) === */
-    .progress {
-      background: linear-gradient(90deg, var(--accent-green), var(--accent-blue), var(--accent-amber));
-      height: 2px;
-    }
-
-    /* === TOGGLE BUTTON === */
-    .sidebar-toggle {
-      background: var(--bg-secondary);
-    }
-
-    /* === FOOTER AREA === */
-    .content p:last-child {
-      color: var(--text-muted);
-      font-size: 12px;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-      padding-top: 16px;
-      margin-top: 32px;
-    }
-
-    /* === TAG STYLING IN CONTENT === */
-    .markdown-section .tag {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 4px;
+    .dash-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-size: 11px;
+      color: var(--text-muted);
+    }
+    .dash-breadcrumb a { color: var(--text-secondary); }
+    .dash-breadcrumb a:hover { color: var(--accent-green); }
+    .dash-actions { display: flex; gap: 8px; }
+    .dash-btn {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 11px;
+      text-decoration: none;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dash-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+    .dash-btn.primary {
+      background: var(--accent-green-dim);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+    .dash-btn.primary:hover {
+      background: var(--accent-green);
+      color: var(--bg-primary);
+    }
+
+    /* HERO */
+    .dash-hero { margin-bottom: 32px; }
+    .dash-hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+      font-size: 11px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+    .dash-hero-meta .live {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-green);
+      font-weight: 500;
+    }
+    .dash-hero-meta .live .pulse {
+      width: 6px; height: 6px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--accent-green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .dash-hero-meta .sep { color: var(--border-light); }
+
+    .dash-hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      margin: 0 0 10px;
+      text-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+    }
+    .dash-hero h1 .accent { color: var(--accent-green); }
+    .dash-hero .subtitle {
+      color: var(--text-secondary);
+      font-size: 13px;
+      max-width: 760px;
+      line-height: 1.7;
+    }
+
+    /* STATS GRID */
+    .dash-stats {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .dash-stat {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 14px 16px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .dash-stat:hover {
+      border-color: var(--border-light);
+      transform: translateY(-1px);
+    }
+    .dash-stat::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent-green);
+    }
+    .dash-stat.blue::before { background: var(--accent-blue); }
+    .dash-stat.amber::before { background: var(--accent-amber); }
+    .dash-stat.purple::before { background: var(--accent-purple); }
+    .dash-stat .label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
       font-weight: 600;
-      letter-spacing: 1px;
-      margin: 2px 4px 2px 0;
+    }
+    .dash-stat .value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 5px;
+      font-variant-numeric: tabular-nums;
+    }
+    .dash-stat .value.green { color: var(--accent-green); }
+    .dash-stat .value.blue { color: var(--accent-blue); }
+    .dash-stat .value.amber { color: var(--accent-amber); }
+    .dash-stat .value.purple { color: var(--accent-purple); }
+    .dash-stat .delta {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+    }
+    .dash-stat .delta.up { color: var(--accent-green); }
+    .dash-stat .delta.down { color: var(--accent-amber); }
+
+    /* SECTION HEADER */
+    .dash-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .dash-section-head h2 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--text-secondary);
+      font-weight: 700;
+      margin: 0;
+    }
+    .dash-section-head .meta {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* CATEGORIES GRID */
+    .dash-categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .dash-cat-tile {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px;
+      transition: all 0.2s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+    }
+    .dash-cat-tile:hover {
+      border-color: var(--border-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    .dash-cat-tile .cat-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .dash-cat-tile .icon-wrap {
+      width: 38px; height: 38px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .dash-cat-tile.green .icon-wrap { background: var(--accent-green-dim); color: var(--accent-green); }
+    .dash-cat-tile.blue .icon-wrap { background: var(--accent-blue-dim); color: var(--accent-blue); }
+    .dash-cat-tile.amber .icon-wrap { background: var(--accent-amber-dim); color: var(--accent-amber); }
+    .dash-cat-tile.purple .icon-wrap { background: var(--accent-purple-dim); color: var(--accent-purple); }
+    .dash-cat-tile.red .icon-wrap { background: var(--accent-red-dim); color: var(--accent-red); }
+    .dash-cat-tile.slate .icon-wrap { background: rgba(98, 114, 164, 0.15); color: var(--text-muted); }
+
+    .dash-cat-tile .count {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-align: right;
+      letter-spacing: 0.3px;
+    }
+    .dash-cat-tile .count strong {
+      display: block;
+      color: var(--text-primary);
+      font-size: 18px;
+      line-height: 1;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+    .dash-cat-tile h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 4px;
+      letter-spacing: 0.3px;
+    }
+    .dash-cat-tile .desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .dash-cat-tile .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--text-muted);
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+      letter-spacing: 0.3px;
+    }
+    .dash-cat-tile .footer .last-update {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .dash-cat-tile .footer .last-update .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 4px var(--accent-green);
+    }
+    .dash-cat-tile.amber .footer .last-update .dot { background: var(--accent-amber); box-shadow: 0 0 4px var(--accent-amber); }
+    .dash-cat-tile .arrow {
+      font-size: 14px;
+      transition: transform 0.15s;
+    }
+    .dash-cat-tile:hover .arrow { transform: translateX(3px); color: var(--accent-green); }
+
+    /* RECENT ENTRIES */
+    .dash-entries {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 32px;
+    }
+    .dash-entry {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 12px 18px;
+      display: grid;
+      grid-template-columns: 80px 1fr auto auto auto;
+      gap: 18px;
+      align-items: center;
+      transition: all 0.15s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .dash-entry:hover {
+      border-color: var(--border-light);
+      background: var(--bg-tertiary);
+    }
+    .dash-entry .date {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.3px;
+    }
+    .dash-entry .info { min-width: 0; }
+    .dash-entry .info h4 {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin: 0 0 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .dash-entry .info .author {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+    }
+    .dash-entry .cat-tag {
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 3px;
+      border: 1px solid;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+    .dash-entry .cat-tag.green { color: var(--accent-green); border-color: var(--accent-green); background: var(--accent-green-dim); }
+    .dash-entry .cat-tag.blue { color: var(--accent-blue); border-color: var(--accent-blue); background: var(--accent-blue-dim); }
+    .dash-entry .cat-tag.amber { color: var(--accent-amber); border-color: var(--accent-amber); background: var(--accent-amber-dim); }
+    .dash-entry .cat-tag.purple { color: var(--accent-purple); border-color: var(--accent-purple); background: var(--accent-purple-dim); }
+    .dash-entry .cat-tag.red { color: var(--accent-red); border-color: var(--accent-red); background: var(--accent-red-dim); }
+    .dash-entry .cat-tag.slate { color: var(--text-muted); border-color: var(--border-light); background: transparent; }
+
+    .dash-entry .rating {
+      display: flex;
+      gap: 1px;
+      font-size: 10px;
+    }
+    .dash-entry .rating .star { color: var(--border-light); }
+    .dash-entry .rating .star.on { color: var(--accent-amber); }
+
+    .dash-entry .arrow {
+      color: var(--text-muted);
+      font-size: 14px;
+      transition: all 0.15s;
+    }
+    .dash-entry:hover .arrow { color: var(--accent-green); transform: translateX(2px); }
+
+    /* FOOTER */
+    .dash-footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+    .dash-footer .links { display: flex; gap: 18px; }
+    .dash-footer .links a { color: var(--text-secondary); letter-spacing: 0.3px; }
+    .dash-footer .version { font-variant-numeric: tabular-nums; letter-spacing: 0.3px; }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 1200px) {
+      .dash-stats { grid-template-columns: repeat(3, 1fr); }
+      .dash-categories { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .sidebar { position: relative; width: 100%; height: auto; }
+      .content { margin-left: 0; }
+      .dashboard { padding: 20px; }
+      .dash-stats { grid-template-columns: repeat(2, 1fr); }
+      .dash-categories { grid-template-columns: 1fr; }
+      .dash-entry {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .dash-entry .date { font-weight: 600; color: var(--text-secondary); }
     }
   </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
+    // Dashboard data — populated at build time by Oracle researcher cron.
+    // Edit this block when adding new batches; everything else is auto-derived.
+    window.__DASHBOARD__ = {
+      generated: '2026-07-02T16:05:00-05:00',
+      stats: {
+        totalEntries: 47,
+        totalDelta: '+10 this week',
+        categories: 6,
+        contributors: 38,
+        lastUpdateDays: 5,
+        avgRating: 4.6,
+        tubeOnAICredits: '19.2k'
+      },
+      categories: [
+        { slug: 'memory-systems',     name: 'Memory Systems',      color: 'green',  icon: '🧠', count: 9,  desc: 'RAG, long-term memory, vector stores, recall',                lastUpdate: '5d ago' },
+        { slug: 'agent-architectures',name: 'Agent Architectures', color: 'blue',   icon: '⚙',  count: 15, desc: 'Multi-agent orchestration, workflows, patterns',            lastUpdate: '5d ago' },
+        { slug: 'tool-use',           name: 'Tool Use & MCP',      color: 'purple', icon: '🔌', count: 5,  desc: 'Function calling, MCP protocol, tool integration',          lastUpdate: '5d ago' },
+        { slug: 'production-ai',      name: 'Production AI',       color: 'amber',  icon: '🚀', count: 5,  desc: 'Deployment, optimization, observability, scaling',          lastUpdate: '5d ago' },
+        { slug: 'archonos-notes',     name: 'ArchonOS Notes',      color: 'red',    icon: '📝', count: 10, desc: 'Direct takeaways and actionable improvements',             lastUpdate: '5d ago' },
+        { slug: 'general',            name: 'General',             color: 'slate',  icon: '📦', count: 3,  desc: 'Cross-cutting talks, conference highlights',               lastUpdate: '5d ago' }
+      ],
+      recent: [
+        { date: '2026-06-27', title: 'Hermes Agent V0.17 Explained: Multi-Agent AI, Security, and Automation', author: 'Alex Hitt',              category: 'ArchonOS Notes',  catColor: 'red',    rating: 5, path: 'archonos-notes/hermes-agent-v017-explained-multi-agent-ai-security-and-automation-Ko4kjQutOQs.md' },
+        { date: '2026-06-27', title: 'Jonathan Frankle, Databricks | Data+AI Summit 2026',                       author: 'SiliconANGLE theCUBE',   category: 'Production AI',   catColor: 'amber',  rating: 5, path: 'production-ai/jonathan-frankle-databricks-databricks-dataai-summit-2026-0dxhNtOed8c.md' },
+        { date: '2026-06-27', title: 'EP02: The Agentic Loop: Where 27% of the Claude Certification Lives',     author: 'Vivek Amilkanthawar',    category: 'Tool Use',        catColor: 'purple', rating: 5, path: 'tool-use/ep02-the-agentic-loop-where-27-of-the-claude-certification-lives-LTgjnnkYOtA.md' },
+        { date: '2026-06-27', title: 'Agentic AI Orchestration for Enterprise Workflows: A 2026 Implementation', author: 'Aetherlink',             category: 'Production AI',   catColor: 'amber',  rating: 5, path: 'production-ai/agentic-ai-orchestration-for-enterprise-workflows-a-2026-implementati-6w5ySE2BoZw.md' },
+        { date: '2026-06-27', title: 'LangGraph vs CrewAI vs AutoGen: The 2026 AI Agent Framework Comparison',   author: 'The Daily Inquiry',      category: 'Agent Arch.',     catColor: 'blue',   rating: 5, path: 'agent-architectures/langgraph-vs-creai-vs-autogen-the-ultimate-2026-ai-agent-framework-comparison-RvmQQIGToks.md' },
+        { date: '2026-06-27', title: 'Multi-Agent AI System in C# & OpenAI | LLM Router, Parallel Agents',        author: 'SynapseEdge Technology', category: 'Agent Arch.',     catColor: 'blue',   rating: 5, path: 'agent-architectures/multi-agent-ai-system-in-c-openai-llm-router-parallel-agents-aggregator-pattern-VeGrL4Ax3eI.md' },
+        { date: '2026-06-27', title: 'Claude AI - Part 18 - Function/tool calling patterns',                       author: 'TechBytes by Sam',       category: 'Tool Use',        catColor: 'purple', rating: 5, path: 'tool-use/claude-ai-part-18-functiontool-calling-patterns-integrating-apis-with-agents-and-2zu_I2Rqgso.md' },
+        { date: '2026-06-27', title: 'Samuel Jaja - Building Production Multi-Agent RAG Systems on Serverless AWS', author: 'PyData London 26',      category: 'Production AI',   catColor: 'amber',  rating: 5, path: 'production-ai/samuel-jaja-building-production-multi-agent-rag-systems-on-serverless-aws-pydata-M4j1otT6Leg.md' },
+        { date: '2026-06-27', title: 'Complete Agentic AI Course - AI Agents, RAG, Embeddings, Architectures',     author: 'Tejas AI',               category: 'General',         catColor: 'slate',  rating: 5, path: 'general/complete-agentic-ai-course-ai-agents-rag-embeddings-architectures-framework-vect-Pn95eOlw5qk.md' },
+        { date: '2026-06-20', title: 'OpenCode Internals: Architecture Patterns for Production AI Agents',         author: 'AgenticEngineering',    category: 'ArchonOS Notes',  catColor: 'red',    rating: 5, path: 'archonos-notes/opencode-internals-architecture-patterns-for-production-ai-a-PqMvdmtlLWQ.md' },
+        { date: '2026-06-20', title: 'Building AI Agent Systems and Scaling Challenges in Agentic AI',            author: 'IBM Technology',         category: 'ArchonOS Notes',  catColor: 'red',    rating: 5, path: 'archonos-notes/building-ai-agent-systems-and-scaling-challenges-in-agentic--fCHe_fOqlYA.md' },
+        { date: '2026-06-20', title: 'I Built the Ultimate Multi-Agent Workflow w/ Hermes Agent Kanban Board',     author: "Tonbi's AI Garage",      category: 'ArchonOS Notes',  catColor: 'red',    rating: 5, path: 'archonos-notes/i-built-the-ultimate-multi-agent-workflow-w-hermes-agent-kan-EKVRqcpTT6s.md' }
+      ]
+    };
+
+    // Render the dashboard HTML from window.__DASHBOARD__
+    function renderDashboard() {
+      var D = window.__DASHBOARD__;
+      var stats = D.stats;
+      var stars = function(n) {
+        var s = '';
+        for (var i = 1; i <= 5; i++) s += '<span class="star' + (i <= n ? ' on' : '') + '">★</span>';
+        return s;
+      };
+      var statsHtml =
+        '<div class="dash-stat"><div class="label">Total Entries</div><div class="value green">' + stats.totalEntries + '</div><div class="delta up">▲ ' + stats.totalDelta + '</div></div>' +
+        '<div class="dash-stat blue"><div class="label">Categories</div><div class="value blue">' + stats.categories + '</div><div class="delta">Active</div></div>' +
+        '<div class="dash-stat purple"><div class="label">Contributors</div><div class="value purple">' + stats.contributors + '</div><div class="delta">Unique channels</div></div>' +
+        '<div class="dash-stat amber"><div class="label">Last Update</div><div class="value amber">' + stats.lastUpdateDays + 'd</div><div class="delta down">Weekly cadence</div></div>' +
+        '<div class="dash-stat"><div class="label">Avg Rating</div><div class="value green">' + stats.avgRating + '</div><div class="delta">⭐ Relevance score</div></div>' +
+        '<div class="dash-stat blue"><div class="label">TubeOnAI Credits</div><div class="value blue">' + stats.tubeOnAICredits + '</div><div class="delta">Remaining</div></div>';
+
+      var catsHtml = D.categories.map(function(c) {
+        return '<a href="#/' + c.slug + '/" class="dash-cat-tile ' + c.color + '">' +
+          '<div class="cat-head"><div class="icon-wrap">' + c.icon + '</div>' +
+          '<div class="count"><strong>' + c.count + '</strong>entries</div></div>' +
+          '<h3>' + c.name + '</h3><div class="desc">' + c.desc + '</div>' +
+          '<div class="footer"><div class="last-update"><span class="dot"></span> ' + c.lastUpdate + '</div><div class="arrow">→</div></div>' +
+          '</a>';
+      }).join('');
+
+      var entriesHtml = D.recent.map(function(e) {
+        return '<a href="#/' + e.path + '" class="dash-entry">' +
+          '<div class="date">' + e.date + '</div>' +
+          '<div class="info"><h4>' + e.title + '</h4><div class="author">' + e.author + '</div></div>' +
+          '<span class="cat-tag ' + e.catColor + '">' + e.category + '</span>' +
+          '<div class="rating">' + stars(e.rating) + '</div>' +
+          '<div class="arrow">→</div>' +
+          '</a>';
+      }).join('');
+
+      return '<div class="dashboard">' +
+        '<div class="dash-topbar">' +
+          '<div class="dash-breadcrumb"><a href="#/">Home</a><span>/</span><span>Overview</span></div>' +
+          '<div class="dash-actions">' +
+            '<a href="https://github.com/alfredaranas/archonos-improvement-wiki" target="_blank" class="dash-btn">View on GitHub</a>' +
+            '<a href="https://github.com/alfredaranas/archonos-improvement-wiki/commits/main" target="_blank" class="dash-btn primary">↻ Refresh</a>' +
+          '</div>' +
+        '</div>' +
+        '<section class="dash-hero">' +
+          '<div class="dash-hero-meta">' +
+            '<span class="live"><span class="pulse"></span> LIVE</span>' +
+            '<span class="sep">·</span><span>Last sync ' + new Date(D.generated).toLocaleString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) + '</span>' +
+            '<span class="sep">·</span><span>Built by Oracle</span>' +
+          '</div>' +
+          '<h1>ArchonOS <span class="accent">Improvement Wiki</span></h1>' +
+          '<p class="subtitle">A living knowledge base of AI agent system improvements — discovered via YouTube, evaluated through <a href="https://tubeonai.com" target="_blank">TubeOnAI</a>, curated by <a href="https://github.com/alfredaranas" target="_blank">Oracle</a>, and applied to <a href="https://github.com/alfredaranas/archonos" target="_blank">ArchonOS</a>. Auto-updates weekly via cron.</p>' +
+        '</section>' +
+        '<div class="dash-stats">' + statsHtml + '</div>' +
+        '<div class="dash-section-head"><h2>Categories</h2><div class="meta">' + D.categories.length + ' categories · ' + stats.totalEntries + ' entries</div></div>' +
+        '<div class="dash-categories">' + catsHtml + '</div>' +
+        '<div class="dash-section-head"><h2>Recent Additions</h2><div class="meta">Latest ' + D.recent.length + ' · last batch 2026-06-27</div></div>' +
+        '<div class="dash-entries">' + entriesHtml + '</div>' +
+        '<div class="dash-footer">' +
+          '<div class="links"><a href="https://github.com/alfredaranas/archonos-improvement-wiki" target="_blank">View source on GitHub</a><a href="https://tubeonai.com" target="_blank">TubeOnAI</a><a href="https://github.com/alfredaranas/archonos" target="_blank">ArchonOS</a><a href="https://github.com/alfredaranas" target="_blank">Oracle</a></div>' +
+          '<div class="version">v3.0 · 2026-07-02</div>' +
+        '</div>' +
+        '</div>';
+    }
+
     window.$docsify = {
-      name: '▣ ARCHONOS',
+      name: 'ARCHONOS',
       nameLink: '/',
       repo: 'https://github.com/alfredaranas/archonos-improvement-wiki',
       loadSidebar: true,
@@ -599,63 +827,52 @@
       mergeNavbar: false,
       formatUpdated: '{YYYY}-{MM}-{DD}',
       plugins: [
+        // Home page dashboard injector — intercepts '/' route only
         function(hook, vm) {
-          hook.afterEach(function(html) {
+          hook.beforeEach(function(html) {
+            var route = vm.route.path;
+            if (route === '/' || route === '/README' || route === '/README.md' || route === '/index.html') {
+              return '<div class="dashboard-only">' + renderDashboard() + '</div>';
+            }
             return html;
           });
+
           hook.doneEach(function() {
-            // Add glow effect to first h1 on each page
-            const h1 = document.querySelector('.markdown-section h1');
-            if (h1) {
-              h1.style.textShadow = '0 0 20px rgba(0,255,65,0.2)';
-            }
+            // Add glow effect to first h1 on inner pages
+            var h1 = document.querySelector('.markdown-section h1');
+            if (h1) h1.style.textShadow = '0 0 20px rgba(0,255,65,0.2)';
+
             // Style code blocks: add a top bar
             document.querySelectorAll('.markdown-section pre').forEach(function(pre) {
               pre.style.borderTop = '2px solid var(--accent-green)';
             });
+
             // Style blockquotes with left accent
             document.querySelectorAll('.markdown-section blockquote').forEach(function(bq) {
               bq.style.borderLeftColor = 'var(--accent-blue)';
             });
           });
         },
-        // Mobile sidebar toggle injector
+        // Mobile sidebar toggle
         function(hook, vm) {
           hook.mounted(function() {
-            // Only inject on mobile viewport
             if (window.innerWidth > 768) return;
-
-            // Inject toggle button
             var toggle = document.createElement('button');
             toggle.className = 'sidebar-toggle';
             toggle.setAttribute('aria-label', 'Menu');
             toggle.innerHTML = '<div class="sidebar-toggle-button"><span></span><span></span><span></span></div>';
             document.body.appendChild(toggle);
-
-            // Inject overlay
             var overlay = document.createElement('div');
             overlay.className = 'sidebar-overlay';
             document.body.appendChild(overlay);
-
-            // Add close class to start (sidebar hidden)
             document.body.classList.add('close');
-
-            // Toggle handler
             toggle.addEventListener('click', function(e) {
               e.stopPropagation();
               document.body.classList.toggle('close');
             });
-
-            // Close sidebar when overlay is clicked
-            overlay.addEventListener('click', function() {
-              document.body.classList.add('close');
-            });
-
-            // Close sidebar when a nav link is clicked
+            overlay.addEventListener('click', function() { document.body.classList.add('close'); });
             document.querySelector('.sidebar').addEventListener('click', function(e) {
-              if (e.target.tagName === 'A') {
-                document.body.classList.add('close');
-              }
+              if (e.target.tagName === 'A') document.body.classList.add('close');
             });
           });
         }
@@ -667,6 +884,5 @@
   <script src="vendor/js/prism-bash.min.js"></script>
   <script src="vendor/js/prism-python.min.js"></script>
   <script src="vendor/js/prism-json.min.js"></script>
-  <script src="vendor/js/prism-sql.min.js"></script>
 </body>
 </html>

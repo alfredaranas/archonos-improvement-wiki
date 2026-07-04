@@ -14,6 +14,22 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-04** [Road to NODES AI: Graph-Based Long-Term Memory: How Agentic Workflows Adapt Thro](memory-systems/road-to-nodes-ai-graph-based-long-term-memory-how-agentic-workflows-adapt-thro-U_sA6S_jBxE.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Complete Deep Agents Course With Langchain In 3 Hours](production-ai/complete-deep-agents-course-with-langchain-in-3-hours-J8DzuMmSDEU.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Give Your Agents a Brain: Mastering Knowledge Graphs and Agentic Memory](archonos-notes/give-your-agents-a-brain-mastering-knowledge-graphs-and-agentic-memory-ltPdJCd0a48.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Autonomous Agents: 3 Reliability Traps | Claude Certified Architect | Agentic Ar](production-ai/autonomous-agents-3-reliability-traps-claude-certified-architect-agentic-ar-MEKNwAIAtKo.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [1. LLMs & Agentic AI Masterclass 2026 | Course Introduction  #llm #agenticai #uv](memory-systems/1-llms-agentic-ai-masterclass-2026-course-introduction-llm-agenticai-uv-_4SqcZoFLtQ.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Runaway Claude Agent? 6 CCA-F Architecture Fixes for Production-Safe AI](production-ai/runaway-claude-agent-6-cca-f-architecture-fixes-for-production-safe-ai-EoAb4igPaSs.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Agentic AI  10 Interview Questions (Patterns, MCP, Memory & Eval)  Intermediate](production-ai/agentic-ai-10-interview-questions-patterns-mcp-memory-eval-intermediate-nZlBfqOSiK8.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [AI Agent Memory Masterclass | How Agents Remember and Forget](memory-systems/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [ð¨ð¥Building an AI Threat Modeling Agent Claude Code + STRIDE + MCP for Auto](tool-use/building-an-ai-threat-modeling-agent-claude-code-stride-mcp-for-auto-zBU1ovXgDTU.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Agentic AI Workflows: Enterprise Automation & Orchestration 2026](production-ai/agentic-ai-workflows-enterprise-automation-orchestration-2026-ruT6m5Rqo2I.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [[Multi-Agent 5] MAO Project WALKTROUGH for Spec-Driven AI Agent Orchestration](agent-architectures/multi-agent-5-mao-project-walktrough-for-spec-driven-ai-agent-orchestration-RQPcXCnviFQ.md) — ⭐⭐⭐⭐
+- **2026-07-04** [The 2026 CTO Playbook: Scaling Agentic AI](production-ai/the-2026-cto-playbook-scaling-agentic-ai-DsXoGBLEcrQ.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Advanced RAG Architectures | How Production AI Systems Scale](production-ai/advanced-rag-architectures-how-production-ai-systems-scale-R62HMHGnbJU.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [RAG Evolution  Naive to Agentic](memory-systems/rag-evolution-naive-to-agentic-3AJFlXGkMyI.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Part 4 Agentic AI Course | Enterprise AI Architecture, Security & Agent Framewor](production-ai/part-4-agentic-ai-course-enterprise-ai-architecture-security-agent-framewor-9FDixrvhxdQ.md) — ⭐⭐⭐⭐⭐
+- **2026-07-04** [Agent Evaluation with Gemini Agent Eval API](production-ai/agent-evaluation-with-gemini-agent-eval-api-qo8i_0RCieU.md) — ⭐⭐⭐⭐
 - **2026-06-27** [Hermes Agent V0.17 Explained: Multi-Agent AI, Security, and Automation](archonos-notes/hermes-agent-v017-explained-multi-agent-ai-security-and-automation-Ko4kjQutOQs.md) — Alex Hitt — ⭐⭐⭐⭐⭐
 - **2026-06-27** [Jonathan Frankle, Databricks | Databricks Data+AI Summit 2026](production-ai/jonathan-frankle-databricks-databricks-dataai-summit-2026-0dxhNtOed8c.md) — SiliconANGLE theCUBE — ⭐⭐⭐⭐⭐
 - **2026-06-27** [EP02: The Agentic Loop: Where 27% of the Claude Certification Lives](tool-use/ep02-the-agentic-loop-where-27-of-the-claude-certification-lives-LTgjnnkYOtA.md) — Vivek Amilkanthawar — ⭐⭐⭐⭐⭐

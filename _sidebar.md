@@ -10,6 +10,11 @@
   - [Claude Can Now Dream - Memory of Agentic AI Explained](memory-systems/claude-dream-memory-of-agentic-ai.md)
   - [ChatGPT's Memory Update Explained](memory-systems/chatgpt-memory-update-explained.md)
   - [Agentic RAG in Production: Orchestration, Evaluation & ROI](memory-systems/agentic-rag-in-production-orchestration-evaluation-u0026-roi-IC_WfkgKESU.md)
+  - [Road to NODES AI: Graph-Based Long-Term Memory: How Agentic Workflows Adapt Thro](memory-systems/road-to-nodes-ai-graph-based-long-term-memory-how-agentic-workflows-adapt-thro-U_sA6S_jBxE.md) — ⭐⭐⭐⭐⭐
+  - [1. LLMs & Agentic AI Masterclass 2026 | Course Introduction  #llm #agenticai #uv](memory-systems/1-llms-agentic-ai-masterclass-2026-course-introduction-llm-agenticai-uv-_4SqcZoFLtQ.md) — ⭐⭐⭐⭐⭐
+  - [AI Agent Memory Masterclass | How Agents Remember and Forget](memory-systems/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
+  - [RAG Evolution  Naive to Agentic](memory-systems/rag-evolution-naive-to-agentic-3AJFlXGkMyI.md) — ⭐⭐⭐⭐⭐
+
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
@@ -23,18 +28,32 @@
   - [Multi-Agent AI System in C# & OpenAI | LLM Router, Parallel Agents, Aggregator Pattern](agent-architectures/multi-agent-ai-system-in-c-openai-llm-router-parallel-agents-aggregator-pattern-VeGrL4Ax3eI.md)
   - [LangGraph vs CrewAI vs AutoGen: The Ultimate 2026 AI Agent Framework Comparison](agent-architectures/langgraph-vs-crewai-vs-autogen-the-ultimate-2026-ai-agent-framework-comparison-RvmQQIGToks.md)
   - [Multi-Agent in Copilot Studio: Child vs Connected Agents — 2026 Tutorial](agent-architectures/multi-agent-in-copilot-studio-child-vs-connected-agents-2026-tutorial-jldsogt0VX4.md)
+  - [[Multi-Agent 5] MAO Project WALKTROUGH for Spec-Driven AI Agent Orchestration](agent-architectures/multi-agent-5-mao-project-walktrough-for-spec-driven-ai-agent-orchestration-RQPcXCnviFQ.md) — ⭐⭐⭐⭐
+
 - **Tool Use & MCP**
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
   - [Engineering Agentic RAG as a Tool](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md)
   - [Claude AI - Part 18 - Function/tool calling patterns, Integrating APIs with agents and RAG](tool-use/claude-ai-part-18-functiontool-calling-patterns-integrating-apis-with-agents-and-2zu_I2Rqgso.md)
   - [EP02: The Agentic Loop: Where 27% of the Claude Certification Lives](tool-use/ep02-the-agentic-loop-where-27-of-the-claude-certification-lives-LTgjnnkYOtA.md)
+  - [🚨🔥Building an AI Threat Modeling Agent Claude Code + STRIDE + MCP for Automated Vulnerability](tool-use/building-an-ai-threat-modeling-agent-claude-code-stride-mcp-for-auto-zBU1ovXgDTU.md) — ⭐⭐⭐⭐⭐
+
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
   - [Samuel Jaja - Building Production Multi-Agent RAG Systems on Serverless AWS | Pydata London 26](production-ai/samuel-jaja-building-production-multi-agent-rag-systems-on-serverless-aws-pydata-M4j1otT6Leg.md)
   - [Agentic AI Orchestration for Enterprise Workflows: A 2026 Implementati](production-ai/agentic-ai-orchestration-for-enterprise-workflows-a-2026-implementati-6w5ySE2BoZw.md)
   - [Jonathan Frankle, Databricks | Databricks Data+AI Summit 2026](production-ai/jonathan-frankle-databricks-databricks-dataai-summit-2026-0dxhNtOed8c.md)
+  - [Complete Deep Agents Course With Langchain In 3 Hours](production-ai/complete-deep-agents-course-with-langchain-in-3-hours-J8DzuMmSDEU.md) — ⭐⭐⭐⭐⭐
+  - [Autonomous Agents: 3 Reliability Traps | Claude Certified Architect | Agentic Ar](production-ai/autonomous-agents-3-reliability-traps-claude-certified-architect-agentic-ar-MEKNwAIAtKo.md) — ⭐⭐⭐⭐⭐
+  - [Runaway Claude Agent? 6 CCA-F Architecture Fixes for Production-Safe AI](production-ai/runaway-claude-agent-6-cca-f-architecture-fixes-for-production-safe-ai-EoAb4igPaSs.md) — ⭐⭐⭐⭐⭐
+  - [Agentic AI  10 Interview Questions (Patterns, MCP, Memory & Eval)  Intermediate](production-ai/agentic-ai-10-interview-questions-patterns-mcp-memory-eval-intermediate-nZlBfqOSiK8.md) — ⭐⭐⭐⭐⭐
+  - [Agentic AI Workflows: Enterprise Automation & Orchestration 2026](production-ai/agentic-ai-workflows-enterprise-automation-orchestration-2026-ruT6m5Rqo2I.md) — ⭐⭐⭐⭐⭐
+  - [The 2026 CTO Playbook: Scaling Agentic AI](production-ai/the-2026-cto-playbook-scaling-agentic-ai-DsXoGBLEcrQ.md) — ⭐⭐⭐⭐⭐
+  - [Advanced RAG Architectures | How Production AI Systems Scale](production-ai/advanced-rag-architectures-how-production-ai-systems-scale-R62HMHGnbJU.md) — ⭐⭐⭐⭐⭐
+  - [Part 4 Agentic AI Course | Enterprise AI Architecture, Security & Agent Framewor](production-ai/part-4-agentic-ai-course-enterprise-ai-architecture-security-agent-framewor-9FDixrvhxdQ.md) — ⭐⭐⭐⭐⭐
+  - [Agent Evaluation with Gemini Agent Eval API](production-ai/agent-evaluation-with-gemini-agent-eval-api-qo8i_0RCieU.md) — ⭐⭐⭐⭐
+
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)
@@ -47,6 +66,9 @@
   - [OpenCode Internals: Architecture Patterns for Production AI Agents](archonos-notes/opencode-internals-architecture-patterns-for-production-ai-a-PqMvdmtlLWQ.md)
   - [Hermes Agent V0.17 Explained: Multi-Agent AI, Security, and Automation](archonos-notes/hermes-agent-v017-explained-multi-agent-ai-security-and-automation-Ko4kjQutOQs.md)
   - [📋 Improvement TODO](archonos-notes/improvement-todo.md)
+  - [Give Your Agents a Brain: Mastering Knowledge Graphs and Agentic Memory](archonos-notes/give-your-agents-a-brain-mastering-knowledge-graphs-and-agentic-memory-ltPdJCd0a48.md) — ⭐⭐⭐⭐⭐
+  - [AI Agent Memory Masterclass | How Agents Remember and Forget](archonos-notes/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
+
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)
   - [TubeOnAI OpenAPI JSON](resources/tubeonai-openapi.json)

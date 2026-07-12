@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-12** [RAG Fundamentals: When to Use Retrieval-Augmented Generation](memory-systems/rag-fundamentals-retrieval-augmented-generation.md) — KodeKloud
 - **2026-07-12** [Agentic AI Framework Selection by System Type](agent-architectures/agentic-ai-framework-taxonomy.md) — IBM Technology
 - **2026-07-12** [DynamoDB + OpenSearch: Stateful Memory Architecture for Production Agents](memory-systems/dynamodb-opensearch-stateful-memory-architecture.md) — Family Trail
 - **2026-07-12** [Persistent Memory: Dual-Layer Architecture (Sessions + User Profiles)](memory-systems/persistent-memory-dual-layer-architecture.md) — Google Cloud Tech

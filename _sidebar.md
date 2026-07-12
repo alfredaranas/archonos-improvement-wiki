@@ -37,6 +37,7 @@
   - [Claude AI - Part 18 - Function/tool calling patterns, Integrating APIs with agents and RAG](tool-use/claude-ai-part-18-functiontool-calling-patterns-integrating-apis-with-agents-and-2zu_I2Rqgso.md)
   - [EP02: The Agentic Loop: Where 27% of the Claude Certification Lives](tool-use/ep02-the-agentic-loop-where-27-of-the-claude-certification-lives-LTgjnnkYOtA.md)
   - [🚨🔥Building an AI Threat Modeling Agent Claude Code + STRIDE + MCP for Automated Vulnerability](tool-use/building-an-ai-threat-modeling-agent-claude-code-stride-mcp-for-auto-zBU1ovXgDTU.md) — ⭐⭐⭐⭐⭐
+  - [Model Context Protocol (MCP): Standardized Model-to-Tool Integration](tool-use/model-context-protocol-mcp-overview.md)
 
 - **Production AI**
   - [Overview](production-ai/)

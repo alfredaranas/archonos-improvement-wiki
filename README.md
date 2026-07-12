@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-12** [Homelab AI Server Build: Multi-Agent Inference Setup](archonos-notes/homelab-ai-server-build-reference.md) — The Nitty-Gritty
 - **2026-07-12** [Agentic AI Learning Roadmap: Foundations to Production](agent-architectures/agentic-ai-learning-roadmap.md) — The DotNet Office
 - **2026-07-12** [Model Context Protocol (MCP): Standardized Model-to-Tool Integration](tool-use/model-context-protocol-mcp-overview.md) — Google Cloud Tech
 - **2026-07-04** [Road to NODES AI: Graph-Based Long-Term Memory: How Agentic Workflows Adapt Thro](memory-systems/road-to-nodes-ai-graph-based-long-term-memory-how-agentic-workflows-adapt-thro-U_sA6S_jBxE.md) — ⭐⭐⭐⭐⭐

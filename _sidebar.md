@@ -14,6 +14,7 @@
   - [1. LLMs & Agentic AI Masterclass 2026 | Course Introduction  #llm #agenticai #uv](memory-systems/1-llms-agentic-ai-masterclass-2026-course-introduction-llm-agenticai-uv-_4SqcZoFLtQ.md) — ⭐⭐⭐⭐⭐
   - [AI Agent Memory Masterclass | How Agents Remember and Forget](memory-systems/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
   - [RAG Evolution  Naive to Agentic](memory-systems/rag-evolution-naive-to-agentic-3AJFlXGkMyI.md) — ⭐⭐⭐⭐⭐
+  - [Persistent Memory: Dual-Layer Architecture (Sessions + User Profiles)](memory-systems/persistent-memory-dual-layer-architecture.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

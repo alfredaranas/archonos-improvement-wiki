@@ -16,6 +16,7 @@
   - [RAG Evolution  Naive to Agentic](memory-systems/rag-evolution-naive-to-agentic-3AJFlXGkMyI.md) — ⭐⭐⭐⭐⭐
   - [Persistent Memory: Dual-Layer Architecture (Sessions + User Profiles)](memory-systems/persistent-memory-dual-layer-architecture.md)
   - [DynamoDB + OpenSearch: Stateful Memory Architecture for Production Agents](memory-systems/dynamodb-opensearch-stateful-memory-architecture.md)
+  - [RAG Fundamentals: When to Use Retrieval-Augmented Generation](memory-systems/rag-fundamentals-retrieval-augmented-generation.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

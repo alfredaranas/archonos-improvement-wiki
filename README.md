@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-12** [Model Context Protocol (MCP): Standardized Model-to-Tool Integration](tool-use/model-context-protocol-mcp-overview.md) — Google Cloud Tech
 - **2026-07-04** [Road to NODES AI: Graph-Based Long-Term Memory: How Agentic Workflows Adapt Thro](memory-systems/road-to-nodes-ai-graph-based-long-term-memory-how-agentic-workflows-adapt-thro-U_sA6S_jBxE.md) — ⭐⭐⭐⭐⭐
 - **2026-07-04** [Complete Deep Agents Course With Langchain In 3 Hours](production-ai/complete-deep-agents-course-with-langchain-in-3-hours-J8DzuMmSDEU.md) — ⭐⭐⭐⭐⭐
 - **2026-07-04** [Give Your Agents a Brain: Mastering Knowledge Graphs and Agentic Memory](archonos-notes/give-your-agents-a-brain-mastering-knowledge-graphs-and-agentic-memory-ltPdJCd0a48.md) — ⭐⭐⭐⭐⭐

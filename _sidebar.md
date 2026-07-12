@@ -15,6 +15,7 @@
   - [AI Agent Memory Masterclass | How Agents Remember and Forget](memory-systems/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
   - [RAG Evolution  Naive to Agentic](memory-systems/rag-evolution-naive-to-agentic-3AJFlXGkMyI.md) — ⭐⭐⭐⭐⭐
   - [Persistent Memory: Dual-Layer Architecture (Sessions + User Profiles)](memory-systems/persistent-memory-dual-layer-architecture.md)
+  - [DynamoDB + OpenSearch: Stateful Memory Architecture for Production Agents](memory-systems/dynamodb-opensearch-stateful-memory-architecture.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

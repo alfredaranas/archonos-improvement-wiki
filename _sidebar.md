@@ -32,6 +32,7 @@
   - [Multi-Agent in Copilot Studio: Child vs Connected Agents — 2026 Tutorial](agent-architectures/multi-agent-in-copilot-studio-child-vs-connected-agents-2026-tutorial-jldsogt0VX4.md)
   - [[Multi-Agent 5] MAO Project WALKTROUGH for Spec-Driven AI Agent Orchestration](agent-architectures/multi-agent-5-mao-project-walktrough-for-spec-driven-ai-agent-orchestration-RQPcXCnviFQ.md) — ⭐⭐⭐⭐
   - [Agentic AI Learning Roadmap: Foundations to Production](agent-architectures/agentic-ai-learning-roadmap.md)
+  - [Agentic AI Framework Selection by System Type](agent-architectures/agentic-ai-framework-taxonomy.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

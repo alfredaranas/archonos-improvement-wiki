@@ -70,6 +70,7 @@
   - [📋 Improvement TODO](archonos-notes/improvement-todo.md)
   - [Give Your Agents a Brain: Mastering Knowledge Graphs and Agentic Memory](archonos-notes/give-your-agents-a-brain-mastering-knowledge-graphs-and-agentic-memory-ltPdJCd0a48.md) — ⭐⭐⭐⭐⭐
   - [AI Agent Memory Masterclass | How Agents Remember and Forget](archonos-notes/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
+  - [Homelab AI Server Build: Multi-Agent Inference Setup](archonos-notes/homelab-ai-server-build-reference.md)
 
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)

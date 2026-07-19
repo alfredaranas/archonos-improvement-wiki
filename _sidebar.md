@@ -18,6 +18,7 @@
   - [DynamoDB + OpenSearch: Stateful Memory Architecture for Production Agents](memory-systems/dynamodb-opensearch-stateful-memory-architecture.md)
   - [RAG Fundamentals: When to Use Retrieval-Augmented Generation](memory-systems/rag-fundamentals-retrieval-augmented-generation.md)
   - [General Agentic Memory (GAM): JIT-Based Lossless Context Management](memory-systems/general-agentic-memory-jit-architecture.md)
+  - [Production Agent Memory Architecture: Working & Long-Term Systems](memory-systems/production-agent-memory-architecture.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

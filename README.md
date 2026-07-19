@@ -14,6 +14,17 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [L8 Principal's Agentic Engineering Workflow](agent-architectures/l8-principal-s-agentic-engineering-workflow-iQyg-KypKAA.md) — Kun Chen — ⭐⭐⭐⭐⭐
+- **2026-07-19** [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — InterSystems Developers — ⭐⭐⭐⭐⭐
+- **2026-07-19** [Every Local AI I Run Now Shares ONE Memory | (LLM Wiki + OKF)](memory-systems/every-local-ai-i-run-now-shares-one-memory-llm-wiki-okf-IwN-eK1s8og.md) — Codacus — ⭐⭐⭐⭐⭐
+- **2026-07-19** [Lamis Mukta - Learning while you sleep: Beyond memory to dreaming - AI Native DevCon June 2026](memory-systems/lamis-mukta-learning-while-you-sleep-beyond-memory-to-dreaming-ai-native-devcon-june-2026-tTcxVv8HHNw.md) — AI Native Dev — ⭐⭐⭐⭐
+- **2026-07-19** [How Production AI Agents Are Actually Built | Mastra at Future Frontend 2026](production-ai/how-production-ai-agents-are-actually-built-mastra-at-future-frontend-2026-NbG2KydKDek.md) — Mastra — ⭐⭐⭐⭐⭐
+- **2026-07-19** [PII, Consent & Session Affinity Patterns That Work](production-ai/pii-consent-session-affinity-patterns-that-work-tuIm734-zMg.md) — Agentic AI Foundation — ⭐⭐⭐⭐⭐
+- **2026-07-19** [Building MCP Apps With GraphQL Patterns You Already Know - Jerel Miller, Apollo GraphQL](tool-use/building-mcp-apps-with-graphql-patterns-you-already-know-jerel-miller-apollo-graphql-IeRjaphHOeA.md) — GraphQL TV — ⭐⭐⭐⭐⭐
+- **2026-07-19** [Writing Better Tools for Agent | Zero to Enterprise AI Engineer (2026 Roadmap) | AI Agent - Part 4](tool-use/writing-better-tools-for-agent-zero-to-enterprise-ai-engineer-2026-roadmap-ai-agent-part-4-kUuAAbiJdX0.md) — NitMonk — ⭐⭐⭐⭐⭐
+- **2026-07-19** [Async Agents in Production: Failure Modes and Fixes — Seb Ringrose | AI in Production 2026](production-ai/async-agents-in-production-failure-modes-and-fixes-seb-ringrose-ai-in-production-2026-rdbdM_RnLCk.md) — Jumping Rivers — ⭐⭐⭐⭐⭐
+- **2026-07-19** [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents (Jul 2026)](memory-systems/compactionrl-reinforcement-learning-with-context-compaction-for-long-horizon-agents-jul-2026--HPThjYR_jA.md) — AI Paper Slop — ⭐⭐⭐
+- **2026-07-19** [06-24-2026 Is GraphRAG Needed Context Optimization](memory-systems/06-24-2026-is-graphrag-needed-context-optimization-AAPLGx5HEBQ.md) — Tinge Zhang — ⭐⭐⭐⭐
 - **2026-07-19** [RAG: Retrieval Augmented Generation Pipeline](memory-systems/rag-retrieval-augmented-generation-overview.md) — Apna College
 - **2026-07-19** [RAG: Retrieval Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md) — Don Woodlock
 - **2026-07-19** [Production RAG Architecture: From Demo to Robust Systems](memory-systems/production-rag-architecture.md) — ByteMonk

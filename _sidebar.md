@@ -30,6 +30,10 @@
   - [Agentic Memory Part 1: What is Agentic Memory & Types](memory-systems/agentic-memory-part-1-what-is-agentic-memory-types-9ta1cawyVsU.md) — ⭐⭐⭐⭐
   - [AI Book Club: Agentic Architectural Patterns for Building Multi-Agent Syste](memory-systems/ai-book-club-agentic-architectural-patterns-for-building-multi-agent-systems-uuyYkKqGrDs.md) — ⭐⭐⭐⭐⭐
   - [What Is an AI Agent? Complete Beginner Guide to AI Agents, Memory & Tools |](memory-systems/what-is-an-ai-agent-complete-beginner-guide-to-ai-agents-memory-tools-day-11-nSo-1anMFjg.md) — ⭐⭐⭐⭐
+  - [Every Local AI I Run Now Shares ONE Memory | (LLM Wiki + OKF)](memory-systems/every-local-ai-i-run-now-shares-one-memory-llm-wiki-okf-IwN-eK1s8og.md) — ⭐⭐⭐⭐⭐
+  - [Lamis Mukta - Learning while you sleep: Beyond memory to dreaming - AI Native DevCon June 2026](memory-systems/lamis-mukta-learning-while-you-sleep-beyond-memory-to-dreaming-ai-native-devcon-june-2026-tTcxVv8HHNw.md) — ⭐⭐⭐⭐
+  - [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents (Jul 2026)](memory-systems/compactionrl-reinforcement-learning-with-context-compaction-for-long-horizon-agents-jul-2026--HPThjYR_jA.md) — ⭐⭐⭐
+  - [06-24-2026 Is GraphRAG Needed Context Optimization](memory-systems/06-24-2026-is-graphrag-needed-context-optimization-AAPLGx5HEBQ.md) — ⭐⭐⭐⭐
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
@@ -56,6 +60,8 @@
 
   - [Agentic AI Frameworks Explained: Workflows, Multi-Agent, & Production](agent-architectures/agentic-ai-frameworks-explained-workflows-multi-agent-production-ZVPlLaehjLk.md) — ⭐⭐⭐⭐
   - [The Future of AI Agents with Andrew Ng | Interrupt 26](agent-architectures/the-future-of-ai-agents-with-andrew-ng-interrupt-26-OaRhpwz_TGM.md) — ⭐⭐⭐⭐
+  - [L8 Principal's Agentic Engineering Workflow](agent-architectures/l8-principal-s-agentic-engineering-workflow-iQyg-KypKAA.md) — ⭐⭐⭐⭐⭐
+  - [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — ⭐⭐⭐⭐⭐
 - **Tool Use & MCP**
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
@@ -74,6 +80,8 @@
   - [MCP vs Skills: Which Is Right for Your AI Agent and LLMs?](tool-use/mcp-vs-skills-which-is-right-for-your-ai-agent-and-llms-goU9VIXA8II.md) — ⭐⭐⭐⭐⭐
   - [Model Context Protocol in Claude Code](tool-use/model-context-protocol-in-claude-code-3Q-5viLs6CQ.md) — ⭐⭐⭐⭐⭐
   - [Solving Context Bloat: Semantic Tool Routing in Multi-Server MCP Environmen](tool-use/solving-context-bloat-semantic-tool-routing-in-multi-server-mcp-environments-L665WzukVcI.md) — ⭐⭐⭐⭐⭐
+  - [Building MCP Apps With GraphQL Patterns You Already Know - Jerel Miller, Apollo GraphQL](tool-use/building-mcp-apps-with-graphql-patterns-you-already-know-jerel-miller-apollo-graphql-IeRjaphHOeA.md) — ⭐⭐⭐⭐⭐
+  - [Writing Better Tools for Agent | Zero to Enterprise AI Engineer (2026 Roadmap) | AI Agent - Part 4](tool-use/writing-better-tools-for-agent-zero-to-enterprise-ai-engineer-2026-roadmap-ai-agent-part-4-kUuAAbiJdX0.md) — ⭐⭐⭐⭐⭐
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
@@ -95,6 +103,9 @@
   - [AI System Design: From Idea to Production - Apoorva Joshi, MongoDB](production-ai/ai-system-design-from-idea-to-production-apoorva-joshi-mongodb-T0HhO4YtTfE.md) — ⭐⭐⭐⭐
   - [Inside Freshworks' MCP Gateway](production-ai/inside-freshworks-mcp-gateway-GVB-1mTmBOU.md) — ⭐⭐⭐⭐⭐
   - [Flowgear v2 Build Experience: Workflows, Debugging, AI Assistant, MCP & Age](production-ai/flowgear-v2-build-experience-workflows-debugging-ai-assistant-mcp-agentic-automa-2PCUg3et538.md) — ⭐⭐⭐⭐⭐
+  - [How Production AI Agents Are Actually Built | Mastra at Future Frontend 2026](production-ai/how-production-ai-agents-are-actually-built-mastra-at-future-frontend-2026-NbG2KydKDek.md) — ⭐⭐⭐⭐⭐
+  - [PII, Consent & Session Affinity Patterns That Work](production-ai/pii-consent-session-affinity-patterns-that-work-tuIm734-zMg.md) — ⭐⭐⭐⭐⭐
+  - [Async Agents in Production: Failure Modes and Fixes — Seb Ringrose | AI in Production 2026](production-ai/async-agents-in-production-failure-modes-and-fixes-seb-ringrose-ai-in-production-2026-rdbdM_RnLCk.md) — ⭐⭐⭐⭐⭐
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)

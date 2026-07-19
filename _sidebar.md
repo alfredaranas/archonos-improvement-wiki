@@ -36,6 +36,7 @@
   - [[Multi-Agent 5] MAO Project WALKTROUGH for Spec-Driven AI Agent Orchestration](agent-architectures/multi-agent-5-mao-project-walktrough-for-spec-driven-ai-agent-orchestration-RQPcXCnviFQ.md) — ⭐⭐⭐⭐
   - [Agentic AI Learning Roadmap: Foundations to Production](agent-architectures/agentic-ai-learning-roadmap.md)
   - [Agentic AI Framework Selection by System Type](agent-architectures/agentic-ai-framework-taxonomy.md)
+  - [AutoGen vs CrewAI vs LangGraph: Framework Selection Matrix](agent-architectures/autogen-crewai-langgraph-comparison-2025.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

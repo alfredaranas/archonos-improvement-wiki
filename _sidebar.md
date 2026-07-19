@@ -37,6 +37,7 @@
   - [Agentic AI Learning Roadmap: Foundations to Production](agent-architectures/agentic-ai-learning-roadmap.md)
   - [Agentic AI Framework Selection by System Type](agent-architectures/agentic-ai-framework-taxonomy.md)
   - [AutoGen vs CrewAI vs LangGraph: Framework Selection Matrix](agent-architectures/autogen-crewai-langgraph-comparison-2025.md)
+  - [Multi-Agent Orchestration: Planning, Task Decomposition, and Handoff](agent-architectures/multi-agent-orchestration-patterns.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

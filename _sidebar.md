@@ -73,6 +73,7 @@
   - [Advanced RAG Architectures | How Production AI Systems Scale](production-ai/advanced-rag-architectures-how-production-ai-systems-scale-R62HMHGnbJU.md) — ⭐⭐⭐⭐⭐
   - [Part 4 Agentic AI Course | Enterprise AI Architecture, Security & Agent Framewor](production-ai/part-4-agentic-ai-course-enterprise-ai-architecture-security-agent-framewor-9FDixrvhxdQ.md) — ⭐⭐⭐⭐⭐
   - [Agent Evaluation with Gemini Agent Eval API](production-ai/agent-evaluation-with-gemini-agent-eval-api-qo8i_0RCieU.md) — ⭐⭐⭐⭐
+  - [Agentic AI Governance: Multi-Layer Risk Control](production-ai/agentic-ai-governance-framework.md)
 
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)

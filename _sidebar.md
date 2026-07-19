@@ -23,6 +23,7 @@
   - [Memory Indexing Failures in Stateful Agents](memory-systems/stateful-agent-memory-indexing-failure.md)
   - [Agent Memory via Bootstrap, Compaction, and Periodic Consolidation](memory-systems/agent-memory-four-mechanisms.md)
   - [Production RAG Architecture: From Demo to Robust Systems](memory-systems/production-rag-architecture.md)
+  - [RAG: Retrieval Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

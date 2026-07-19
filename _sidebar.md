@@ -48,6 +48,7 @@
   - [Model Context Protocol (MCP): USB-C Standard for AI Tool Integration](tool-use/model-context-protocol-mcp-overview.md)
   - [MCP as Universal Translator: Enriching Agent Tool Context](tool-use/mcp-universal-translator-pattern.md)
   - [Model Context Protocol (MCP): Standardized AI-Tool Integration](tool-use/model-context-protocol-mcp-integration-standard.md)
+  - [MCP vs Skills: Context Protocol vs Domain Knowledge Packaging](tool-use/mcp-vs-skills-comparison.md)
 
 - **Production AI**
   - [Overview](production-ai/)

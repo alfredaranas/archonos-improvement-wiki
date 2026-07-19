@@ -20,6 +20,7 @@
   - [General Agentic Memory (GAM): JIT-Based Lossless Context Management](memory-systems/general-agentic-memory-jit-architecture.md)
   - [Production Agent Memory Architecture: Working & Long-Term Systems](memory-systems/production-agent-memory-architecture.md)
   - [Local Multimodal RAG: DocLane Document Processing Pipeline](memory-systems/local-multimodal-rag-with-docklane.md)
+  - [Memory Indexing Failures in Stateful Agents](memory-systems/stateful-agent-memory-indexing-failure.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

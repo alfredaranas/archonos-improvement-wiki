@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [Agentic AI Governance: Multi-Layer Risk Control](production-ai/agentic-ai-governance-framework.md) — IBM Technology
 - **2026-07-19** [Agent Memory via Bootstrap, Compaction, and Periodic Consolidation](memory-systems/agent-memory-four-mechanisms.md) — Damian Galarza
 - **2026-07-19** [Memory Indexing Failures in Stateful Agents](memory-systems/stateful-agent-memory-indexing-failure.md) — The Bearded AI Guy
 - **2026-07-19** [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md) — rhemaai_tech_training

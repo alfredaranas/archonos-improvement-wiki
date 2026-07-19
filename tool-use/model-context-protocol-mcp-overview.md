@@ -1,22 +1,22 @@
-# Model Context Protocol (MCP): Standardized Model-to-Tool Integration
+# Model Context Protocol (MCP): USB-C Standard for AI Tool Integration
 
-> **Source:** [How Model Context Protocol (MCP) actually works](https://youtube.com/watch?v=cGuyrANVi4A)
-> **Channel:** Google Cloud Tech · **Published:** 2026-06-24 · **Ingested:** 2026-07-12
-> **Relevance score:** 10/10
+> **Source:** [Claude&#39;s Model Context Protocol is here... Let&#39;s test it](https://youtube.com/watch?v=HyzlYwjoXOQ)
+> **Channel:** Fireship · **Published:** 2025-03-31 · **Ingested:** 2026-07-19
+> **Relevance score:** 9/10
 
 ## Summary
 
-MCP is an open standard that enables models to discover and interact with tools, data, and context through a consistent, structured interface—replacing fragile custom integrations with a unified protocol. It abstracts over underlying REST/GraphQL APIs, allowing models to dynamically discover capabilities, invoke actions, and chain operations without hard-coded endpoints or brittle system prompts.
+MCP is Anthropic's standardized protocol for connecting LLMs to external data sources and actionable tools via a client-server architecture. It defines two primitives—resources (read-only context, analogous to REST GET) and tools (executable actions with side effects, analogous to REST POST)—enabling reliable, pluggable LLM integrations with schema validation via Zod to prevent hallucination.
 
 ## Key Takeaways
 
-- MCP defines client-server architecture where clients (models/agents) connect to servers exposing tools, resources, prompts, and context with standardized JSON schemas for discovery and execution
-- Four core resource types: tools (invokable actions), resources (data/state), prompts (behavioral templates), and context (external info)—each with metadata describing inputs, outputs, and capabilities
-- MCP is an abstraction layer above existing APIs; servers can wrap REST/GraphQL endpoints but expose them through MCP's consistent interface, eliminating per-integration custom code and reducing brittleness across model upgrades
+- MCP replaces ad-hoc API bindings with a standardized transport layer (stdio, SSE, or HTTP) that makes LLM clients portable across Claude, other models, and future AI systems
+- Resources fetch contextual data (files, DB queries) without side effects; tools execute actions (DB writes, file uploads) with strict schema validation to ground LLM behavior
+- MCP servers are effectively 'APIs for APIs'—wrap existing REST endpoints or cloud infrastructure (Postgres, S3, etc.) to expose them as composable context and actions to LLMs
 
 ## ArchonOS Applicability
 
-ArchonOS should implement MCP-compliant server interfaces for homelab tool integration (containers, VMs, file systems, local services). This enables the agent to dynamically discover available capabilities and interact with heterogeneous tools without hardcoded tool definitions, while maintaining separation between internal API implementations and model-facing standardized protocols.
+ArchonOS should implement MCP as the primary integration layer for homelab tools, databases, and services. Each MCP server wraps local infrastructure (k8s clusters, storage, DBs) as discoverable resources and tools, allowing the agent to reliably query state and execute infrastructure operations without custom SDK maintenance per tool.
 
 ---
 

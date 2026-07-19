@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [Multi-Agent Orchestration: Planning, Task Decomposition, and Handoff](agent-architectures/multi-agent-orchestration-patterns.md) — Databricks
 - **2026-07-19** [AutoGen vs CrewAI vs LangGraph: Framework Selection Matrix](agent-architectures/autogen-crewai-langgraph-comparison-2025.md) — Digibase Media
 - **2026-07-19** [MCP vs Skills: Context Protocol vs Domain Knowledge Packaging](tool-use/mcp-vs-skills-comparison.md) — IBM Technology
 - **2026-07-19** [Model Context Protocol (MCP): Standardized AI-Tool Integration](tool-use/model-context-protocol-mcp-integration-standard.md) — ByteByteGo

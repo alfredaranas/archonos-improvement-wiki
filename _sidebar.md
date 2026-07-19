@@ -45,6 +45,7 @@
   - [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md)
   - [Three Pillars of Agentic Workflows vs. Chatbot Responses](agent-architectures/agentic-workflow-three-pillars.md)
   - [Agent Loop: Observe-Think-Act Pattern](agent-architectures/agent-loop-observe-think-act.md)
+  - [Low-Precision Task Selection for Agent Automation](agent-architectures/agent-task-selection-precision-framework.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

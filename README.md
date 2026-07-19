@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [RAG: Retrieval Augmented Generation Pipeline](memory-systems/rag-retrieval-augmented-generation-overview.md) — Apna College
 - **2026-07-19** [RAG: Retrieval Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md) — Don Woodlock
 - **2026-07-19** [Production RAG Architecture: From Demo to Robust Systems](memory-systems/production-rag-architecture.md) — ByteMonk
 - **2026-07-19** [Low-Precision Task Selection for Agent Automation](agent-architectures/agent-task-selection-precision-framework.md) — Futurepedia

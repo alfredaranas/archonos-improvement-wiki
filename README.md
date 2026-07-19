@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md) — rhemaai_tech_training
 - **2026-07-19** [Deferred Tool Loading & Programmatic Tool Calling: Context-Efficient Agent Patterns](tool-use/deferred-tool-loading-programmatic-calling.md) — The AI Automators
 - **2026-07-19** [Local Multimodal RAG: DocLane Document Processing Pipeline](memory-systems/local-multimodal-rag-with-docklane.md) — The AI Automators
 - **2026-07-19** [Multi-Agent Systems: When & How to Deploy](agent-architectures/multi-agent-systems-decision-framework.md) — Shaw Talebi

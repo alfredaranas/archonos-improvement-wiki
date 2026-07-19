@@ -21,6 +21,7 @@
   - [Production Agent Memory Architecture: Working & Long-Term Systems](memory-systems/production-agent-memory-architecture.md)
   - [Local Multimodal RAG: DocLane Document Processing Pipeline](memory-systems/local-multimodal-rag-with-docklane.md)
   - [Memory Indexing Failures in Stateful Agents](memory-systems/stateful-agent-memory-indexing-failure.md)
+  - [Agent Memory via Bootstrap, Compaction, and Periodic Consolidation](memory-systems/agent-memory-four-mechanisms.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

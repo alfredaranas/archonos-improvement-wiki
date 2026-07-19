@@ -26,6 +26,10 @@
   - [RAG: Retrieval Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md)
   - [RAG: Retrieval Augmented Generation Pipeline](memory-systems/rag-retrieval-augmented-generation-overview.md)
 
+  - [Build Your Own Fully Private, Local AI Stack (Chat, RAG, Coding Agent, Auto](memory-systems/build-your-own-fully-private-local-ai-stack-chat-rag-coding-agent-automation-oh50KFF8A_0.md) — ⭐⭐⭐⭐
+  - [Agentic Memory Part 1: What is Agentic Memory & Types](memory-systems/agentic-memory-part-1-what-is-agentic-memory-types-9ta1cawyVsU.md) — ⭐⭐⭐⭐
+  - [AI Book Club: Agentic Architectural Patterns for Building Multi-Agent Syste](memory-systems/ai-book-club-agentic-architectural-patterns-for-building-multi-agent-systems-uuyYkKqGrDs.md) — ⭐⭐⭐⭐⭐
+  - [What Is an AI Agent? Complete Beginner Guide to AI Agents, Memory & Tools |](memory-systems/what-is-an-ai-agent-complete-beginner-guide-to-ai-agents-memory-tools-day-11-nSo-1anMFjg.md) — ⭐⭐⭐⭐
 - **Agent Architectures**
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
@@ -50,6 +54,8 @@
   - [Agent Loop: Observe-Think-Act Pattern](agent-architectures/agent-loop-observe-think-act.md)
   - [Low-Precision Task Selection for Agent Automation](agent-architectures/agent-task-selection-precision-framework.md)
 
+  - [Agentic AI Frameworks Explained: Workflows, Multi-Agent, & Production](agent-architectures/agentic-ai-frameworks-explained-workflows-multi-agent-production-ZVPlLaehjLk.md) — ⭐⭐⭐⭐
+  - [The Future of AI Agents with Andrew Ng | Interrupt 26](agent-architectures/the-future-of-ai-agents-with-andrew-ng-interrupt-26-OaRhpwz_TGM.md) — ⭐⭐⭐⭐
 - **Tool Use & MCP**
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
@@ -64,6 +70,10 @@
   - [MCP vs Skills: Context Protocol vs Domain Knowledge Packaging](tool-use/mcp-vs-skills-comparison.md)
   - [Deferred Tool Loading & Programmatic Tool Calling: Context-Efficient Agent Patterns](tool-use/deferred-tool-loading-programmatic-calling.md)
 
+  - [Why Your MCP Agents Drift at Scale (And the Fix With Shared State)](tool-use/why-your-mcp-agents-drift-at-scale-and-the-fix-with-shared-state-ELRKqq0NaX8.md) — ⭐⭐⭐⭐⭐
+  - [MCP vs Skills: Which Is Right for Your AI Agent and LLMs?](tool-use/mcp-vs-skills-which-is-right-for-your-ai-agent-and-llms-goU9VIXA8II.md) — ⭐⭐⭐⭐⭐
+  - [Model Context Protocol in Claude Code](tool-use/model-context-protocol-in-claude-code-3Q-5viLs6CQ.md) — ⭐⭐⭐⭐⭐
+  - [Solving Context Bloat: Semantic Tool Routing in Multi-Server MCP Environmen](tool-use/solving-context-bloat-semantic-tool-routing-in-multi-server-mcp-environments-L665WzukVcI.md) — ⭐⭐⭐⭐⭐
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
@@ -81,6 +91,10 @@
   - [Agent Evaluation with Gemini Agent Eval API](production-ai/agent-evaluation-with-gemini-agent-eval-api-qo8i_0RCieU.md) — ⭐⭐⭐⭐
   - [Agentic AI Governance: Multi-Layer Risk Control](production-ai/agentic-ai-governance-framework.md)
 
+  - [30 AI Agent Interview Questions You WILL Be Asked in 2026 (MCP, A2A, LangGr](production-ai/30-ai-agent-interview-questions-you-will-be-asked-in-2026-mcp-a2a-langgraph-crew-ej-XwkYqAyE.md) — ⭐⭐⭐⭐⭐
+  - [AI System Design: From Idea to Production - Apoorva Joshi, MongoDB](production-ai/ai-system-design-from-idea-to-production-apoorva-joshi-mongodb-T0HhO4YtTfE.md) — ⭐⭐⭐⭐
+  - [Inside Freshworks' MCP Gateway](production-ai/inside-freshworks-mcp-gateway-GVB-1mTmBOU.md) — ⭐⭐⭐⭐⭐
+  - [Flowgear v2 Build Experience: Workflows, Debugging, AI Assistant, MCP & Age](production-ai/flowgear-v2-build-experience-workflows-debugging-ai-assistant-mcp-agentic-automa-2PCUg3et538.md) — ⭐⭐⭐⭐⭐
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)
@@ -94,7 +108,6 @@
   - [Hermes Agent V0.17 Explained: Multi-Agent AI, Security, and Automation](archonos-notes/hermes-agent-v017-explained-multi-agent-ai-security-and-automation-Ko4kjQutOQs.md)
   - [📋 Improvement TODO](archonos-notes/improvement-todo.md)
   - [Give Your Agents a Brain: Mastering Knowledge Graphs and Agentic Memory](archonos-notes/give-your-agents-a-brain-mastering-knowledge-graphs-and-agentic-memory-ltPdJCd0a48.md) — ⭐⭐⭐⭐⭐
-  - [AI Agent Memory Masterclass | How Agents Remember and Forget](archonos-notes/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
   - [Homelab AI Server Build: Multi-Agent Inference Setup](archonos-notes/homelab-ai-server-build-reference.md)
 
 - **Resources**

@@ -1,3 +1,9 @@
+---
+kind: structural
+provenance_note: "Internal TODO — derived from fleet daily review"
+provenance_classified_at: 2026-07-10
+---
+
 # ArchonOS Improvement TODO
 
 > Live implementation tracker — sourced from the [Memory System Roadmap](memory-system-current-vs-improvements.md).  

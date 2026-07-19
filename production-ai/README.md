@@ -1,3 +1,9 @@
+---
+kind: structural
+provenance_note: "Section index — see production-ai/*.md"
+provenance_classified_at: 2026-07-10
+---
+
 # Production AI
 
 Videos about deploying, scaling, monitoring, and optimizing AI systems in production.

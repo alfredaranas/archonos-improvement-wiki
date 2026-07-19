@@ -1,3 +1,9 @@
+---
+kind: structural
+provenance_note: "Internal design doc — derived from fleet memory infra"
+provenance_classified_at: 2026-07-10
+---
+
 # ArchonOS Memory System — Current State vs. Improvement Roadmap
 
 > **Prerequisite:** Read [Memory System Architecture](archonos-memory-system-architecture.md) first — this document builds on the full 6-layer inventory.

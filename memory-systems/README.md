@@ -1,3 +1,9 @@
+---
+kind: structural
+provenance_note: "Section index — see memory-systems/*.md"
+provenance_classified_at: 2026-07-10
+---
+
 # Memory Systems
 
 Videos about AI memory: RAG, long-term memory, vector stores, recall mechanisms, context management.

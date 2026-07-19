@@ -1,3 +1,9 @@
+---
+kind: structural
+provenance_note: "Section index — see archonos-notes/*.md"
+provenance_classified_at: 2026-07-10
+---
+
 # ArchonOS Notes
 
 Direct takeaways from videos mapped to specific improvements for ArchonOS.

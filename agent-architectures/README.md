@@ -1,3 +1,9 @@
+---
+kind: structural
+provenance_note: "Section index — see agent-architectures/*.md"
+provenance_classified_at: 2026-07-10
+---
+
 # Agent Architectures
 
 Videos about multi-agent orchestration, agent workflows, design patterns, and agentic systems.

@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [Low-Precision Task Selection for Agent Automation](agent-architectures/agent-task-selection-precision-framework.md) — Futurepedia
 - **2026-07-19** [Agent Loop: Observe-Think-Act Pattern](agent-architectures/agent-loop-observe-think-act.md) — Greg Isenberg
 - **2026-07-19** [Three Pillars of Agentic Workflows vs. Chatbot Responses](agent-architectures/agentic-workflow-three-pillars.md) — AI Master
 - **2026-07-19** [Agentic AI Governance: Multi-Layer Risk Control](production-ai/agentic-ai-governance-framework.md) — IBM Technology

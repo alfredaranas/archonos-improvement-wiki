@@ -44,6 +44,7 @@
   - [Multi-Agent Systems: When & How to Deploy](agent-architectures/multi-agent-systems-decision-framework.md)
   - [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md)
   - [Three Pillars of Agentic Workflows vs. Chatbot Responses](agent-architectures/agentic-workflow-three-pillars.md)
+  - [Agent Loop: Observe-Think-Act Pattern](agent-architectures/agent-loop-observe-think-act.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

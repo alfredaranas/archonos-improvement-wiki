@@ -24,6 +24,7 @@
   - [Agent Memory via Bootstrap, Compaction, and Periodic Consolidation](memory-systems/agent-memory-four-mechanisms.md)
   - [Production RAG Architecture: From Demo to Robust Systems](memory-systems/production-rag-architecture.md)
   - [RAG: Retrieval Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md)
+  - [RAG: Retrieval Augmented Generation Pipeline](memory-systems/rag-retrieval-augmented-generation-overview.md)
 
 - **Agent Architectures**
   - [Overview](agent-architectures/)

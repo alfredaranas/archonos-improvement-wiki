@@ -46,6 +46,7 @@
   - [🚨🔥Building an AI Threat Modeling Agent Claude Code + STRIDE + MCP for Automated Vulnerability](tool-use/building-an-ai-threat-modeling-agent-claude-code-stride-mcp-for-auto-zBU1ovXgDTU.md) — ⭐⭐⭐⭐⭐
   - [Model Context Protocol (MCP): Standardized Model-to-Tool Integration](tool-use/model-context-protocol-mcp-overview.md)
   - [Model Context Protocol (MCP): USB-C Standard for AI Tool Integration](tool-use/model-context-protocol-mcp-overview.md)
+  - [MCP as Universal Translator: Enriching Agent Tool Context](tool-use/mcp-universal-translator-pattern.md)
 
 - **Production AI**
   - [Overview](production-ai/)

@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-19** [MCP as Universal Translator: Enriching Agent Tool Context](tool-use/mcp-universal-translator-pattern.md) — Nate Herk | AI Automation
 - **2026-07-19** [Model Context Protocol (MCP): USB-C Standard for AI Tool Integration](tool-use/model-context-protocol-mcp-overview.md) — Fireship
 - **2026-07-19** [Production Agent Memory Architecture: Working & Long-Term Systems](memory-systems/production-agent-memory-architecture.md) — Mukul Raina
 - **2026-07-19** [General Agentic Memory (GAM): JIT-Based Lossless Context Management](memory-systems/general-agentic-memory-jit-architecture.md) — AI Paper Slop

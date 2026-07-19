@@ -40,6 +40,7 @@
   - [AutoGen vs CrewAI vs LangGraph: Framework Selection Matrix](agent-architectures/autogen-crewai-langgraph-comparison-2025.md)
   - [Multi-Agent Orchestration: Planning, Task Decomposition, and Handoff](agent-architectures/multi-agent-orchestration-patterns.md)
   - [Multi-Agent Systems: When & How to Deploy](agent-architectures/multi-agent-systems-decision-framework.md)
+  - [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

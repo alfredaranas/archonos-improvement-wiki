@@ -43,6 +43,7 @@
   - [Multi-Agent Orchestration: Planning, Task Decomposition, and Handoff](agent-architectures/multi-agent-orchestration-patterns.md)
   - [Multi-Agent Systems: When & How to Deploy](agent-architectures/multi-agent-systems-decision-framework.md)
   - [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md)
+  - [Three Pillars of Agentic Workflows vs. Chatbot Responses](agent-architectures/agentic-workflow-three-pillars.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

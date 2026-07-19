@@ -38,6 +38,7 @@
   - [Agentic AI Framework Selection by System Type](agent-architectures/agentic-ai-framework-taxonomy.md)
   - [AutoGen vs CrewAI vs LangGraph: Framework Selection Matrix](agent-architectures/autogen-crewai-langgraph-comparison-2025.md)
   - [Multi-Agent Orchestration: Planning, Task Decomposition, and Handoff](agent-architectures/multi-agent-orchestration-patterns.md)
+  - [Multi-Agent Systems: When & How to Deploy](agent-architectures/multi-agent-systems-decision-framework.md)
 
 - **Tool Use & MCP**
   - [Overview](tool-use/)

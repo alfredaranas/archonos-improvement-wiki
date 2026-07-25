@@ -14,6 +14,18 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-25** [LangChain vs CrewAI vs AutoGen: Which Agent Framework is Best? | AI Foundations #4 🤖⚡](memory-systems/langchain-vs-crewai-vs-autogen-which-agent-framework-is-best-ai-foundations-4-lX0ifSgclGk.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [How to Train an AI Agent? Dual-Memory Systems with Claude Code and Codex, Conversation Management...](memory-systems/how-to-train-an-ai-agent-dual-memory-systems-with-claude-code-and-codex-conversa-GRhg_ZZswmQ.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [Multi-Agent Systems Explained: Enterprise Agentic AI Architecture for Production](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [Architecting Production-Grade Multi-Agent AI](memory-systems/architecting-production-grade-multi-agent-ai-VmydgDcX8R8.md) — YouTube — ⭐⭐⭐⭐
+- **2026-07-25** [Multi-Agent Orchestration: The #1 Skill AI Engineers NEED in 2026](memory-systems/multi-agent-orchestration-the-1-skill-ai-engineers-need-in-2026-GCd4Ft4tcMA.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [What Is An AI Agent, Actually? — The 2026 Definition Every Framework Argues About (AI Agents E1)](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — YouTube — ⭐⭐⭐⭐
+- **2026-07-25** [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [Building Enterprise AI Agents with MCP and Production Governance | Satish Chandra](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [Agent Orchestration Frameworks](tool-use/agent-orchestration-frameworks-TtzBQmOk2TE.md) — YouTube — ⭐⭐⭐⭐⭐
+- **2026-07-25** [MCP Architecture EXPLAINED: The Stateless Rebuild (July Update)](tool-use/mcp-architecture-explained-the-stateless-rebuild-july-update-X6wyLCmpuo0.md) — YouTube — ⭐⭐⭐⭐
+- **2026-07-25** [AI Agent System Design: The Complete Blueprint (7 Subsystems Every Production Agent Needs)](tool-use/ai-agent-system-design-the-complete-blueprint-7-subsystems-every-production-agen-p5e_b9GXHbg.md) — YouTube — ⭐⭐⭐⭐⭐
 - **2026-07-19** [L8 Principal's Agentic Engineering Workflow](agent-architectures/l8-principal-s-agentic-engineering-workflow-iQyg-KypKAA.md) — Kun Chen — ⭐⭐⭐⭐⭐
 - **2026-07-19** [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — InterSystems Developers — ⭐⭐⭐⭐⭐
 - **2026-07-19** [Every Local AI I Run Now Shares ONE Memory | (LLM Wiki + OKF)](memory-systems/every-local-ai-i-run-now-shares-one-memory-llm-wiki-okf-IwN-eK1s8og.md) — Codacus — ⭐⭐⭐⭐⭐

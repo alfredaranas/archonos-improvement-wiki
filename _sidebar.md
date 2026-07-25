@@ -2,6 +2,10 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [LangChain vs CrewAI vs AutoGen: Which Agent Framework is …](memory-systems/langchain-vs-crewai-vs-autogen-which-agent-framework-is-best-ai-foundations-4-lX0ifSgclGk.md) — ⭐⭐⭐⭐⭐
+  - [How to Train an AI Agent? Dual-Memory Systems with Claude…](memory-systems/how-to-train-an-ai-agent-dual-memory-systems-with-claude-code-and-codex-conversa-GRhg_ZZswmQ.md) — ⭐⭐⭐⭐⭐
+  - [Architecting Production-Grade Multi-Agent AI](memory-systems/architecting-production-grade-multi-agent-ai-VmydgDcX8R8.md) — ⭐⭐⭐⭐
+  - [Multi-Agent Orchestration: The #1 Skill AI Engineers NEED…](memory-systems/multi-agent-orchestration-the-1-skill-ai-engineers-need-in-2026-GCd4Ft4tcMA.md) — ⭐⭐⭐⭐⭐
   - [Overview](memory-systems/)
   - [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md)
   - [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md)
@@ -35,6 +39,9 @@
   - [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents (Jul 2026)](memory-systems/compactionrl-reinforcement-learning-with-context-compaction-for-long-horizon-agents-jul-2026--HPThjYR_jA.md) — ⭐⭐⭐
   - [06-24-2026 Is GraphRAG Needed Context Optimization](memory-systems/06-24-2026-is-graphrag-needed-context-optimization-AAPLGx5HEBQ.md) — ⭐⭐⭐⭐
 - **Agent Architectures**
+  - [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — ⭐⭐⭐⭐⭐
+  - [Multi-Agent Systems Explained: Enterprise Agentic AI Arch…](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — ⭐⭐⭐⭐⭐
+  - [What Is An AI Agent, Actually? — The 2026 Definition Ever…](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — ⭐⭐⭐⭐
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
   - [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md)
@@ -63,6 +70,11 @@
   - [L8 Principal's Agentic Engineering Workflow](agent-architectures/l8-principal-s-agentic-engineering-workflow-iQyg-KypKAA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — ⭐⭐⭐⭐⭐
 - **Tool Use & MCP**
+  - [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
+  - [Building Enterprise AI Agents with MCP and Production Gov…](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — ⭐⭐⭐⭐⭐
+  - [Agent Orchestration Frameworks](tool-use/agent-orchestration-frameworks-TtzBQmOk2TE.md) — ⭐⭐⭐⭐⭐
+  - [MCP Architecture EXPLAINED: The Stateless Rebuild (July U…](tool-use/mcp-architecture-explained-the-stateless-rebuild-july-update-X6wyLCmpuo0.md) — ⭐⭐⭐⭐
+  - [AI Agent System Design: The Complete Blueprint (7 Subsyst…](tool-use/ai-agent-system-design-the-complete-blueprint-7-subsystems-every-production-agen-p5e_b9GXHbg.md) — ⭐⭐⭐⭐⭐
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
   - [Engineering Agentic RAG as a Tool](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md)

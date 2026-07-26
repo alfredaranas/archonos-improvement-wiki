@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-26** [Autonomous Agents vs Large Action Models: Architecture and Scope](agent-architectures/autonomous-agents-vs-large-action-models.md) — ByteMonk
 - **2026-07-26** [LLM Function Call Python Template & Execution Steps](tool-use/llm-function-call-python-template.md) — Cloud - DeepTech
 - **2026-07-26** [Local Agentic Coding: VRAM-Constrained Model Selection](archonos-notes/local-agentic-coding-vram-constraints.md) — Tech With Tim
 - **2026-07-26** [Two-Tier Self-Hosted AI Lab Architecture: Always-On + Compute Separation](archonos-notes/two-tier-self-hosted-ai-architecture.md) — The Smart Workshop

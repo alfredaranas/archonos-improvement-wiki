@@ -95,6 +95,7 @@
   - [Solving Context Bloat: Semantic Tool Routing in Multi-Server MCP Environmen](tool-use/solving-context-bloat-semantic-tool-routing-in-multi-server-mcp-environments-L665WzukVcI.md) — ⭐⭐⭐⭐⭐
   - [Building MCP Apps With GraphQL Patterns You Already Know - Jerel Miller, Apollo GraphQL](tool-use/building-mcp-apps-with-graphql-patterns-you-already-know-jerel-miller-apollo-graphql-IeRjaphHOeA.md) — ⭐⭐⭐⭐⭐
   - [Writing Better Tools for Agent | Zero to Enterprise AI Engineer (2026 Roadmap) | AI Agent - Part 4](tool-use/writing-better-tools-for-agent-zero-to-enterprise-ai-engineer-2026-roadmap-ai-agent-part-4-kUuAAbiJdX0.md) — ⭐⭐⭐⭐⭐
+  - [LLM Function Call Python Template & Execution Steps](tool-use/llm-function-call-python-template.md)
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)

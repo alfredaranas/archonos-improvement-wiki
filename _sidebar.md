@@ -69,6 +69,7 @@
   - [The Future of AI Agents with Andrew Ng | Interrupt 26](agent-architectures/the-future-of-ai-agents-with-andrew-ng-interrupt-26-OaRhpwz_TGM.md) — ⭐⭐⭐⭐
   - [L8 Principal's Agentic Engineering Workflow](agent-architectures/l8-principal-s-agentic-engineering-workflow-iQyg-KypKAA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — ⭐⭐⭐⭐⭐
+  - [Multi-Agent Orchestration Patterns: Framework Comparison](agent-architectures/multi-agent-orchestration-patterns-2026.md)
 - **Tool Use & MCP**
   - [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
   - [Building Enterprise AI Agents with MCP and Production Gov…](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — ⭐⭐⭐⭐⭐

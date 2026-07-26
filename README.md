@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-07-26** [Two-Tier Self-Hosted AI Lab Architecture: Always-On + Compute Separation](archonos-notes/two-tier-self-hosted-ai-architecture.md) — The Smart Workshop
 - **2026-07-26** [Multi-Agent Orchestration Patterns: Framework Comparison](agent-architectures/multi-agent-orchestration-patterns-2026.md) — AgenticEngineering
 - **2026-07-25** [LangChain vs CrewAI vs AutoGen: Which Agent Framework is Best? | AI Foundations #4 🤖⚡](memory-systems/langchain-vs-crewai-vs-autogen-which-agent-framework-is-best-ai-foundations-4-lX0ifSgclGk.md) — YouTube — ⭐⭐⭐⭐⭐
 - **2026-07-25** [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — YouTube — ⭐⭐⭐⭐⭐

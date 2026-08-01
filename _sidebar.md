@@ -38,6 +38,7 @@
   - [Lamis Mukta - Learning while you sleep: Beyond memory to dreaming - AI Native DevCon June 2026](memory-systems/lamis-mukta-learning-while-you-sleep-beyond-memory-to-dreaming-ai-native-devcon-june-2026-tTcxVv8HHNw.md) — ⭐⭐⭐⭐
   - [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents (Jul 2026)](memory-systems/compactionrl-reinforcement-learning-with-context-compaction-for-long-horizon-agents-jul-2026--HPThjYR_jA.md) — ⭐⭐⭐
   - [06-24-2026 Is GraphRAG Needed Context Optimization](memory-systems/06-24-2026-is-graphrag-needed-context-optimization-AAPLGx5HEBQ.md) — ⭐⭐⭐⭐
+  - [📥 31 new entries from 2026-08-01 batch](memory-systems/)
 - **Agent Architectures**
   - [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Systems Explained: Enterprise Agentic AI Arch…](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — ⭐⭐⭐⭐⭐
@@ -71,6 +72,7 @@
   - [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Orchestration Patterns: Framework Comparison](agent-architectures/multi-agent-orchestration-patterns-2026.md)
   - [Autonomous Agents vs Large Action Models: Architecture and Scope](agent-architectures/autonomous-agents-vs-large-action-models.md)
+  - [📥 6 new entries from 2026-08-01 batch](agent-architectures/)
 - **Tool Use & MCP**
   - [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
   - [Building Enterprise AI Agents with MCP and Production Gov…](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — ⭐⭐⭐⭐⭐
@@ -97,6 +99,7 @@
   - [Building MCP Apps With GraphQL Patterns You Already Know - Jerel Miller, Apollo GraphQL](tool-use/building-mcp-apps-with-graphql-patterns-you-already-know-jerel-miller-apollo-graphql-IeRjaphHOeA.md) — ⭐⭐⭐⭐⭐
   - [Writing Better Tools for Agent | Zero to Enterprise AI Engineer (2026 Roadmap) | AI Agent - Part 4](tool-use/writing-better-tools-for-agent-zero-to-enterprise-ai-engineer-2026-roadmap-ai-agent-part-4-kUuAAbiJdX0.md) — ⭐⭐⭐⭐⭐
   - [LLM Function Call Python Template & Execution Steps](tool-use/llm-function-call-python-template.md)
+  - [📥 13 new entries from 2026-08-01 batch](tool-use/)
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
@@ -121,6 +124,7 @@
   - [How Production AI Agents Are Actually Built | Mastra at Future Frontend 2026](production-ai/how-production-ai-agents-are-actually-built-mastra-at-future-frontend-2026-NbG2KydKDek.md) — ⭐⭐⭐⭐⭐
   - [PII, Consent & Session Affinity Patterns That Work](production-ai/pii-consent-session-affinity-patterns-that-work-tuIm734-zMg.md) — ⭐⭐⭐⭐⭐
   - [Async Agents in Production: Failure Modes and Fixes — Seb Ringrose | AI in Production 2026](production-ai/async-agents-in-production-failure-modes-and-fixes-seb-ringrose-ai-in-production-2026-rdbdM_RnLCk.md) — ⭐⭐⭐⭐⭐
+  - [📥 2 new entries from 2026-08-01 batch](production-ai/)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)

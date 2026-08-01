@@ -14,114 +14,35 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
-- **2026-07-26** [Autonomous Agents vs Large Action Models: Architecture and Scope](agent-architectures/autonomous-agents-vs-large-action-models.md) — ByteMonk
-- **2026-07-26** [LLM Function Call Python Template & Execution Steps](tool-use/llm-function-call-python-template.md) — Cloud - DeepTech
-- **2026-07-26** [Local Agentic Coding: VRAM-Constrained Model Selection](archonos-notes/local-agentic-coding-vram-constraints.md) — Tech With Tim
-- **2026-07-26** [Two-Tier Self-Hosted AI Lab Architecture: Always-On + Compute Separation](archonos-notes/two-tier-self-hosted-ai-architecture.md) — The Smart Workshop
-- **2026-07-26** [Multi-Agent Orchestration Patterns: Framework Comparison](agent-architectures/multi-agent-orchestration-patterns-2026.md) — AgenticEngineering
-- **2026-07-25** [LangChain vs CrewAI vs AutoGen: Which Agent Framework is Best? | AI Foundations #4 🤖⚡](memory-systems/langchain-vs-crewai-vs-autogen-which-agent-framework-is-best-ai-foundations-4-lX0ifSgclGk.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [How to Train an AI Agent? Dual-Memory Systems with Claude Code and Codex, Conversation Management...](memory-systems/how-to-train-an-ai-agent-dual-memory-systems-with-claude-code-and-codex-conversa-GRhg_ZZswmQ.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [Multi-Agent Systems Explained: Enterprise Agentic AI Architecture for Production](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [Architecting Production-Grade Multi-Agent AI](memory-systems/architecting-production-grade-multi-agent-ai-VmydgDcX8R8.md) — YouTube — ⭐⭐⭐⭐
-- **2026-07-25** [Multi-Agent Orchestration: The #1 Skill AI Engineers NEED in 2026](memory-systems/multi-agent-orchestration-the-1-skill-ai-engineers-need-in-2026-GCd4Ft4tcMA.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [What Is An AI Agent, Actually? — The 2026 Definition Every Framework Argues About (AI Agents E1)](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — YouTube — ⭐⭐⭐⭐
-- **2026-07-25** [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [Building Enterprise AI Agents with MCP and Production Governance | Satish Chandra](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [Agent Orchestration Frameworks](tool-use/agent-orchestration-frameworks-TtzBQmOk2TE.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-25** [MCP Architecture EXPLAINED: The Stateless Rebuild (July Update)](tool-use/mcp-architecture-explained-the-stateless-rebuild-july-update-X6wyLCmpuo0.md) — YouTube — ⭐⭐⭐⭐
-- **2026-07-25** [AI Agent System Design: The Complete Blueprint (7 Subsystems Every Production Agent Needs)](tool-use/ai-agent-system-design-the-complete-blueprint-7-subsystems-every-production-agen-p5e_b9GXHbg.md) — YouTube — ⭐⭐⭐⭐⭐
-- **2026-07-19** [L8 Principal's Agentic Engineering Workflow](agent-architectures/l8-principal-s-agentic-engineering-workflow-iQyg-KypKAA.md) — Kun Chen — ⭐⭐⭐⭐⭐
-- **2026-07-19** [Multi-Agent Orchestration for Enterprise Workflows](agent-architectures/multi-agent-orchestration-for-enterprise-workflows-XMF4WCRCP_A.md) — InterSystems Developers — ⭐⭐⭐⭐⭐
-- **2026-07-19** [Every Local AI I Run Now Shares ONE Memory | (LLM Wiki + OKF)](memory-systems/every-local-ai-i-run-now-shares-one-memory-llm-wiki-okf-IwN-eK1s8og.md) — Codacus — ⭐⭐⭐⭐⭐
-- **2026-07-19** [Lamis Mukta - Learning while you sleep: Beyond memory to dreaming - AI Native DevCon June 2026](memory-systems/lamis-mukta-learning-while-you-sleep-beyond-memory-to-dreaming-ai-native-devcon-june-2026-tTcxVv8HHNw.md) — AI Native Dev — ⭐⭐⭐⭐
-- **2026-07-19** [How Production AI Agents Are Actually Built | Mastra at Future Frontend 2026](production-ai/how-production-ai-agents-are-actually-built-mastra-at-future-frontend-2026-NbG2KydKDek.md) — Mastra — ⭐⭐⭐⭐⭐
-- **2026-07-19** [PII, Consent & Session Affinity Patterns That Work](production-ai/pii-consent-session-affinity-patterns-that-work-tuIm734-zMg.md) — Agentic AI Foundation — ⭐⭐⭐⭐⭐
-- **2026-07-19** [Building MCP Apps With GraphQL Patterns You Already Know - Jerel Miller, Apollo GraphQL](tool-use/building-mcp-apps-with-graphql-patterns-you-already-know-jerel-miller-apollo-graphql-IeRjaphHOeA.md) — GraphQL TV — ⭐⭐⭐⭐⭐
-- **2026-07-19** [Writing Better Tools for Agent | Zero to Enterprise AI Engineer (2026 Roadmap) | AI Agent - Part 4](tool-use/writing-better-tools-for-agent-zero-to-enterprise-ai-engineer-2026-roadmap-ai-agent-part-4-kUuAAbiJdX0.md) — NitMonk — ⭐⭐⭐⭐⭐
-- **2026-07-19** [Async Agents in Production: Failure Modes and Fixes — Seb Ringrose | AI in Production 2026](production-ai/async-agents-in-production-failure-modes-and-fixes-seb-ringrose-ai-in-production-2026-rdbdM_RnLCk.md) — Jumping Rivers — ⭐⭐⭐⭐⭐
-- **2026-07-19** [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents (Jul 2026)](memory-systems/compactionrl-reinforcement-learning-with-context-compaction-for-long-horizon-agents-jul-2026--HPThjYR_jA.md) — AI Paper Slop — ⭐⭐⭐
-- **2026-07-19** [06-24-2026 Is GraphRAG Needed Context Optimization](memory-systems/06-24-2026-is-graphrag-needed-context-optimization-AAPLGx5HEBQ.md) — Tinge Zhang — ⭐⭐⭐⭐
-- **2026-07-19** [RAG: Retrieval Augmented Generation Pipeline](memory-systems/rag-retrieval-augmented-generation-overview.md) — Apna College
-- **2026-07-19** [RAG: Retrieval Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md) — Don Woodlock
-- **2026-07-19** [Production RAG Architecture: From Demo to Robust Systems](memory-systems/production-rag-architecture.md) — ByteMonk
-- **2026-07-19** [Low-Precision Task Selection for Agent Automation](agent-architectures/agent-task-selection-precision-framework.md) — Futurepedia
-- **2026-07-19** [Agent Loop: Observe-Think-Act Pattern](agent-architectures/agent-loop-observe-think-act.md) — Greg Isenberg
-- **2026-07-19** [Three Pillars of Agentic Workflows vs. Chatbot Responses](agent-architectures/agentic-workflow-three-pillars.md) — AI Master
-- **2026-07-19** [Agentic AI Governance: Multi-Layer Risk Control](production-ai/agentic-ai-governance-framework.md) — IBM Technology
-- **2026-07-19** [Agent Memory via Bootstrap, Compaction, and Periodic Consolidation](memory-systems/agent-memory-four-mechanisms.md) — Damian Galarza
-- **2026-07-19** [Memory Indexing Failures in Stateful Agents](memory-systems/stateful-agent-memory-indexing-failure.md) — The Bearded AI Guy
-- **2026-07-19** [Multi-Agent State Management: Distributed Architecture and Event Sourcing](agent-architectures/multi-agent-state-management-patterns.md) — rhemaai_tech_training
-- **2026-07-19** [Deferred Tool Loading & Programmatic Tool Calling: Context-Efficient Agent Patterns](tool-use/deferred-tool-loading-programmatic-calling.md) — The AI Automators
-- **2026-07-19** [Local Multimodal RAG: DocLane Document Processing Pipeline](memory-systems/local-multimodal-rag-with-docklane.md) — The AI Automators
-- **2026-07-19** [Multi-Agent Systems: When & How to Deploy](agent-architectures/multi-agent-systems-decision-framework.md) — Shaw Talebi
-- **2026-07-19** [Multi-Agent Orchestration: Planning, Task Decomposition, and Handoff](agent-architectures/multi-agent-orchestration-patterns.md) — Databricks
-- **2026-07-19** [AutoGen vs CrewAI vs LangGraph: Framework Selection Matrix](agent-architectures/autogen-crewai-langgraph-comparison-2025.md) — Digibase Media
-- **2026-07-19** [MCP vs Skills: Context Protocol vs Domain Knowledge Packaging](tool-use/mcp-vs-skills-comparison.md) — IBM Technology
-- **2026-07-19** [Model Context Protocol (MCP): Standardized AI-Tool Integration](tool-use/model-context-protocol-mcp-integration-standard.md) — ByteByteGo
-- **2026-07-19** [MCP as Universal Translator: Enriching Agent Tool Context](tool-use/mcp-universal-translator-pattern.md) — Nate Herk | AI Automation
-- **2026-07-19** [Model Context Protocol (MCP): USB-C Standard for AI Tool Integration](tool-use/model-context-protocol-mcp-overview.md) — Fireship
-- **2026-07-19** [Production Agent Memory Architecture: Working & Long-Term Systems](memory-systems/production-agent-memory-architecture.md) — Mukul Raina
-- **2026-07-19** [General Agentic Memory (GAM): JIT-Based Lossless Context Management](memory-systems/general-agentic-memory-jit-architecture.md) — AI Paper Slop
-- **2026-07-12** [RAG Fundamentals: When to Use Retrieval-Augmented Generation](memory-systems/rag-fundamentals-retrieval-augmented-generation.md) — KodeKloud
-- **2026-07-12** [Agentic AI Framework Selection by System Type](agent-architectures/agentic-ai-framework-taxonomy.md) — IBM Technology
-- **2026-07-12** [DynamoDB + OpenSearch: Stateful Memory Architecture for Production Agents](memory-systems/dynamodb-opensearch-stateful-memory-architecture.md) — Family Trail
-- **2026-07-12** [Persistent Memory: Dual-Layer Architecture (Sessions + User Profiles)](memory-systems/persistent-memory-dual-layer-architecture.md) — Google Cloud Tech
-- **2026-07-12** [Homelab AI Server Build: Multi-Agent Inference Setup](archonos-notes/homelab-ai-server-build-reference.md) — The Nitty-Gritty
-- **2026-07-12** [Agentic AI Learning Roadmap: Foundations to Production](agent-architectures/agentic-ai-learning-roadmap.md) — The DotNet Office
-- **2026-07-12** [Model Context Protocol (MCP): Standardized Model-to-Tool Integration](tool-use/model-context-protocol-mcp-overview.md) — Google Cloud Tech
-- **2026-07-04** [Road to NODES AI: Graph-Based Long-Term Memory: How Agentic Workflows Adapt Thro](memory-systems/road-to-nodes-ai-graph-based-long-term-memory-how-agentic-workflows-adapt-thro-U_sA6S_jBxE.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Complete Deep Agents Course With Langchain In 3 Hours](production-ai/complete-deep-agents-course-with-langchain-in-3-hours-J8DzuMmSDEU.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Give Your Agents a Brain: Mastering Knowledge Graphs and Agentic Memory](archonos-notes/give-your-agents-a-brain-mastering-knowledge-graphs-and-agentic-memory-ltPdJCd0a48.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Autonomous Agents: 3 Reliability Traps | Claude Certified Architect | Agentic Ar](production-ai/autonomous-agents-3-reliability-traps-claude-certified-architect-agentic-ar-MEKNwAIAtKo.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [1. LLMs & Agentic AI Masterclass 2026 | Course Introduction  #llm #agenticai #uv](memory-systems/1-llms-agentic-ai-masterclass-2026-course-introduction-llm-agenticai-uv-_4SqcZoFLtQ.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Runaway Claude Agent? 6 CCA-F Architecture Fixes for Production-Safe AI](production-ai/runaway-claude-agent-6-cca-f-architecture-fixes-for-production-safe-ai-EoAb4igPaSs.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Agentic AI  10 Interview Questions (Patterns, MCP, Memory & Eval)  Intermediate](production-ai/agentic-ai-10-interview-questions-patterns-mcp-memory-eval-intermediate-nZlBfqOSiK8.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [AI Agent Memory Masterclass | How Agents Remember and Forget](memory-systems/ai-agent-memory-masterclass-how-agents-remember-and-forget-PxuMqeIqCEo.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [ð¨ð¥Building an AI Threat Modeling Agent Claude Code + STRIDE + MCP for Auto](tool-use/building-an-ai-threat-modeling-agent-claude-code-stride-mcp-for-auto-zBU1ovXgDTU.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Agentic AI Workflows: Enterprise Automation & Orchestration 2026](production-ai/agentic-ai-workflows-enterprise-automation-orchestration-2026-ruT6m5Rqo2I.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [[Multi-Agent 5] MAO Project WALKTROUGH for Spec-Driven AI Agent Orchestration](agent-architectures/multi-agent-5-mao-project-walktrough-for-spec-driven-ai-agent-orchestration-RQPcXCnviFQ.md) — ⭐⭐⭐⭐
-- **2026-07-04** [The 2026 CTO Playbook: Scaling Agentic AI](production-ai/the-2026-cto-playbook-scaling-agentic-ai-DsXoGBLEcrQ.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Advanced RAG Architectures | How Production AI Systems Scale](production-ai/advanced-rag-architectures-how-production-ai-systems-scale-R62HMHGnbJU.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [RAG Evolution  Naive to Agentic](memory-systems/rag-evolution-naive-to-agentic-3AJFlXGkMyI.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Part 4 Agentic AI Course | Enterprise AI Architecture, Security & Agent Framewor](production-ai/part-4-agentic-ai-course-enterprise-ai-architecture-security-agent-framewor-9FDixrvhxdQ.md) — ⭐⭐⭐⭐⭐
-- **2026-07-04** [Agent Evaluation with Gemini Agent Eval API](production-ai/agent-evaluation-with-gemini-agent-eval-api-qo8i_0RCieU.md) — ⭐⭐⭐⭐
-- **2026-06-27** [Hermes Agent V0.17 Explained: Multi-Agent AI, Security, and Automation](archonos-notes/hermes-agent-v017-explained-multi-agent-ai-security-and-automation-Ko4kjQutOQs.md) — Alex Hitt — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Jonathan Frankle, Databricks | Databricks Data+AI Summit 2026](production-ai/jonathan-frankle-databricks-databricks-dataai-summit-2026-0dxhNtOed8c.md) — SiliconANGLE theCUBE — ⭐⭐⭐⭐⭐
-- **2026-06-27** [EP02: The Agentic Loop: Where 27% of the Claude Certification Lives](tool-use/ep02-the-agentic-loop-where-27-of-the-claude-certification-lives-LTgjnnkYOtA.md) — Vivek Amilkanthawar — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Agentic AI Orchestration for Enterprise Workflows: A 2026 Implementati](production-ai/agentic-ai-orchestration-for-enterprise-workflows-a-2026-implementati-6w5ySE2BoZw.md) — Aetherlink — ⭐⭐⭐⭐⭐
-- **2026-06-27** [LangGraph vs CrewAI vs AutoGen: The Ultimate 2026 AI Agent Framework Comparison](agent-architectures/langgraph-vs-crewai-vs-autogen-the-ultimate-2026-ai-agent-framework-comparison-RvmQQIGToks.md) — The Daily Inquiry — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Multi-Agent AI System in C# & OpenAI | LLM Router, Parallel Agents, Aggregator Pattern](agent-architectures/multi-agent-ai-system-in-c-openai-llm-router-parallel-agents-aggregator-pattern-VeGrL4Ax3eI.md) — SynapseEdge Technology — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Claude AI - Part 18 - Function/tool calling patterns, Integrating APIs with agents and RAG](tool-use/claude-ai-part-18-functiontool-calling-patterns-integrating-apis-with-agents-and-2zu_I2Rqgso.md) — TechBytes by Sam — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Samuel Jaja - Building Production Multi-Agent RAG Systems on Serverless AWS | Pydata London 26](production-ai/samuel-jaja-building-production-multi-agent-rag-systems-on-serverless-aws-pydata-M4j1otT6Leg.md) — PyData — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Complete Agentic AI Course - AI Agents, RAG, Embeddings, Architectures, Framework, VectorDB & Memory](general/complete-agentic-ai-course-ai-agents-rag-embeddings-architectures-framework-vect-Pn95eOlw5qk.md) — Tejas AI — ⭐⭐⭐⭐⭐
-- **2026-06-27** [Multi-Agent in Copilot Studio: Child vs Connected Agents — 2026 Tutorial](agent-architectures/multi-agent-in-copilot-studio-child-vs-connected-agents-2026-tutorial-jldsogt0VX4.md) — Corporate Programming — ⭐⭐⭐⭐⭐
-- **2026-06-20** [OpenCode Internals: Architecture Patterns for Production AI Agents](archonos-notes/opencode-internals-architecture-patterns-for-production-ai-a-PqMvdmtlLWQ.md) — AgenticEngineering — ⭐⭐⭐⭐⭐
-- **2026-06-20** [Building AI Agent Systems and Scaling Challenges in Agentic AI (IBM)](archonos-notes/building-ai-agent-systems-and-scaling-challenges-in-agentic--fCHe_fOqlYA.md) — IBM Technology — ⭐⭐⭐⭐⭐
-- **2026-06-20** [I Built the Ultimate Multi-Agent Workflow w/ Hermes Agent Kanban Board](archonos-notes/i-built-the-ultimate-multi-agent-workflow-w-hermes-agent-kan-EKVRqcpTT6s.md) — Tonbi's AI Garage — ⭐⭐⭐⭐⭐
-- **2026-06-20** [Engineering Agentic RAG as a Tool (Part 2)](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md) — Unfold Data Science — ⭐⭐⭐⭐⭐
-- **2026-06-20** [Orchestrating Intelligence: Multi-Agentic Design Patterns for Production AI](agent-architectures/orchestrating-intelligence-multi-agentic-design-patterns-for-vZb0Si1p64o.md) — Developer Summit / Mary Grygleski — ⭐⭐⭐⭐⭐
-- **2026-06-20** [AI Signals x LangChain Community #32: Agents, RAG, and Production AI Workflows](agent-architectures/ai-signals-x-langchain-community-32-agents-rag-and-productio-Gi2JBlzO-1A.md) — AI Signals — ⭐⭐⭐⭐⭐
-- **2026-06-20** [Building Enterprise Multi-Agent AI: LangGraph vs LangChain Explained](agent-architectures/building-enterprise-multi-agent-ai-langgraph-vs-langchain-ex-Unm37cQ70k0.md) — AsembleAI — ⭐⭐⭐⭐
-- **2026-06-20** [Multi-Agent Orchestration Explained](agent-architectures/multi-agent-orchestration-explained-how-agentic-ai-systems-c-AoDdcWXlDyg.md) — TechLambda — ⭐⭐⭐⭐
-- **2026-06-20** [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md) — The Ravit Show — ⭐⭐⭐⭐⭐
-- **2026-06-20** [Agentic RAG in Production: Orchestration, Evaluation & ROI](memory-systems/agentic-rag-in-production-orchestration-evaluation-u0026-roi-IC_WfkgKESU.md) — Developer Summit / Rohit Bhardwaj — ⭐⭐⭐⭐
-- **2026-06-13** [I Built The Best Claude Memory System (Beats Hermes)](memory-systems/i-built-the-best-claude-memory-system-beats-hermes.md) — Simon Scrapes — ⭐⭐⭐⭐⭐
-- **2026-06-13** [The Four Types of Memory Every AI Agent Needs](memory-systems/four-types-of-memory-every-ai-agent-needs.md) — IBM Technology — ⭐⭐⭐⭐⭐
-- **2026-06-13** [Claude Can Now Dream - Memory of Agentic AI Explained](memory-systems/claude-dream-memory-of-agentic-ai.md) — Piyush Garg — ⭐⭐⭐⭐
-- **2026-06-13** [ChatGPT's Memory Update Explained](memory-systems/chatgpt-memory-update-explained.md) — The AI Advantage — ⭐⭐⭐
-- **2026-06-13** [Intelligent Java Apps: Agent Patterns, MCP, and AI-Native Design](agent-architectures/intelligent-java-apps-agent-patterns-mcp.md) — Developer Summit — ⭐⭐⭐⭐⭐
-- **2026-06-13** [Plan Before You Build: Deterministic Planning Patterns for AI Agents](agent-architectures/deterministic-planning-patterns-ai-agents.md) — Spring I/O — ⭐⭐⭐⭐⭐
-- **2026-06-13** [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md) — Vijayaragavan — ⭐⭐⭐⭐
-- **2026-06-13** [Hermes Agentic OS is Insane... just watch (2026)](archonos-notes/hermes-agentic-os-just-watch.md) — Jack Roberts — ⭐⭐⭐⭐⭐
-- **2026-06-09** [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md) — Emergent Mind
-- **2026-06-09** [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md) — Emergent Mind
-- **2026-06-09** [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md) — EverestAn - AI Agent Research
-- **2026-06-09** [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md) — BazAI
+### 2026-08-01 Batch — 52 new entries
 
-<!-- AUTO-GENERATED: cron updates this section -->
+#### Memory Systems (31 entries)
+- [5 Advanced RAG Context Expansion Techniques](memory-systems/5-advanced-rag-context-expansion-techniques-3pR4i0_UDtU.md) — ⭐⭐⭐⭐⭐
+- [AI Agent Memory Systems Explained (2026) — Vector, Graph, RAG & Reflec...](memory-systems/ai-agent-memory-systems-explained-2026-vector-graph-rag-refl-9Au5iPhOUBA.md) — ⭐⭐⭐⭐⭐
+- [AI Agent Memory: The Part Nobody Explains](memory-systems/ai-agent-memory-the-part-nobody-explains-Ez4siJMzLX8.md) — ⭐⭐⭐⭐⭐
+- [AI Agentic Memory System Design](memory-systems/ai-agentic-memory-system-design-2zdWI2SYB9I.md) — ⭐⭐⭐⭐⭐
+- [AI Agents Explained: How to Create and Use AI Agents in 2026](memory-systems/ai-agents-explained-how-to-create-and-use-ai-agents-in-2026-4TvH-OZhwxI.md) — ⭐⭐⭐⭐⭐
+- ... and 26 more in [Memory Systems](memory-systems/)
 
-_Seed batch — 6 entries added 2026-05-31_
+#### Agent Architectures (6 entries)
+- [A Blueprint for Single Org, Multi Agent Orchestration | TDX 2026 | Arc...](agent-architectures/a-blueprint-for-single-org-multi-agent-orchestration-tdx-202-DWH-Clo6nys.md) — ⭐⭐⭐⭐⭐
+- [Armchair Architects: Multi-agent Orchestration and Patterns](agent-architectures/armchair-architects-multi-agent-orchestration-and-patterns-Dwyx8GomVvQ.md) — ⭐⭐⭐⭐⭐
+- [Multi-Agent Orchestration by OpenAI - Swarm](agent-architectures/multi-agent-orchestration-by-openai-swarm-7liBQxFSIuE.md) — ⭐⭐⭐⭐⭐
+- [Rebranding & AI-Multi-Agent Orchestration](agent-architectures/rebranding-ai-multi-agent-orchestration-ADjd79A2dxc.md) — ⭐⭐⭐⭐⭐
+- [What Is Multi-Agent Orchestration? The Complete Guide for AI-Driven Bu...](agent-architectures/what-is-multi-agent-orchestration-the-complete-guide-for-ai--4qFtd6Eh0tE.md) — ⭐⭐⭐⭐⭐
+- ... and 1 more in [Agent Architectures](agent-architectures/)
+
+#### Tool Use & MCP (13 entries)
+- [AI Agents: The Most Valuable Skill You Can Learn in 2026 (Full Course)](tool-use/ai-agents-the-most-valuable-skill-you-can-learn-in-2026-full-5p-sq8v3OXw.md) — ⭐⭐⭐⭐⭐
+- [Conceptual Guide: Multi Agent Architectures](tool-use/conceptual-guide-multi-agent-architectures-4nZl32FwU-o.md) — ⭐⭐⭐⭐⭐
+- [From Chaos to Choreography: Multi-Agent Orchestration Patterns That Ac...](tool-use/from-chaos-to-choreography-multi-agent-orchestration-pattern-2czYyrTzILg.md) — ⭐⭐⭐⭐⭐
+- [MCP Explained for Beginners (2026): How AI Agents Actually Use Tools](tool-use/mcp-explained-for-beginners-2026-how-ai-agents-actually-use--1nTJdYUJByc.md) — ⭐⭐⭐⭐⭐
+- [MCP Explained for Marketers in 60 Seconds](tool-use/mcp-explained-for-marketers-in-60-seconds-70ekIAUuavk.md) — ⭐⭐⭐⭐⭐
+- ... and 8 more in [Tool Use & MCP](tool-use/)
+
+#### Production AI (2 entries)
+- [How I prepared System Design](production-ai/how-i-prepared-system-design-0JSg44zuUTw.md) — ⭐⭐⭐
+- [How Senior Engineers Actually Build With AI in 2026 | Build a Full Sta...](production-ai/how-senior-engineers-actually-build-with-ai-in-2026-build-a--14RP8liACqo.md) — ⭐⭐⭐⭐⭐
 
 ### Memory Systems
 - [Self-Evolving Agents: Memory Growth vs. Real Learning](memory-systems/self-evolving-agents-memory-vs-learning.md) — ⭐⭐⭐⭐

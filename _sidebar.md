@@ -144,6 +144,7 @@
   - [Homelab AI Server Build: Multi-Agent Inference Setup](archonos-notes/homelab-ai-server-build-reference.md)
   - [Two-Tier Self-Hosted AI Lab Architecture: Always-On + Compute Separation](archonos-notes/two-tier-self-hosted-ai-architecture.md)
   - [Local Agentic Coding: VRAM-Constrained Model Selection](archonos-notes/local-agentic-coding-vram-constraints.md)
+  - [Pi: Minimal Open-Source Terminal AI Agent](archonos-notes/pi-agent-terminal-setup.md)
 
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)

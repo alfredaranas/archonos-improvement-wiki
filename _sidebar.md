@@ -102,6 +102,7 @@
   - [Writing Better Tools for Agent | Zero to Enterprise AI Engineer (2026 Roadmap) | AI Agent - Part 4](tool-use/writing-better-tools-for-agent-zero-to-enterprise-ai-engineer-2026-roadmap-ai-agent-part-4-kUuAAbiJdX0.md) — ⭐⭐⭐⭐⭐
   - [LLM Function Call Python Template & Execution Steps](tool-use/llm-function-call-python-template.md)
   - [📥 13 new entries from 2026-08-01 batch](tool-use/)
+  - [Function Calling & Tool Use Pattern: LLM Agent Interface Design](tool-use/function-calling-tool-use-pattern.md)
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)

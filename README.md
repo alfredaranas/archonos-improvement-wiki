@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-08-02** [Missions: Multi-Agent Architecture for Long-Running Tasks](agent-architectures/missions-multi-agent-framework.md) — AI Engineer
 - **2026-08-02** [OpenClaw Multi-Agent Deployment: Dedicated Hardware, Access Control, and Cost Management](production-ai/openclaw-multi-agent-deployment-architecture.md) — Brian Casel
 - **2026-08-02** [MemEvolve: Meta-Evolutionary Framework for Agent Memory Architecture](memory-systems/memevolve-meta-evolutionary-agent-memory.md) — AI Research Roundup
 ### 2026-08-01 Batch — 52 new entries

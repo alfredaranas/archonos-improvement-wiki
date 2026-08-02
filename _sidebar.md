@@ -40,6 +40,7 @@
   - [06-24-2026 Is GraphRAG Needed Context Optimization](memory-systems/06-24-2026-is-graphrag-needed-context-optimization-AAPLGx5HEBQ.md) — ⭐⭐⭐⭐
   - [📥 31 new entries from 2026-08-01 batch](memory-systems/)
   - [MemEvolve: Meta-Evolutionary Framework for Agent Memory Architecture](memory-systems/memevolve-meta-evolutionary-agent-memory.md)
+  - [Google ADK: Persistent Session Memory with Database Storage](memory-systems/google-adk-persistent-session-memory.md)
 - **Agent Architectures**
   - [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Systems Explained: Enterprise Agentic AI Arch…](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — ⭐⭐⭐⭐⭐

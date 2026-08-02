@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-08-02** [AWS Bedrock Agents: Session Persistence & State Management](memory-systems/aws-bedrock-agents-session-management.md) — Arindam Majumder
 - **2026-08-02** [Google ADK: Persistent Session Memory with Database Storage](memory-systems/google-adk-persistent-session-memory.md) — Tech With ravi
 - **2026-08-02** [Function Calling with Gemini API: Multi-Tool Assistant Pattern](tool-use/gemini-function-calling-multi-tool-assistant.md) — Nishcodezz
 - **2026-08-02** [Function Calling & Tool Use Pattern: LLM Agent Interface Design](tool-use/function-calling-tool-use-pattern.md) — AI TL;DR

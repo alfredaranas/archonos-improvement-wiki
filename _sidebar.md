@@ -133,6 +133,7 @@
   - [Async Agents in Production: Failure Modes and Fixes — Seb Ringrose | AI in Production 2026](production-ai/async-agents-in-production-failure-modes-and-fixes-seb-ringrose-ai-in-production-2026-rdbdM_RnLCk.md) — ⭐⭐⭐⭐⭐
   - [📥 2 new entries from 2026-08-01 batch](production-ai/)
   - [OpenClaw Multi-Agent Deployment: Dedicated Hardware, Access Control, and Cost Management](production-ai/openclaw-multi-agent-deployment-architecture.md)
+  - [TubeOnAI Empty-Summary Failure (2026-08-08 batch)](production-ai/tubeonai-empty-summary-failure-2026-08-08.md)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)

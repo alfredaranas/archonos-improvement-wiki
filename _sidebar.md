@@ -108,6 +108,7 @@
   - [📥 13 new entries from 2026-08-01 batch](tool-use/)
   - [Function Calling & Tool Use Pattern: LLM Agent Interface Design](tool-use/function-calling-tool-use-pattern.md)
   - [Function Calling with Gemini API: Multi-Tool Assistant Pattern](tool-use/gemini-function-calling-multi-tool-assistant.md)
+  - [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md)
 - **Production AI**
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)

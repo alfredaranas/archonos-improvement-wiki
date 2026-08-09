@@ -42,6 +42,7 @@
   - [MemEvolve: Meta-Evolutionary Framework for Agent Memory Architecture](memory-systems/memevolve-meta-evolutionary-agent-memory.md)
   - [Google ADK: Persistent Session Memory with Database Storage](memory-systems/google-adk-persistent-session-memory.md)
   - [AWS Bedrock Agents: Session Persistence & State Management](memory-systems/aws-bedrock-agents-session-management.md)
+  - [Hybrid Agent Memory Architecture: From Stateless to Intelligent](memory-systems/hybrid-agent-memory-architecture.md)
 - **Agent Architectures**
   - [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Systems Explained: Enterprise Agentic AI Arch…](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — ⭐⭐⭐⭐⭐

@@ -79,6 +79,7 @@
   - [📥 6 new entries from 2026-08-01 batch](agent-architectures/)
   - [Missions: Multi-Agent Architecture for Long-Running Tasks](agent-architectures/missions-multi-agent-framework.md)
   - [Agentic RAG: LLM-Driven Data Source Selection](agent-architectures/agentic-rag-intelligent-retrieval.md)
+  - [DATA Loop: Agent Autonomy vs. Chat Automation](agent-architectures/data-loop-agent-framework.md)
 - **Tool Use & MCP**
   - [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
   - [Building Enterprise AI Agents with MCP and Production Gov…](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — ⭐⭐⭐⭐⭐

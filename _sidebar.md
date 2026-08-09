@@ -153,6 +153,7 @@
   - [Local Agentic Coding: VRAM-Constrained Model Selection](archonos-notes/local-agentic-coding-vram-constraints.md)
   - [Pi: Minimal Open-Source Terminal AI Agent](archonos-notes/pi-agent-terminal-setup.md)
   - [Output-Driven Local AI Setup: Practical Development Stack](archonos-notes/local-ai-output-driven-setup.md)
+  - [Local LLM VRAM Selection & Context Loading for Code Agents](archonos-notes/local-llm-vram-constraints-coding.md)
 
 - **Resources**
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)

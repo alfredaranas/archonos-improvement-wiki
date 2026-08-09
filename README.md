@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-08-09** [DATA Loop: Agent Autonomy vs. Chat Automation](agent-architectures/data-loop-agent-framework.md) — Dan Martell
 - **2026-08-09** [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md) — Cursor
 - **2026-08-09** [Local LLM VRAM Selection & Context Loading for Code Agents](archonos-notes/local-llm-vram-constraints-coding.md) — Zen van Riel
 - **2026-08-09** [Hybrid Agent Memory Architecture: From Stateless to Intelligent](memory-systems/hybrid-agent-memory-architecture.md) — SnapSizzle

@@ -1,0 +1,29 @@
+# Cognitive Tool Use Pattern - Tool Augmented Agent Part 2
+
+**URL:** https://youtube.com/watch?v=8zsPO_fOlHY
+**Added:** 2026-08-16
+**Relevance:** ⭐⭐⭐ (3/5)
+
+## Key Takeaways
+- **🔧 Context and setup** — Continues a tool-augmented arithmetic agent using LangChain tools and LangGraph.…
+- **🧠 Shared state: MessageState as a communication bus** — Think of MessageState as a shared whiteboard: all nodes read from and write to it; no direct node-to-node messaging.…
+- **🧩 Message types used** — SystemMessage: developer-set instructions that persist; not user-editable.…
+- **🛠️ LLM node (llm_call) design** — Node input: the current MessageState.…
+- **📜 System prompt intent and guardrails** — Use tools for all arithmetic calculations.…
+
+## Apply to ArchonOS
+- Update archonOS agent orchestrator to share this pattern: Continues a tool-augmented arithmetic agent using LangChain tools and LangGraph.…
+- Apply to ArchonOS domain knowledge: Think of MessageState as a shared whiteboard: all nodes read from and write to it; no direct node-to-node messaging.…
+- Apply to ArchonOS domain knowledge: SystemMessage: developer-set instructions that persist; not user-editable.…
+
+## TubeOnAI Summary
+> - 🔧 Context and setup
+  – Continues a tool-augmented arithmetic agent using LangChain tools and LangGraph.
+  – Prior work: implemented four Python methods as tools, created an array of tools and a tool_by_name dictionary, and bound tools to an LLM.
+  – Current goal: build a graph using LangGraph’s StateGraph and introduce a stateful memory via MessageState.
+
+- 🧠 Shared state: MessageState as a communication bus
+  – Think of MessageState as a shared whiteboard: all nodes read from and write to it…
+
+## Tags
+`#ai-agents` `#archonos-improvement`

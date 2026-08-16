@@ -6,6 +6,8 @@
   - [How to Train an AI Agent? Dual-Memory Systems with Claude…](memory-systems/how-to-train-an-ai-agent-dual-memory-systems-with-claude-code-and-codex-conversa-GRhg_ZZswmQ.md) — ⭐⭐⭐⭐⭐
   - [Architecting Production-Grade Multi-Agent AI](memory-systems/architecting-production-grade-multi-agent-ai-VmydgDcX8R8.md) — ⭐⭐⭐⭐
   - [Multi-Agent Orchestration: The #1 Skill AI Engineers NEED…](memory-systems/multi-agent-orchestration-the-1-skill-ai-engineers-need-in-2026-GCd4Ft4tcMA.md) — ⭐⭐⭐⭐⭐
+
+  - [📥 1 new entries from 2026-08-16 batch](memory-systems/)
   - [Overview](memory-systems/)
   - [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md)
   - [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md)
@@ -47,6 +49,8 @@
   - [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Systems Explained: Enterprise Agentic AI Arch…](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — ⭐⭐⭐⭐⭐
   - [What Is An AI Agent, Actually? — The 2026 Definition Ever…](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — ⭐⭐⭐⭐
+
+  - [📥 7 new entries from 2026-08-16 batch](agent-architectures/)
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
   - [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md)
@@ -86,6 +90,8 @@
   - [Agent Orchestration Frameworks](tool-use/agent-orchestration-frameworks-TtzBQmOk2TE.md) — ⭐⭐⭐⭐⭐
   - [MCP Architecture EXPLAINED: The Stateless Rebuild (July U…](tool-use/mcp-architecture-explained-the-stateless-rebuild-july-update-X6wyLCmpuo0.md) — ⭐⭐⭐⭐
   - [AI Agent System Design: The Complete Blueprint (7 Subsyst…](tool-use/ai-agent-system-design-the-complete-blueprint-7-subsystems-every-production-agen-p5e_b9GXHbg.md) — ⭐⭐⭐⭐⭐
+
+  - [📥 4 new entries from 2026-08-16 batch](tool-use/)
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
   - [Engineering Agentic RAG as a Tool](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md)

@@ -14,6 +14,18 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-08-16** [China Just Open-Sourced Humanlike Memory for AI Agents (Tencent DB)](memory-systems/china-just-open-sourced-humanlike-memory-for-ai-agents-tence-W3yHP9_jYNk.md) — Oracle batch
+- **2026-08-16** [Design an MCP Server (Model Context Protocol) — System Design Interview 2026](tool-use/design-an-mcp-server-model-context-protocol-system-design-in-odSkvzUwMz4.md) — Oracle batch
+- **2026-08-16** [Building Openkode Devlog#3: AI Coding Agent | Multi-Agent Orchestration | Observability | Langfuse](agent-architectures/building-openkode-devlog3-ai-coding-agent-multi-agent-orches-B3aK3luoeKU.md) — Oracle batch
+- **2026-08-16** [Building Resilient Multi-Agent Systems](agent-architectures/building-resilient-multi-agent-systems-kWM41c6tu80.md) — Oracle batch
+- **2026-08-16** [System Design for AI Agents – Building a Multi-Agent PR Reviewer](agent-architectures/system-design-for-ai-agents-building-a-multi-agent-pr-review-iqRcGCah0Kw.md) — Oracle batch
+- **2026-08-16** [Building MCP at the Speed of Hype: Principles That Outlast the Trends [PyCon DE \u0026 PyData 2026]](tool-use/building-mcp-at-the-speed-of-hype-principles-that-outlast-th-hTkJ-Hm8_1Q.md) — Oracle batch
+- **2026-08-16** [GHAI-606 – Agent Architecture \u0026 SDLC Integration (2026)](agent-architectures/ghai-606-agent-architecture-u0026-sdlc-integration-2026-Z0ZRoVvC1R8.md) — Oracle batch
+- **2026-08-16** [Cognitive Tool Use Pattern - Tool Augmented Agent Part 2](agent-architectures/cognitive-tool-use-pattern-tool-augmented-agent-part-2-8zsPO_fOlHY.md) — Oracle batch
+- **2026-08-16** [The 2026-07-28 MCP Specification Update: Stateless Protocol, No More Sessions](tool-use/the-2026-07-28-mcp-specification-update-stateless-protocol-n-IoDFcbRsvkc.md) — Oracle batch
+- **2026-08-16** [How Does Claude Code Actually Work? Let's Make Our Own](agent-architectures/how-does-claude-code-actually-work-lets-make-our-own-vp6Dlx5aHDU.md) — Oracle batch
+- **2026-08-16** [5 Open Source AI Tools That Feel ILLEGAL To Know About](tool-use/5-open-source-ai-tools-that-feel-illegal-to-know-about--UxcljWN49I.md) — Oracle batch
+- **2026-08-16** [What is Harness Engineering? The Future of Agentic AI Explained](agent-architectures/what-is-harness-engineering-the-future-of-agentic-ai-explain-IBTeJtMmEac.md) — Oracle batch
 - **2026-08-09** [DATA Loop: Agent Autonomy vs. Chat Automation](agent-architectures/data-loop-agent-framework.md) — Dan Martell
 - **2026-08-09** [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md) — Cursor
 - **2026-08-09** [Local LLM VRAM Selection & Context Loading for Code Agents](archonos-notes/local-llm-vram-constraints-coding.md) — Zen van Riel

@@ -1,0 +1,29 @@
+# 5 Open Source AI Tools That Feel ILLEGAL To Know About
+
+**URL:** https://youtube.com/watch?v=-UxcljWN49I
+**Added:** 2026-08-16
+**Relevance:** ⭐⭐⭐ (3/5)
+
+## Key Takeaways
+- **🕸️ Reading the web (Firecrawl) — the “eyes”** — Converts any URL into clean, structured Markdown/JSON, removing ads, banners, and navigation…
+- **🖱️ Acting on the web (browser-use) — the “hands”** — Gives an agent a real browser to click, type, scroll, and navigate sites without APIs…
+- **🧠 Persistent memory (Mem0) — durable, efficient recall** — Solves forgetting between sessions without pasting full transcripts on every turn…
+- **💻 Autonomous coding (OpenHands) — builds and fixes software** — Community open-source answer to Cognition AI’s Devin ($500/month): full dev sandbox for agents…
+- **🧩 Planning, orchestration, and production (Dify) — the “brain” and front door** — Visual canvas to wire models, tools, retrievers, and agents; supports multi-agent orchestration…
+
+## Apply to ArchonOS
+- Apply to ArchonOS domain knowledge: Converts any URL into clean, structured Markdown/JSON, removing ads, banners, and navigation…
+- Update archonOS agent orchestrator to share this pattern: Gives an agent a real browser to click, type, scroll, and navigate sites without APIs…
+- Add to SupaBrain enrichment pipeline: episodic→semantic consolidation layer: Solves forgetting between sessions without pasting full transcripts on every turn…
+
+## TubeOnAI Summary
+> 🔥 Core premise: Build AI agents by assembling five open-source components covering four needs—read the web, act on it, remember, and plan/operate  
+  – The four capabilities: web reading, web action, persistent memory, planning/orchestration  
+  – Five repos fill all slots; one doubles as both brain and production platform  
+  – All are free/open-source; mix self-hosted and hosted options; pay primarily for model calls
+
+🕸️ Reading the web (Firecrawl) — the “eyes”  
+  – Converts any URL into clea…
+
+## Tags
+`#ai-agents` `#archonos-improvement`

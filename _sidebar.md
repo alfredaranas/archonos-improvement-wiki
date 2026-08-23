@@ -143,6 +143,7 @@
   - [📥 2 new entries from 2026-08-01 batch](production-ai/)
   - [OpenClaw Multi-Agent Deployment: Dedicated Hardware, Access Control, and Cost Management](production-ai/openclaw-multi-agent-deployment-architecture.md)
   - [TubeOnAI Empty-Summary Failure (2026-08-08 batch)](production-ai/tubeonai-empty-summary-failure-2026-08-08.md)
+  - [TubeOnAI `summary_generation_incomplete` Outage (2026-08-22 batch)](production-ai/tubeonai-summary-generation-incomplete-outage-2026-08-22.md)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)

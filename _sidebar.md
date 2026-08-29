@@ -2,6 +2,8 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [📥 1 new entries from 2026-08-29 batch](memory-systems/)
+
   - [LangChain vs CrewAI vs AutoGen: Which Agent Framework is …](memory-systems/langchain-vs-crewai-vs-autogen-which-agent-framework-is-best-ai-foundations-4-lX0ifSgclGk.md) — ⭐⭐⭐⭐⭐
   - [How to Train an AI Agent? Dual-Memory Systems with Claude…](memory-systems/how-to-train-an-ai-agent-dual-memory-systems-with-claude-code-and-codex-conversa-GRhg_ZZswmQ.md) — ⭐⭐⭐⭐⭐
   - [Architecting Production-Grade Multi-Agent AI](memory-systems/architecting-production-grade-multi-agent-ai-VmydgDcX8R8.md) — ⭐⭐⭐⭐
@@ -46,6 +48,8 @@
   - [AWS Bedrock Agents: Session Persistence & State Management](memory-systems/aws-bedrock-agents-session-management.md)
   - [Hybrid Agent Memory Architecture: From Stateless to Intelligent](memory-systems/hybrid-agent-memory-architecture.md)
 - **Agent Architectures**
+  - [📥 3 new entries from 2026-08-29 batch](agent-architectures/)
+
   - [I Tested Buzz by Block: Multi-Agent Orchestration](agent-architectures/i-tested-buzz-by-block-multi-agent-orchestration-L5gXr2TghgA.md) — ⭐⭐⭐⭐⭐
   - [Multi-Agent Systems Explained: Enterprise Agentic AI Arch…](agent-architectures/multi-agent-systems-explained-enterprise-agentic-ai-architecture-for-production-Z0czZnUq6EU.md) — ⭐⭐⭐⭐⭐
   - [What Is An AI Agent, Actually? — The 2026 Definition Ever…](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — ⭐⭐⭐⭐
@@ -85,6 +89,8 @@
   - [Agentic RAG: LLM-Driven Data Source Selection](agent-architectures/agentic-rag-intelligent-retrieval.md)
   - [DATA Loop: Agent Autonomy vs. Chat Automation](agent-architectures/data-loop-agent-framework.md)
 - **Tool Use & MCP**
+  - [📥 1 new entries from 2026-08-29 batch](tool-use/)
+
   - [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
   - [Building Enterprise AI Agents with MCP and Production Gov…](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — ⭐⭐⭐⭐⭐
   - [Agent Orchestration Frameworks](tool-use/agent-orchestration-frameworks-TtzBQmOk2TE.md) — ⭐⭐⭐⭐⭐
@@ -117,6 +123,8 @@
   - [Function Calling with Gemini API: Multi-Tool Assistant Pattern](tool-use/gemini-function-calling-multi-tool-assistant.md)
   - [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md)
 - **Production AI**
+  - [📥 4 new entries from 2026-08-29 batch](production-ai/)
+
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
   - [Samuel Jaja - Building Production Multi-Agent RAG Systems on Serverless AWS | Pydata London 26](production-ai/samuel-jaja-building-production-multi-agent-rag-systems-on-serverless-aws-pydata-M4j1otT6Leg.md)
@@ -168,5 +176,7 @@
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)
   - [TubeOnAI OpenAPI JSON](resources/tubeonai-openapi.json)
 - **General**
+  - [📥 1 new entries from 2026-08-29 batch](general/)
+
   - [Overview](general/)
   - [Complete Agentic AI Course - AI Agents, RAG, Embeddings, Architectures, Framework, VectorDB & Memory](general/complete-agentic-ai-course-ai-agents-rag-embeddings-architectures-framework-vect-Pn95eOlw5qk.md)

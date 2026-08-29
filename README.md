@@ -14,6 +14,26 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-08-29** [Memory Pruning in LangChain | Importance-Based Context Management for Production AI](production-ai/memory-pruning-in-langchain-importance-based-context-management-for-production-a-OZKKQg8nhSU.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-08-29** [Sliding Window Memory in LangChain Explained | Build Production-Ready AI Chat Memory](memory-systems/sliding-window-memory-in-langchain-explained-build-production-ready-ai-chat-memo-Rxn1qGJ3fYc.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [My current agentic coding workflow](agent-architectures/my-current-agentic-coding-workflow-xLQgOzK1adE.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [6. Agentic System Design: How to Architect AI That Actually Takes Action (Not Just Chats)](agent-architectures/6-agentic-system-design-how-to-architect-ai-that-actually-takes-action-not-just--H7uqurKcxjY.md) — Oracle batch — ⭐⭐⭐⭐⭐
+- **2026-08-29** [Claude Certified Developer: Ep 09 | How AI Agents Actually Use MCP | Full Course](tool-use/claude-certified-developer-ep-09-how-ai-agents-actually-use-mcp-full-course-M3zvzzwzZSY.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-08-29** [GitHub Agentic Workflows Explained - Don Syme, GitHub Next](production-ai/github-agentic-workflows-explained-don-syme-github-next-T2W0nIEQIgc.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [A Meta Engineer's Agentic Engineering Workflow](agent-architectures/a-meta-engineer-s-agentic-engineering-workflow-Ukju3maxbEQ.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [Why AI Agents Fail Silently in Production (And How to Fix It) |Dr Sekhar Sarukkai CEO Chatsee AI](production-ai/why-ai-agents-fail-silently-in-production-and-how-to-fix-it-dr-sekhar-sarukkai-c-dSPeB7Srsfc.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-08-29** [Bevor du KI-AGENTEN nutzt: Das musst du WIRKLICH wissen!](general/bevor-du-ki-agenten-nutzt-das-musst-du-wirklich-wissen-GgYBe6I4aHQ.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [20 Agentic AI System Design Interview Questions & Solutions](production-ai/20-agentic-ai-system-design-interview-questions-solutions-I4sGn8Z1vpI.md) — Oracle batch — ⭐⭐⭐⭐⭐
+- **2026-08-29** [Memory Pruning in LangChain | Importance-Based Context Management for Production AI](production-ai/memory-pruning-in-langchain-importance-based-context-management-for-production-a-OZKKQg8nhSU.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-08-29** [Sliding Window Memory in LangChain Explained | Build Production-Ready AI Chat Memory](memory-systems/sliding-window-memory-in-langchain-explained-build-production-ready-ai-chat-memo-Rxn1qGJ3fYc.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [My current agentic coding workflow](agent-architectures/my-current-agentic-coding-workflow-xLQgOzK1adE.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [6. Agentic System Design: How to Architect AI That Actually Takes Action (Not Just Chats)](agent-architectures/6-agentic-system-design-how-to-architect-ai-that-actually-takes-action-not-just--H7uqurKcxjY.md) — Oracle batch — ⭐⭐⭐⭐⭐
+- **2026-08-29** [Claude Certified Developer: Ep 09 | How AI Agents Actually Use MCP | Full Course](tool-use/claude-certified-developer-ep-09-how-ai-agents-actually-use-mcp-full-course-M3zvzzwzZSY.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-08-29** [GitHub Agentic Workflows Explained - Don Syme, GitHub Next](production-ai/github-agentic-workflows-explained-don-syme-github-next-T2W0nIEQIgc.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [A Meta Engineer's Agentic Engineering Workflow](agent-architectures/a-meta-engineer-s-agentic-engineering-workflow-Ukju3maxbEQ.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [Why AI Agents Fail Silently in Production (And How to Fix It) |Dr Sekhar Sarukkai CEO Chatsee AI](production-ai/why-ai-agents-fail-silently-in-production-and-how-to-fix-it-dr-sekhar-sarukkai-c-dSPeB7Srsfc.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-08-29** [Bevor du KI-AGENTEN nutzt: Das musst du WIRKLICH wissen!](general/bevor-du-ki-agenten-nutzt-das-musst-du-wirklich-wissen-GgYBe6I4aHQ.md) — Oracle batch — ⭐⭐⭐
+- **2026-08-29** [20 Agentic AI System Design Interview Questions & Solutions](production-ai/20-agentic-ai-system-design-interview-questions-solutions-I4sGn8Z1vpI.md) — Oracle batch — ⭐⭐⭐⭐⭐
 - **2026-08-16** [China Just Open-Sourced Humanlike Memory for AI Agents (Tencent DB)](memory-systems/china-just-open-sourced-humanlike-memory-for-ai-agents-tence-W3yHP9_jYNk.md) — Oracle batch
 - **2026-08-16** [Design an MCP Server (Model Context Protocol) — System Design Interview 2026](tool-use/design-an-mcp-server-model-context-protocol-system-design-in-odSkvzUwMz4.md) — Oracle batch
 - **2026-08-16** [Building Openkode Devlog#3: AI Coding Agent | Multi-Agent Orchestration | Observability | Langfuse](agent-architectures/building-openkode-devlog3-ai-coding-agent-multi-agent-orches-B3aK3luoeKU.md) — Oracle batch

@@ -2,6 +2,11 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [📥 2 new entries from 2026-09-12 batch](memory-systems/)
+
+  - [RAG for Conversational AI Explained | Long-Term Memory, Context Management & Consistent AI Chatbots](memory-systems/rag-for-conversational-ai-explained-long-term-memory-context-management-u0026-co-ayn-LO4-QjQ.md) — ⭐⭐⭐⭐⭐
+  - [What Mem0 actually is (the memory layer)](memory-systems/what-mem0-actually-is-the-memory-layer-Wxg-rJvoACE.md) — ⭐⭐⭐⭐
+
   - [📥 2 new entries from 2026-09-05 batch](memory-systems/)
 
   - [How AI Agent Memory Actually Works in 2026 (Mem0, Letta, Zep)](memory-systems/how-ai-agent-memory-actually-works-in-2026-mem0-letta-zep-x1fawQEJXEQ.md) — ⭐⭐⭐⭐⭐
@@ -53,6 +58,16 @@
   - [AWS Bedrock Agents: Session Persistence & State Management](memory-systems/aws-bedrock-agents-session-management.md)
   - [Hybrid Agent Memory Architecture: From Stateless to Intelligent](memory-systems/hybrid-agent-memory-architecture.md)
 - **Agent Architectures**
+  - [📥 7 new entries from 2026-09-12 batch](agent-architectures/)
+
+  - [AI Agents vs. LLMs: Choosing the Right Tool for AI Tasks](agent-architectures/ai-agents-vs-llms-choosing-the-right-tool-for-ai-tasks-I9z-nrk9cw0.md) — ⭐⭐⭐
+  - [Claude Multi-Agent Orchestration Explained: Full Workflow Breakdown](agent-architectures/claude-multi-agent-orchestration-explained-full-workflow-breakdown-z5_w8TOUoPQ.md) — ⭐⭐⭐⭐
+  - [Core Agent Workflow](agent-architectures/core-agent-workflow-PZsJfBVDZZc.md) — ⭐⭐⭐⭐
+  - [Directive Orchestration Execution (DOE Framework)](agent-architectures/directive-orchestration-execution-doe-framework-MxyRjL7NG18.md) — ⭐⭐⭐⭐⭐
+  - [MCP Servers vs Bash Tools](agent-architectures/mcp-servers-vs-bash-tools-IFs8LRbKTIY.md) — ⭐⭐⭐
+  - [Mission control: Monitoring agent progress](agent-architectures/mission-control-monitoring-agent-progress-fqvbxkgU6vE.md) — ⭐⭐⭐⭐⭐
+  - [What Is Multi-Agent Orchestration?](agent-architectures/what-is-multi-agent-orchestration-EtSO9vU84ws.md) — ⭐⭐⭐⭐⭐
+
   - [📥 5 new entries from 2026-09-05 batch](agent-architectures/)
 
   - [AI agent design patterns](agent-architectures/ai-agent-design-patterns-GDm_uH6VxPY.md) — ⭐⭐⭐⭐
@@ -102,6 +117,13 @@
   - [Agentic RAG: LLM-Driven Data Source Selection](agent-architectures/agentic-rag-intelligent-retrieval.md)
   - [DATA Loop: Agent Autonomy vs. Chat Automation](agent-architectures/data-loop-agent-framework.md)
 - **Tool Use & MCP**
+  - [📥 4 new entries from 2026-09-12 batch](tool-use/)
+
+  - [Benefits of connecting AI to tools](tool-use/benefits-of-connecting-ai-to-tools-GuTcle5edjk.md) — ⭐⭐⭐⭐
+  - [Build YOUR OWN MCP Server](tool-use/build-your-own-mcp-server-0U4qoyf1VoE.md) — ⭐⭐⭐⭐
+  - [How Model Context Protocol (MCP) actually works](tool-use/how-model-context-protocol-mcp-actually-works-cGuyrANVi4A.md) — ⭐⭐⭐
+  - [Running an MCP Gateway with n8n](tool-use/running-an-mcp-gateway-with-n8n-Zmy439spZB4.md) — ⭐⭐⭐
+
   - [📥 1 new entries from 2026-09-05 batch](tool-use/)
 
   - [MCP + A2A Coding Masterclass: Build multi-agent orchestration from scratch (Beginner to Pro)](tool-use/mcp-a2a-coding-masterclass-build-multi-agent-orchestration-from-scratch-beginner-utF6leQwcts.md) — ⭐⭐⭐⭐
@@ -140,6 +162,12 @@
   - [Function Calling with Gemini API: Multi-Tool Assistant Pattern](tool-use/gemini-function-calling-multi-tool-assistant.md)
   - [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md)
 - **Production AI**
+  - [📥 3 new entries from 2026-09-12 batch](production-ai/)
+
+  - [5 Tips for Deploying AI Agents to Production](production-ai/5-tips-for-deploying-ai-agents-to-production-j1wfE0SOBbE.md) — ⭐⭐⭐⭐
+  - [LLM-as-a-judge & evaluation metrics](production-ai/llm-as-a-judge-u0026-evaluation-metrics-cR5mqLcj3J4.md) — ⭐⭐⭐⭐
+  - [Next steps and improvements](production-ai/next-steps-and-improvements-ObTPqBGsEbA.md) — ⭐⭐⭐⭐
+
   - [📥 1 new entries from 2026-09-05 batch](production-ai/)
 
   - [Why 95% of AI Agents Failed in Production (And How the 5% Will Win in 2026)](production-ai/why-95-of-ai-agents-failed-in-production-and-how-the-5-will-win-in-2026-VL-RbFqTiQc.md) — ⭐⭐⭐⭐⭐
@@ -197,6 +225,10 @@
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)
   - [TubeOnAI OpenAPI JSON](resources/tubeonai-openapi.json)
 - **General**
+  - [📥 1 new entries from 2026-09-12 batch](general/)
+
+  - [AI Agents, Clearly Explained](general/ai-agents-clearly-explained-FwOTs4UxQS4.md) — ⭐⭐⭐
+
   - [📥 3 new entries from 2026-09-05 batch](general/)
 
   - [Agentic Workflows Have Changed EVERYTHING in 2026 (DEATH Of The Senior Dev?)](general/agentic-workflows-have-changed-everything-in-2026-death-of-the-senior-dev-utBeUmDPApk.md) — ⭐⭐⭐

@@ -14,6 +14,18 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-05** [Why 95% of AI Agents Failed in Production (And How the 5% Will Win in 2026)](production-ai/why-95-of-ai-agents-failed-in-production-and-how-the-5-will-win-in-2026-VL-RbFqTiQc.md) — Oracle batch — ⭐⭐⭐⭐⭐
+- **2026-09-05** [MCP + A2A Coding Masterclass: Build multi-agent orchestration from scratch (Beginner to Pro)](tool-use/mcp-a2a-coding-masterclass-build-multi-agent-orchestration-from-scratch-beginner-utF6leQwcts.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-05** [How AI Agent Memory Actually Works in 2026 (Mem0, Letta, Zep)](memory-systems/how-ai-agent-memory-actually-works-in-2026-mem0-letta-zep-x1fawQEJXEQ.md) — Oracle batch — ⭐⭐⭐⭐⭐
+- **2026-09-05** [Is RAG Still Needed? Choosing the Best Approach for LLMs](memory-systems/is-rag-still-needed-choosing-the-best-approach-for-llms-UabBYexBD4k.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-05** [AI agent design patterns](agent-architectures/ai-agent-design-patterns-GDm_uH6VxPY.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-05** [Claude Architect: Multi-Agent Orchestration](agent-architectures/claude-architect-multi-agent-orchestration-vRYBG_R8JAI.md) — Oracle batch — ⭐⭐⭐⭐⭐
+- **2026-09-05** [How to Use Agentic AI: LLMs, AI Agents & Prompt Engineering in Action](agent-architectures/how-to-use-agentic-ai-llms-ai-agents-prompt-engineering-in-action-bwvfdFWR1RI.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-05** [Multi-Agent Orchestration: Coordinating the Agent Dance with Temporal](agent-architectures/multi-agent-orchestration-coordinating-the-agent-dance-with-temporal-nyR1NyyvL5M.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-05** [The Only Agentic Engineer Workflow You Need In 2026](agent-architectures/the-only-agentic-engineer-workflow-you-need-in-2026-ElYxdpYi4U0.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-05** [Agentic Workflows Have Changed EVERYTHING in 2026 (DEATH Of The Senior Dev?)](general/agentic-workflows-have-changed-everything-in-2026-death-of-the-senior-dev-utBeUmDPApk.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-05** [Skills vs MCP vs RAG vs Memory: What AI Agents Need to Know](general/skills-vs-mcp-vs-rag-vs-memory-what-ai-agents-need-to-know-X4FVEEegCbk.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-05** [Why LLMs get dumb (Context Windows Explained)](general/why-llms-get-dumb-context-windows-explained-TeQDr4DkLYo.md) — Oracle batch — ⭐⭐⭐
 - **2026-08-29** [Memory Pruning in LangChain | Importance-Based Context Management for Production AI](production-ai/memory-pruning-in-langchain-importance-based-context-management-for-production-a-OZKKQg8nhSU.md) — Oracle batch — ⭐⭐⭐⭐
 - **2026-08-29** [Sliding Window Memory in LangChain Explained | Build Production-Ready AI Chat Memory](memory-systems/sliding-window-memory-in-langchain-explained-build-production-ready-ai-chat-memo-Rxn1qGJ3fYc.md) — Oracle batch — ⭐⭐⭐
 - **2026-08-29** [My current agentic coding workflow](agent-architectures/my-current-agentic-coding-workflow-xLQgOzK1adE.md) — Oracle batch — ⭐⭐⭐

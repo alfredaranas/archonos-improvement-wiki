@@ -164,6 +164,7 @@
   - [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md)
   - [Model Context Protocol (MCP) Server in .NET](tool-use/mcp-server-dotnet-implementation.md)
   - [LLM Function Calling & Tool Invocation Loop Pattern](tool-use/llm-function-calling-tool-invocation-loop.md)
+  - [LLM Function & Tool Calling: External Data Access Pattern](tool-use/llm-function-calling-tool-calling.md)
 - **Production AI**
   - [📥 3 new entries from 2026-09-12 batch](production-ai/)
 

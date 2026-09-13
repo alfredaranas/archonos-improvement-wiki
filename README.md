@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-13** [Agentic Workflows: Core Design Patterns and Error Analysis](agent-architectures/agentic-workflows-core-patterns.md) — DeepLearningAI
 - **2026-09-13** [Model Context Protocol (MCP) Server in .NET](tool-use/mcp-server-dotnet-implementation.md) — Imposter Syndrome
 - **2026-09-12** [Directive Orchestration Execution (DOE Framework)](agent-architectures/directive-orchestration-execution-doe-framework-MxyRjL7NG18.md) — Oracle batch — ⭐⭐⭐⭐⭐
 - **2026-09-12** [Mission control: Monitoring agent progress](agent-architectures/mission-control-monitoring-agent-progress-fqvbxkgU6vE.md) — Oracle batch — ⭐⭐⭐⭐⭐

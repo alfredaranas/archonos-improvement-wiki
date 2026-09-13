@@ -116,6 +116,7 @@
   - [Missions: Multi-Agent Architecture for Long-Running Tasks](agent-architectures/missions-multi-agent-framework.md)
   - [Agentic RAG: LLM-Driven Data Source Selection](agent-architectures/agentic-rag-intelligent-retrieval.md)
   - [DATA Loop: Agent Autonomy vs. Chat Automation](agent-architectures/data-loop-agent-framework.md)
+  - [Agentic Workflows: Core Design Patterns and Error Analysis](agent-architectures/agentic-workflows-core-patterns.md)
 - **Tool Use & MCP**
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)
 

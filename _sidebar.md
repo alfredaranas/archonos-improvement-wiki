@@ -161,6 +161,7 @@
   - [Function Calling & Tool Use Pattern: LLM Agent Interface Design](tool-use/function-calling-tool-use-pattern.md)
   - [Function Calling with Gemini API: Multi-Tool Assistant Pattern](tool-use/gemini-function-calling-multi-tool-assistant.md)
   - [Tool Calling: Dynamic Context Retrieval and Agentic Action](tool-use/tool-calling-fundamentals.md)
+  - [Model Context Protocol (MCP) Server in .NET](tool-use/mcp-server-dotnet-implementation.md)
 - **Production AI**
   - [📥 3 new entries from 2026-09-12 batch](production-ai/)
 

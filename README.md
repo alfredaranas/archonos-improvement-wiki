@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-13** [Context vs. Memory: Architectural Separation for Agent Recall](memory-systems/context-vs-memory-agent-recall.md) — KodeKloud
 - **2026-09-13** [.NET LLM Function Calling: Autonomous API Integration](tool-use/dotnet-llm-function-calling-patterns.md) — AI Engineering in DotNet
 - **2026-09-13** [LLM Function & Tool Calling: External Data Access Pattern](tool-use/llm-function-calling-tool-calling.md) — Coding Jist
 - **2026-09-13** [LLM Function Calling & Tool Invocation Loop Pattern](tool-use/llm-function-calling-tool-invocation-loop.md) — Javed Wasim — AI & Tech

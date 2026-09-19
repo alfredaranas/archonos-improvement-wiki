@@ -20,6 +20,11 @@
   - [Multi-Agent Orchestration: The #1 Skill AI Engineers NEED…](memory-systems/multi-agent-orchestration-the-1-skill-ai-engineers-need-in-2026-GCd4Ft4tcMA.md) — ⭐⭐⭐⭐⭐
 
   - [📥 1 new entries from 2026-08-16 batch](memory-systems/)
+
+  - [📥 3 new entries from 2026-09-19 batch](memory-systems/)
+  - [You Can Design Production AI Agents in 20min: My 14-Step AI System Design Stack](memory-systems/you-can-design-production-ai-agents-in-20min-my-14-step-ai-system-design-stack-D6QlZuz67LA.md) — ⭐⭐⭐⭐
+  - [Turn off Claude Code's Memory](memory-systems/turn-off-claude-codes-memory-Jf54k7tFeEc.md) — ⭐⭐⭐⭐
+  - [AI Agent Memory: 7 Types Explained in 12 Minutes](memory-systems/ai-agent-memory-7-types-explained-in-12-minutes-bK1clrG-boc.md) — ⭐⭐⭐
   - [Overview](memory-systems/)
   - [Neuroscience-Inspired Persistent Memory for AI Agents](memory-systems/neuroscience-inspired-persistent-agent-memory.md)
   - [Neuroscience-Inspired Memory Architecture for Persistent AI Agents](memory-systems/neuroscience-inspired-agent-memory-architecture.md)
@@ -85,6 +90,19 @@
   - [What Is An AI Agent, Actually? — The 2026 Definition Ever…](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — ⭐⭐⭐⭐
 
   - [📥 7 new entries from 2026-08-16 batch](agent-architectures/)
+
+  - [📥 11 new entries from 2026-09-19 batch](agent-architectures/)
+  - [Agentic AI Architecture - Tools, Memory, Planning &amp; Multi-Agent Systems](agent-architectures/agentic-ai-architecture-tools-memory-planning-multi-agent-systems-GLbKyqoaxgA.md) — ⭐⭐⭐
+  - [Building the Open Agentic Stack: Founders on Multi-Agent Architecture and Contex](agent-architectures/building-the-open-agentic-stack-founders-on-multi-agent-architecture-and-context-s8fdTsoae88.md) — ⭐⭐⭐
+  - [Claude Agent SDK: Agentic Loops and Multi-Agent Orchestration](agent-architectures/claude-agent-sdk-agentic-loops-and-multi-agent-orchestration-3X0-Jia87LA.md) — ⭐⭐⭐
+  - [Turn Claude into your PERFECT Agentic OS (in 4 Simple Steps)](agent-architectures/turn-claude-into-your-perfect-agentic-os-in-4-simple-steps-8NSyI-npJCU.md) — ⭐⭐⭐
+  - [AI Agent System Design Explained in 15 Minutes!](agent-architectures/ai-agent-system-design-explained-in-15-minutes-BeeQ3_zb8q8.md) — ⭐⭐⭐⭐
+  - [Agentic AI Crash Course for JavaScript &amp; TypeScript Developers](agent-architectures/agentic-ai-crash-course-for-javascript-typescript-developers-42sSz7GNgf8.md) — ⭐⭐⭐
+  - [Coordinator Subagent Orchestration in Claude Agent SDK — How Multi-Agent Delegat](agent-architectures/coordinator-subagent-orchestration-in-claude-agent-sdk-how-multi-agent-delegatio-RfB1ju3Wks4.md) — ⭐⭐⭐
+  - [Agents Without Code: Skills, YAML, and Filesystems Replaced Python — Philipp Sch](agent-architectures/agents-without-code-skills-yaml-and-filesystems-replaced-python-philipp-schmid-g-fjF8EKnxKCU.md) — ⭐⭐⭐⭐
+  - [Building AI Agents in Pure Python - Beginner Course](agent-architectures/building-ai-agents-in-pure-python---beginner-course-c9AnqCeyxbI.md) — ⭐⭐⭐
+  - [Ranking Every Personal AI Agent in 18 Minutes](agent-architectures/ranking-every-personal-ai-agent-in-18-minutes-aBdMey9nqcM.md) — ⭐⭐⭐
+  - [Multi Agent Orchestration - Claude Certified Architect Foundations - 02](agent-architectures/multi-agent-orchestration-claude-certified-architect-foundations---02-k_Ty8yiBz98.md) — ⭐⭐⭐⭐
   - [Overview](agent-architectures/)
   - [Agentic Memory: Three-Layer Taxonomy and Dynamic Lifecycle](agent-architectures/agentic-memory-taxonomy-2025.md)
   - [Dynamic Specialist Agent Instantiation Pattern](agent-architectures/dynamic-specialist-agent-instantiation.md)
@@ -140,6 +158,11 @@
   - [AI Agent System Design: The Complete Blueprint (7 Subsyst…](tool-use/ai-agent-system-design-the-complete-blueprint-7-subsystems-every-production-agen-p5e_b9GXHbg.md) — ⭐⭐⭐⭐⭐
 
   - [📥 4 new entries from 2026-08-16 batch](tool-use/)
+
+  - [📥 3 new entries from 2026-09-19 batch](tool-use/)
+  - [Code Mode: Why AI Agents Are Ditching Tool Calls for Code](tool-use/code-mode-why-ai-agents-are-ditching-tool-calls-for-code-IXe48aIw_X4.md) — ⭐⭐⭐
+  - [Tool Calling Explained: How AI Agents Use APIs and Tools](tool-use/tool-calling-explained-how-ai-agents-use-apis-and-tools-mCnsIHja5cw.md) — ⭐⭐⭐
+  - [Route Tools Without Context Bloat](tool-use/route-tools-without-context-bloat-PgI7uJmwoAY.md) — ⭐⭐⭐
   - [Overview](tool-use/)
   - [I Connected Claude AI to Groww — Real MCP Production Case Study](tool-use/claude-mcp-groww-portfolio-tools.md)
   - [Engineering Agentic RAG as a Tool](tool-use/engineering-agentic-rag-as-a-tool-part-2-agenticrag-aiagents-54C8GzErOPE.md)
@@ -181,6 +204,12 @@
 
   - [📥 4 new entries from 2026-08-29 batch](production-ai/)
 
+
+  - [📥 4 new entries from 2026-09-19 batch](production-ai/)
+  - [Agentic engineering: Graphs, workflows, verifiable coding agent runtimes, and st](production-ai/agentic-engineering-graphs-workflows-verifiable-coding-agent-runtimes-and-stayin-epg292lGCZ4.md) — ⭐⭐⭐⭐
+  - [AI System Design: 7 Patterns Explained in 17 Minutes](production-ai/ai-system-design-7-patterns-explained-in-17-minutes-0jCss9xfOiw.md) — ⭐⭐⭐⭐
+  - [AutoHedge: Build and Audit a Multi-Agent Trading System in Python](production-ai/autohedge-build-and-audit-a-multi-agent-trading-system-in-python-oZ82glPzK8g.md) — ⭐⭐⭐
+  - [Design Your Multi-Agent System](production-ai/design-your-multi-agent-system-elRW5G4dr4k.md) — ⭐⭐⭐
   - [Overview](production-ai/)
   - [CosmosDB Conf 2026 Key Takeaways: OpenAI Scale, Agent Memory & AI-Native Databases](production-ai/cosmosdb-conf-2026-key-takeaways-openai-scale-agent-memory-u-kJ-iS2vls7o.md)
   - [Samuel Jaja - Building Production Multi-Agent RAG Systems on Serverless AWS | Pydata London 26](production-ai/samuel-jaja-building-production-multi-agent-rag-systems-on-serverless-aws-pydata-M4j1otT6Leg.md)

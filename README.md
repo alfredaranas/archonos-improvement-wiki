@@ -14,6 +14,27 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-19** [Agentic AI Architecture | Tools, Memory, Planning & Multi-Agent Systems](agent-architectures/agentic-ai-architecture-tools-memory-planning-multi-agent-systems-GLbKyqoaxgA.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Agentic AI Crash Course for JavaScript & TypeScript Developers](agent-architectures/agentic-ai-crash-course-for-javascript-typescript-developers-42sSz7GNgf8.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Agentic engineering: Graphs, workflows, verifiable coding agent runtimes, and staying in control](production-ai/agentic-engineering-graphs-workflows-verifiable-coding-agent-runtimes-and-stayin-epg292lGCZ4.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-19** [Agents Without Code: Skills, YAML, and Filesystems Replaced Python — Philipp Schmid, Google DeepMind](agent-architectures/agents-without-code-skills-yaml-and-filesystems-replaced-python-philipp-schmid-g-fjF8EKnxKCU.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-19** [AI Agent Memory: 7 Types Explained in 12 Minutes](memory-systems/ai-agent-memory-7-types-explained-in-12-minutes-bK1clrG-boc.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [AI Agent System Design Explained in 15 Minutes!](agent-architectures/ai-agent-system-design-explained-in-15-minutes-BeeQ3_zb8q8.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-19** [AI System Design: 7 Patterns Explained in 17 Minutes](production-ai/ai-system-design-7-patterns-explained-in-17-minutes-0jCss9xfOiw.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-19** [AutoHedge: Build and Audit a Multi-Agent Trading System in Python](production-ai/autohedge-build-and-audit-a-multi-agent-trading-system-in-python-oZ82glPzK8g.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Building AI Agents in Pure Python - Beginner Course](agent-architectures/building-ai-agents-in-pure-python---beginner-course-c9AnqCeyxbI.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Building the Open Agentic Stack: Founders on Multi-Agent Architecture and Context](agent-architectures/building-the-open-agentic-stack-founders-on-multi-agent-architecture-and-context-s8fdTsoae88.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Claude Agent SDK: Agentic Loops and Multi-Agent Orchestration](agent-architectures/claude-agent-sdk-agentic-loops-and-multi-agent-orchestration-3X0-Jia87LA.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Code Mode: Why AI Agents Are Ditching Tool Calls for Code](tool-use/code-mode-why-ai-agents-are-ditching-tool-calls-for-code-IXe48aIw_X4.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Coordinator Subagent Orchestration in Claude Agent SDK — How Multi-Agent Delegation Actually Works](agent-architectures/coordinator-subagent-orchestration-in-claude-agent-sdk-how-multi-agent-delegatio-RfB1ju3Wks4.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Design Your Multi-Agent System](production-ai/design-your-multi-agent-system-elRW5G4dr4k.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Multi Agent Orchestration | Claude Certified Architect Foundations - 02](agent-architectures/multi-agent-orchestration-claude-certified-architect-foundations---02-k_Ty8yiBz98.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-19** [Ranking Every Personal AI Agent in 18 Minutes](agent-architectures/ranking-every-personal-ai-agent-in-18-minutes-aBdMey9nqcM.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Route Tools Without Context Bloat](tool-use/route-tools-without-context-bloat-PgI7uJmwoAY.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Tool Calling Explained: How AI Agents Use APIs and Tools](tool-use/tool-calling-explained-how-ai-agents-use-apis-and-tools-mCnsIHja5cw.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Turn Claude into your PERFECT Agentic OS (in 4 Simple Steps)](agent-architectures/turn-claude-into-your-perfect-agentic-os-in-4-simple-steps-8NSyI-npJCU.md) — Oracle batch — ⭐⭐⭐
+- **2026-09-19** [Turn off Claude Code's Memory](memory-systems/turn-off-claude-codes-memory-Jf54k7tFeEc.md) — Oracle batch — ⭐⭐⭐⭐
+- **2026-09-19** [You Can Design Production AI Agents in 20min: My 14-Step AI System Design Stack](memory-systems/you-can-design-production-ai-agents-in-20min-my-14-step-ai-system-design-stack-D6QlZuz67LA.md) — Oracle batch — ⭐⭐⭐⭐
 - **2026-09-13** [Agent Checkpointing & Persistent State for Crash Recovery](memory-systems/agent-checkpoint-persistence-patterns.md) — DevOps Hint
 - **2026-09-13** [Context vs. Memory: Architectural Separation for Agent Recall](memory-systems/context-vs-memory-agent-recall.md) — KodeKloud
 - **2026-09-13** [.NET LLM Function Calling: Autonomous API Integration](tool-use/dotnet-llm-function-calling-patterns.md) — AI Engineering in DotNet

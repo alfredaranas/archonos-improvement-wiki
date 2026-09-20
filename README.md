@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-20** [ReAct Framework: Synergizing Reasoning and Action in LLM Agents](agent-architectures/react-framework-reasoning-action.md) — New Machina
 - **2026-09-20** [Multi-Agent Orchestration with Tmux and Event Observability](agent-architectures/multi-agent-orchestration-tmux-observability.md) — IndyDevDan
 - **2026-09-19** [Agentic AI Architecture | Tools, Memory, Planning & Multi-Agent Systems](agent-architectures/agentic-ai-architecture-tools-memory-planning-multi-agent-systems-GLbKyqoaxgA.md) — Oracle batch — ⭐⭐⭐
 - **2026-09-19** [Agentic AI Crash Course for JavaScript & TypeScript Developers](agent-architectures/agentic-ai-crash-course-for-javascript-typescript-developers-42sSz7GNgf8.md) — Oracle batch — ⭐⭐⭐

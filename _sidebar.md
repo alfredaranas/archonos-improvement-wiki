@@ -21,6 +21,8 @@
 
   - [📥 1 new entries from 2026-08-16 batch](memory-systems/)
 
+  - [📥 3 new entries from 2026-09-26 batch](memory-systems/)
+
   - [📥 3 new entries from 2026-09-19 batch](memory-systems/)
   - [You Can Design Production AI Agents in 20min: My 14-Step AI System Design Stack](memory-systems/you-can-design-production-ai-agents-in-20min-my-14-step-ai-system-design-stack-D6QlZuz67LA.md) — ⭐⭐⭐⭐
   - [Turn off Claude Code's Memory](memory-systems/turn-off-claude-codes-memory-Jf54k7tFeEc.md) — ⭐⭐⭐⭐
@@ -90,6 +92,8 @@
   - [What Is An AI Agent, Actually? — The 2026 Definition Ever…](agent-architectures/what-is-an-ai-agent-actually-the-2026-definition-every-framework-argues-about-ai-_GzB2crntnA.md) — ⭐⭐⭐⭐
 
   - [📥 7 new entries from 2026-08-16 batch](agent-architectures/)
+
+  - [📥 2 new entries from 2026-09-26 batch](agent-architectures/)
 
   - [📥 11 new entries from 2026-09-19 batch](agent-architectures/)
   - [Agentic AI Architecture - Tools, Memory, Planning &amp; Multi-Agent Systems](agent-architectures/agentic-ai-architecture-tools-memory-planning-multi-agent-systems-GLbKyqoaxgA.md) — ⭐⭐⭐
@@ -161,6 +165,8 @@
 
   - [📥 4 new entries from 2026-08-16 batch](tool-use/)
 
+  - [📥 3 new entries from 2026-09-26 batch](tool-use/)
+
   - [📥 3 new entries from 2026-09-19 batch](tool-use/)
   - [Code Mode: Why AI Agents Are Ditching Tool Calls for Code](tool-use/code-mode-why-ai-agents-are-ditching-tool-calls-for-code-IXe48aIw_X4.md) — ⭐⭐⭐
   - [Tool Calling Explained: How AI Agents Use APIs and Tools](tool-use/tool-calling-explained-how-ai-agents-use-apis-and-tools-mCnsIHja5cw.md) — ⭐⭐⭐
@@ -206,6 +212,8 @@
 
   - [📥 4 new entries from 2026-08-29 batch](production-ai/)
 
+
+  - [📥 2 new entries from 2026-09-26 batch](production-ai/)
 
   - [📥 4 new entries from 2026-09-19 batch](production-ai/)
   - [Agentic engineering: Graphs, workflows, verifiable coding agent runtimes, and st](production-ai/agentic-engineering-graphs-workflows-verifiable-coding-agent-runtimes-and-stayin-epg292lGCZ4.md) — ⭐⭐⭐⭐

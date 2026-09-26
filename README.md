@@ -14,6 +14,24 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+## Latest Additions (2026-09-26)
+### Memory Systems
+- [Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents (Sep 2026)](memory-systems/jev-mem-system-one-controlled-agentic-memory-for-efficient-ai-agents-sep-2026-BE1qrffnWXE.md) — ⭐⭐⭐⭐⭐
+- [Agent Memory Explained in 5 Minutes](memory-systems/agent-memory-explained-in-5-minutes-0P-ACuHyu-0.md) — ⭐⭐⭐⭐⭐
+- [What Is Agentic Storage? Solving AI’s Limits with LLMs & MCP](memory-systems/what-is-agentic-storage-solving-ais-limits-with-llms-mcp-TjvT9sI5mLE.md) — ⭐⭐⭐⭐⭐
+
+### Agent Architectures
+- [Top 6 AI Agent Design Patterns You Need to Know in 2026](agent-architectures/top-6-ai-agent-design-patterns-you-need-to-know-in-2026-PvwslxjeehA.md) — ⭐⭐⭐⭐⭐
+- [Master ALL 20 Agentic AI Design Patterns [Complete Course]](agent-architectures/master-all-20-agentic-ai-design-patterns-complete-course-e2zIr_2JMbE.md) — ⭐⭐⭐⭐⭐
+
+### Tool Use
+- [Best Guide to the Model Context Protocol (MCP) in 2026](tool-use/best-guide-to-the-model-context-protocol-mcp-in-2026-NIIjOy0NYaU.md) — ⭐⭐⭐⭐⭐
+- [MCP Trends 2026: Where Model Context Protocol Is Headed | Objectives](tool-use/mcp-trends-2026-where-model-context-protocol-is-headed-objectives-R4gYffOvxY0.md) — ⭐⭐⭐⭐⭐
+- [How to Set Up AI Agents in 2026 (Use this FREE AI Tool)](tool-use/how-to-set-up-ai-agents-in-2026-use-this-free-ai-tool-qfXxWLxNGuM.md) — ⭐⭐⭐
+
+### Production AI
+- [Llama.cpp vs vLLM: Which Local LLM Engine Actually Scales?](production-ai/llamacpp-vs-vllm-which-local-llm-engine-actually-scales-0ujh7hfutq0.md) — ⭐⭐⭐⭐
+- [The Honest Guide To Fine-Tuning Local AI In 2026](production-ai/the-honest-guide-to-fine-tuning-local-ai-in-2026-v7qMjy_RxOs.md) — ⭐⭐⭐⭐
 - **2026-09-20** [ReAct Framework: Synergizing Reasoning and Action in LLM Agents](agent-architectures/react-framework-reasoning-action.md) — New Machina
 - **2026-09-20** [Multi-Agent Orchestration with Tmux and Event Observability](agent-architectures/multi-agent-orchestration-tmux-observability.md) — IndyDevDan
 - **2026-09-19** [Agentic AI Architecture | Tools, Memory, Planning & Multi-Agent Systems](agent-architectures/agentic-ai-architecture-tools-memory-planning-multi-agent-systems-GLbKyqoaxgA.md) — Oracle batch — ⭐⭐⭐

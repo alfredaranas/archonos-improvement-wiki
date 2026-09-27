@@ -66,6 +66,7 @@
   - [Hybrid Agent Memory Architecture: From Stateless to Intelligent](memory-systems/hybrid-agent-memory-architecture.md)
   - [Context vs. Memory: Architectural Separation for Agent Recall](memory-systems/context-vs-memory-agent-recall.md)
   - [Agent Checkpointing & Persistent State for Crash Recovery](memory-systems/agent-checkpoint-persistence-patterns.md)
+  - [Four Memory Layers for Enterprise AI Agents](memory-systems/four-memory-layers-enterprise-agents.md)
 - **Agent Architectures**
   - [📥 7 new entries from 2026-09-12 batch](agent-architectures/)
 

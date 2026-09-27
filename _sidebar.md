@@ -145,6 +145,7 @@
   - [Multi-Agent Orchestration with Tmux and Event Observability](agent-architectures/multi-agent-orchestration-tmux-observability.md)
   - [ReAct Framework: Synergizing Reasoning and Action in LLM Agents](agent-architectures/react-framework-reasoning-action.md)
   - [Four Knowledge Acquisition Patterns for AI Agents: Skills, MCP, RAG, Memory](agent-architectures/agent-knowledge-acquisition-patterns.md)
+  - [Multi-Agent Orchestration: Five Core Patterns and Implementation Strategy](agent-architectures/multi-agent-orchestration-patterns.md)
 - **Tool Use & MCP**
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)
 

@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-27** [Four Memory Layers for Enterprise AI Agents](memory-systems/four-memory-layers-enterprise-agents.md) — TeqTalk
 ## Latest Additions (2026-09-26)
 ### Memory Systems
 - [Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents (Sep 2026)](memory-systems/jev-mem-system-one-controlled-agentic-memory-for-efficient-ai-agents-sep-2026-BE1qrffnWXE.md) — ⭐⭐⭐⭐⭐

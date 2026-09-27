@@ -202,6 +202,7 @@
   - [LLM Function Calling & Tool Invocation Loop Pattern](tool-use/llm-function-calling-tool-invocation-loop.md)
   - [LLM Function & Tool Calling: External Data Access Pattern](tool-use/llm-function-calling-tool-calling.md)
   - [.NET LLM Function Calling: Autonomous API Integration](tool-use/dotnet-llm-function-calling-patterns.md)
+  - [LLM Function Calling: Dynamic Tool Invocation During Reasoning](tool-use/llm-function-calling-pattern.md)
 - **Production AI**
   - [📥 3 new entries from 2026-09-12 batch](production-ai/)
 

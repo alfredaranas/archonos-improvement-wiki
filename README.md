@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-09-27** [LLM Function Calling: Dynamic Tool Invocation During Reasoning](tool-use/llm-function-calling-pattern.md) — Gary Explains
 - **2026-09-27** [Multi-Agent Orchestration: Five Core Patterns and Implementation Strategy](agent-architectures/multi-agent-orchestration-patterns.md) — scrollypedia
 - **2026-09-27** [Four Knowledge Acquisition Patterns for AI Agents: Skills, MCP, RAG, Memory](agent-architectures/agent-knowledge-acquisition-patterns.md) — IBM Technology
 - **2026-09-27** [Four Memory Layers for Enterprise AI Agents](memory-systems/four-memory-layers-enterprise-agents.md) — TeqTalk

@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-04** [Private Agentic Flows: Three-Layer Architecture for Sensitive Data](production-ai/private-agentic-flows-architecture.md) — IBM Technology
 - **2026-09-27** [Streaming Tool Events for Agent Responsiveness](production-ai/streaming-agent-events-frontend-ux.md) — AWS Developers
 - **2026-09-27** [OpenAI Function Calling: Structured API Integration Pattern](tool-use/openai-function-calling-api-integration.md) — Krish Naik
 - **2026-09-27** [LLM Function Calling: Dynamic Tool Invocation During Reasoning](tool-use/llm-function-calling-pattern.md) — Gary Explains

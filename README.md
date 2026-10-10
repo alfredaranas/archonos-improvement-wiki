@@ -14,6 +14,19 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-10** [LangChain MCP + Multi-Agent Architecture Explained | Build Agentic AI Systems Step by Step](agent-architectures/langchain-mcp-multi-agent-architecture-explained-build-agentic-ai-systems-step-b-AD5l8tQcH_Y.md) — ⭐⭐⭐⭐⭐
+- **2026-10-10** [LangGraph vs CrewAI vs Claude Agent SDK: Which AI Agent Framework Should You Choose](agent-architectures/langgraph-vs-crewai-vs-claude-agent-sdk-which-ai-agent-framework-should-you-choo-rOlYiu4w8ew.md) — ⭐⭐⭐⭐⭐
+- **2026-10-10** [How to Build Multi-Agent Systems in Antigravity (Copilot + Claude Integration)](agent-architectures/how-to-build-multi-agent-systems-in-antigravity-copilot-claude-integration-gscSpnNKA5w.md) — ⭐⭐⭐⭐
+- **2026-10-10** [Multi-Agent Supervisor System | Build AI Agents with LangGraph | Episode 11](agent-architectures/multi-agent-supervisor-system-build-ai-agents-with-langgraph-episode-11-8HcOCVabvOg.md) — ⭐⭐⭐⭐
+- **2026-10-10** [Anthropic Claude Certified Architect - Professional Exam Prep | RAG, MCP, Eval & Compliance](tool-use/anthropic-claude-certified-architect-professional-exam-prep-rag-mcp-eval-compl-PcYZzatbhbk.md) — ⭐⭐⭐⭐
+- **2026-10-10** [Multi-Agent Orchestration System Design: Why](agent-architectures/multi-agent-orchestration-system-design-why-YBEL0ZFJPZs.md) — ⭐⭐⭐
+- **2026-10-10** [Multi-Agent Architecture & Orchestration - Omar Elcircevi | AI Agents Bootcamp](agent-architectures/multi-agent-architecture-u0026-orchestration-omar-elcircevi-ai-agents-bootcamp-NryqsRd48Mc.md) — ⭐⭐⭐
+- **2026-10-10** [Stop Building One Huge Agent! Agentforce Multi-Agent Orchestration | Salesforce](agent-architectures/stop-building-one-huge-agent-agentforce-multi-agent-orchestration-salesforce-age-NNHE-huBk3E.md) — ⭐⭐⭐
+- **2026-10-10** [Qualcomm at AI Infra Summit 2026: Building the New Architecture for Agentic AI](production-ai/qualcomm-at-ai-infra-summit-2026-building-the-new-architecture-for-agentic-ai-MQSW57UKf18.md) — ⭐⭐⭐
+- **2026-10-10** [Agentic AI System Design was HARD until I Learned these 6 Concepts](production-ai/agentic-ai-system-design-was-hard-until-i-learned-these-6-concepts-UqnLqEcTm5s.md) — ⭐⭐⭐
+- **2026-10-10** [Total Recall: Agent Memory and Harness Engineering — Ignacio Martinez, Oracle](memory-systems/total-recall-agent-memory-and-harness-engineering-ignacio-martinez-oracle-xs-ob87TTzg.md) — ⭐⭐⭐
+- **2026-10-10** [Build an LLM Wiki for Agent Long-Term Memory - @itsdecodingai](memory-systems/build-an-llm-wiki-for-agent-long-term-memory-itsdecodingai-f5xRFWRdyKA.md) — ⭐⭐⭐
+- **2026-10-10** [Samsung Says the AI Winners Won't Have the Most Memory](memory-systems/samsung-says-the-ai-winners-wont-have-the-most-memory-9UGuD9wNQRk.md) — ⭐⭐⭐
 - **2026-10-04** [Private Agentic Flows: Three-Layer Architecture for Sensitive Data](production-ai/private-agentic-flows-architecture.md) — IBM Technology
 - **2026-09-27** [Streaming Tool Events for Agent Responsiveness](production-ai/streaming-agent-events-frontend-ux.md) — AWS Developers
 - **2026-09-27** [OpenAI Function Calling: Structured API Integration Pattern](tool-use/openai-function-calling-api-integration.md) — Krish Naik

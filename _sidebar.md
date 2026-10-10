@@ -2,6 +2,7 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [📥 3 new entries from 2026-10-10 batch](memory-systems/)
   - [📥 2 new entries from 2026-09-12 batch](memory-systems/)
 
   - [RAG for Conversational AI Explained | Long-Term Memory, Context Management & Consistent AI Chatbots](memory-systems/rag-for-conversational-ai-explained-long-term-memory-context-management-u0026-co-ayn-LO4-QjQ.md) — ⭐⭐⭐⭐⭐
@@ -68,6 +69,7 @@
   - [Agent Checkpointing & Persistent State for Crash Recovery](memory-systems/agent-checkpoint-persistence-patterns.md)
   - [Four Memory Layers for Enterprise AI Agents](memory-systems/four-memory-layers-enterprise-agents.md)
 - **Agent Architectures**
+  - [📥 7 new entries from 2026-10-10 batch](agent-architectures/)
   - [📥 7 new entries from 2026-09-12 batch](agent-architectures/)
 
   - [AI Agents vs. LLMs: Choosing the Right Tool for AI Tasks](agent-architectures/ai-agents-vs-llms-choosing-the-right-tool-for-ai-tasks-I9z-nrk9cw0.md) — ⭐⭐⭐
@@ -147,6 +149,7 @@
   - [Four Knowledge Acquisition Patterns for AI Agents: Skills, MCP, RAG, Memory](agent-architectures/agent-knowledge-acquisition-patterns.md)
   - [Multi-Agent Orchestration: Five Core Patterns and Implementation Strategy](agent-architectures/multi-agent-orchestration-patterns.md)
 - **Tool Use & MCP**
+  - [📥 1 new entries from 2026-10-10 batch](tool-use/)
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)
 
   - [Benefits of connecting AI to tools](tool-use/benefits-of-connecting-ai-to-tools-GuTcle5edjk.md) — ⭐⭐⭐⭐
@@ -205,6 +208,7 @@
   - [LLM Function Calling: Dynamic Tool Invocation During Reasoning](tool-use/llm-function-calling-pattern.md)
   - [OpenAI Function Calling: Structured API Integration Pattern](tool-use/openai-function-calling-api-integration.md)
 - **Production AI**
+  - [📥 2 new entries from 2026-10-10 batch](production-ai/)
   - [📥 3 new entries from 2026-09-12 batch](production-ai/)
 
   - [5 Tips for Deploying AI Agents to Production](production-ai/5-tips-for-deploying-ai-agents-to-production-j1wfE0SOBbE.md) — ⭐⭐⭐⭐

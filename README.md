@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-11** [RAG Strategy Selection & Composition Framework](memory-systems/rag-strategy-selection-framework.md) — Cole Medin
 - **2026-10-11** [Function Calling: LLM Tool Invocation Pattern](tool-use/function-calling-llm-tool-invocation.md) — Coding with Neeraj
 - **2026-10-11** [Context Engineering: Sessions vs Memory Systems](memory-systems/context-engineering-session-vs-memory.md) — Anshul Creates AI
 - **2026-10-10** [LangChain MCP + Multi-Agent Architecture Explained | Build Agentic AI Systems Step by Step](agent-architectures/langchain-mcp-multi-agent-architecture-explained-build-agentic-ai-systems-step-b-AD5l8tQcH_Y.md) — ⭐⭐⭐⭐⭐

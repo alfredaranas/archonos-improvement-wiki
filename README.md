@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-11** [Function Calling: LLM Tool Invocation Pattern](tool-use/function-calling-llm-tool-invocation.md) — Coding with Neeraj
 - **2026-10-11** [Context Engineering: Sessions vs Memory Systems](memory-systems/context-engineering-session-vs-memory.md) — Anshul Creates AI
 - **2026-10-10** [LangChain MCP + Multi-Agent Architecture Explained | Build Agentic AI Systems Step by Step](agent-architectures/langchain-mcp-multi-agent-architecture-explained-build-agentic-ai-systems-step-b-AD5l8tQcH_Y.md) — ⭐⭐⭐⭐⭐
 - **2026-10-10** [LangGraph vs CrewAI vs Claude Agent SDK: Which AI Agent Framework Should You Choose](agent-architectures/langgraph-vs-crewai-vs-claude-agent-sdk-which-ai-agent-framework-should-you-choo-rOlYiu4w8ew.md) — ⭐⭐⭐⭐⭐

@@ -69,6 +69,7 @@
   - [Agent Checkpointing & Persistent State for Crash Recovery](memory-systems/agent-checkpoint-persistence-patterns.md)
   - [Four Memory Layers for Enterprise AI Agents](memory-systems/four-memory-layers-enterprise-agents.md)
   - [Context Engineering: Sessions vs Memory Systems](memory-systems/context-engineering-session-vs-memory.md)
+  - [RAG Strategy Selection & Composition Framework](memory-systems/rag-strategy-selection-framework.md)
 - **Agent Architectures**
   - [📥 7 new entries from 2026-10-10 batch](agent-architectures/)
   - [📥 7 new entries from 2026-09-12 batch](agent-architectures/)

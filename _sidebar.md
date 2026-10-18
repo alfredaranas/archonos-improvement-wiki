@@ -150,6 +150,7 @@
   - [ReAct Framework: Synergizing Reasoning and Action in LLM Agents](agent-architectures/react-framework-reasoning-action.md)
   - [Four Knowledge Acquisition Patterns for AI Agents: Skills, MCP, RAG, Memory](agent-architectures/agent-knowledge-acquisition-patterns.md)
   - [Multi-Agent Orchestration: Five Core Patterns and Implementation Strategy](agent-architectures/multi-agent-orchestration-patterns.md)
+  - [Multi-Agent Orchestration: State, Routing, and Decision Logic](agent-architectures/multi-agent-orchestration-langgraph.md)
 - **Tool Use & MCP**
   - [📥 1 new entries from 2026-10-10 batch](tool-use/)
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)

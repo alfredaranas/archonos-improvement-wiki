@@ -14,6 +14,19 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+
+- **2026-10-18** [Bhavin Parikh: Context Engineering for AI Agents: A Practical Architecture for Production Systems](memory-systems/bhavin-parikh-context-engineering-for-ai-agents-a-practical-architecture-for-J-L2jFwNJcU.md) — The AI Conference™ — ⭐⭐⭐
+- **2026-10-18** [Hindsight 记忆和图谱｜多智能体记忆 Hermes、Codex、Claude Code、Cursor、Antigravity...](memory-systems/hindsight-hermescodexclaude-codecursorantigravity-91-kpi1jC2c.md) — wow — ⭐⭐⭐⭐
+- **2026-10-18** [The AI Agent Memory Architecture Explained - From State to Long-Term Memory](memory-systems/the-ai-agent-memory-architecture-explained-from-state-to-long-term-memory-4KvVWNUTd9g.md) — Applied with AI - Sanjay Kumar — ⭐⭐⭐⭐⭐
+- **2026-10-18** [Building the Document Context Layer for AI Agents — Jerry Liu, LlamaIndex](memory-systems/building-the-document-context-layer-for-ai-agents-jerry-liu-llamaindex-RQi7x-navxU.md) — AI Engineer — ⭐⭐⭐⭐⭐
+- **2026-10-18** [Agentic Architecture & Orchestration](agent-architectures/agentic-architecture-orchestration-3JtjCuewm8E.md) — Code, AI \u0026 Beyond — ⭐⭐⭐
+- **2026-10-18** [Why AI Coding Agents Need a Memory Pipeline](agent-architectures/why-ai-coding-agents-need-a-memory-pipeline-mAKUL12h1n8.md) — Boundary and HumanLayer — ⭐⭐⭐⭐⭐
+- **2026-10-18** [Multi-Agent Orchestrator with Jev, LangGraph & OpenAI](agent-architectures/multi-agent-orchestrator-with-jev-langgraph-openai-Ugj5GjWA-ww.md) — AgenticAI-Tech — ⭐⭐⭐⭐⭐
+- **2026-10-18** [Top 7 AI Agent Tools That Actually Work](tool-use/top-7-ai-agent-tools-that-actually-work-84-sHkG4AQU.md) — Tech With Tim — ⭐⭐⭐⭐
+- **2026-10-18** [Model Context Protocol (MCP) in 2026! Connect LLMs to Data](tool-use/model-context-protocol-mcp-in-2026-connect-llms-to-data-jprtdSKcpmc.md) — CodeForSelf — ⭐⭐⭐
+- **2026-10-18** [7 Hermes Agent Use Cases That Run My Entire Life](tool-use/7-hermes-agent-use-cases-that-run-my-entire-life-VXUoi5V9J2o.md) — Sharbel A. — ⭐⭐⭐⭐⭐
+- **2026-10-18** [MCP Servers Explained & Built](tool-use/mcp-servers-explained-built-He8tUwLzLnU.md) — Tech With Tim — ⭐⭐⭐⭐⭐
+- **2026-10-18** [AJANLAR & CLAUDE CODE MASTERCLASS: Kendi Ajan Sistemini Kur (2026)](general/ajanlar-claude-code-masterclass-kendi-ajan-sistemini-kur-2026-HYMDaMcuSGQ.md) — Selma Kocabıyık — ⭐⭐⭐
 - **2026-10-18** [Agent Loop & Harness: The 80% Beyond the Model](agent-architectures/agent-loop-harness-core-runtime.md) — Tech With Tim
 - **2026-10-18** [Four-Pillar Autonomous Agent Architecture](agent-architectures/multi-agent-orchestration-four-pillars.md) — SaveDollars Lab
 - **2026-10-18** [Context Window Limits & Stateless LLM API Calls](memory-systems/context-window-limits-stateless-llm-apis.md) — Piyush Garg

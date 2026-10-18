@@ -2,6 +2,7 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [📥 4 new entries from 2026-10-18 batch](memory-systems/)
   - [📥 3 new entries from 2026-10-10 batch](memory-systems/)
   - [📥 2 new entries from 2026-09-12 batch](memory-systems/)
 
@@ -72,6 +73,7 @@
   - [RAG Strategy Selection & Composition Framework](memory-systems/rag-strategy-selection-framework.md)
   - [Context Window Limits & Stateless LLM API Calls](memory-systems/context-window-limits-stateless-llm-apis.md)
 - **Agent Architectures**
+  - [📥 3 new entries from 2026-10-18 batch](agent-architectures/)
   - [📥 7 new entries from 2026-10-10 batch](agent-architectures/)
   - [📥 7 new entries from 2026-09-12 batch](agent-architectures/)
 
@@ -155,6 +157,7 @@
   - [Four-Pillar Autonomous Agent Architecture](agent-architectures/multi-agent-orchestration-four-pillars.md)
   - [Agent Loop & Harness: The 80% Beyond the Model](agent-architectures/agent-loop-harness-core-runtime.md)
 - **Tool Use & MCP**
+  - [📥 4 new entries from 2026-10-18 batch](tool-use/)
   - [📥 1 new entries from 2026-10-10 batch](tool-use/)
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)
 
@@ -289,6 +292,7 @@
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)
   - [TubeOnAI OpenAPI JSON](resources/tubeonai-openapi.json)
 - **General**
+  - [📥 1 new entries from 2026-10-18 batch](general/)
   - [📥 1 new entries from 2026-09-12 batch](general/)
 
   - [AI Agents, Clearly Explained](general/ai-agents-clearly-explained-FwOTs4UxQS4.md) — ⭐⭐⭐

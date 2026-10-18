@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-18** [Agent Loop & Harness: The 80% Beyond the Model](agent-architectures/agent-loop-harness-core-runtime.md) — Tech With Tim
 - **2026-10-18** [Four-Pillar Autonomous Agent Architecture](agent-architectures/multi-agent-orchestration-four-pillars.md) — SaveDollars Lab
 - **2026-10-18** [Context Window Limits & Stateless LLM API Calls](memory-systems/context-window-limits-stateless-llm-apis.md) — Piyush Garg
 - **2026-10-18** [Multi-Agent Orchestration: State, Routing, and Decision Logic](agent-architectures/multi-agent-orchestration-langgraph.md) — Accelerated AI

@@ -153,6 +153,7 @@
   - [Multi-Agent Orchestration: Five Core Patterns and Implementation Strategy](agent-architectures/multi-agent-orchestration-patterns.md)
   - [Multi-Agent Orchestration: State, Routing, and Decision Logic](agent-architectures/multi-agent-orchestration-langgraph.md)
   - [Four-Pillar Autonomous Agent Architecture](agent-architectures/multi-agent-orchestration-four-pillars.md)
+  - [Agent Loop & Harness: The 80% Beyond the Model](agent-architectures/agent-loop-harness-core-runtime.md)
 - **Tool Use & MCP**
   - [📥 1 new entries from 2026-10-10 batch](tool-use/)
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)

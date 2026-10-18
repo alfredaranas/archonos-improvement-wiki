@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-18** [Context Window Limits & Stateless LLM API Calls](memory-systems/context-window-limits-stateless-llm-apis.md) — Piyush Garg
 - **2026-10-18** [Multi-Agent Orchestration: State, Routing, and Decision Logic](agent-architectures/multi-agent-orchestration-langgraph.md) — Accelerated AI
 - **2026-10-11** [RAG Strategy Selection & Composition Framework](memory-systems/rag-strategy-selection-framework.md) — Cole Medin
 - **2026-10-11** [Function Calling: LLM Tool Invocation Pattern](tool-use/function-calling-llm-tool-invocation.md) — Coding with Neeraj

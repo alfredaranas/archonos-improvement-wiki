@@ -15,6 +15,23 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 
 ## Latest Additions
 
+- **2026-10-24** [Enterprise Agentic AI Architecture Explained | RAG, Tools, MCP & Multi-Agent Systems](agent-architectures/enterprise-agentic-ai-architecture-explained-rag-tools-mcp-multi-agent-systems--sPM5Gvj6NU.md) — Architect With Purpose — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Building Self-Improving Agent Software Factories — Suraj Gupta, Warp](agent-architectures/building-self-improving-agent-software-factories-suraj-gupta-warp-TN3mj92oZ8I.md) — AI Engineer — ⭐⭐⭐⭐
+- **2026-10-24** [2,000+ Hours of Learning Agentic AI System Design in 20 Minutes](agent-architectures/2000-hours-of-learning-agentic-ai-system-design-in-20-minutes-Mv7eiQFQQ1E.md) — Unknown — ⭐⭐⭐⭐
+- **2026-10-24** [Mac Mini For AI Agents: How Much Memory You Need, And How To Use What You Have.](production-ai/mac-mini-for-ai-agents-how-much-memory-you-need-and-how-to-use-what-you-have-xUl-RD4l4i4.md) — Unknown — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Agentic AI System Design Crash Course](agent-architectures/agentic-ai-system-design-crash-course-TDReumVAUmI.md) — Piyush Garg — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Build a Production-Ready AI Agent in Snowflake | AI Observability Part 1 | Cortex Search + RAG](production-ai/build-a-production-ready-ai-agent-in-snowflake-ai-observability-part-1-cortex-jNx0AeCX_8U.md) — Deepti Agrawal — ⭐⭐⭐⭐
+- **2026-10-24** [This NEW Jev + Claude OS Just Changed Every AI Workflow](agent-architectures/this-new-jev-claude-os-just-changed-every-ai-workflow-EOdXR6lU5ZA.md) — Chase AI — ⭐⭐⭐
+- **2026-10-24** [5 Concepts to Know for Coding with AI Agents](agent-architectures/5-concepts-to-know-for-coding-with-ai-agents-hTAWHgQI4xg.md) — IBM Technology and IBM Developer — ⭐⭐⭐⭐⭐
+- **2026-10-24** [105 | Advanced Agentic Workflows Explained | Google ADK | State, Routing & Multi-Agent Workflows](agent-architectures/105-advanced-agentic-workflows-explained-google-adk-state-routing-multi-agent-4sfYYA8rSrA.md) — Implovate — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Designing a Production RAG System from Scratch | Structured + Unstructured Data | System Design](memory-systems/designing-a-production-rag-system-from-scratch-structured-unstructured-data-sy-21JTfX-d9S0.md) — Code AMAUC — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Is Your AI Agent Production Ready? Snowflake AI Observability with TruLens | Part 2](production-ai/is-your-ai-agent-production-ready-snowflake-ai-observability-with-trulens-part-Ikz3SwmvPkM.md) — Deepti Agrawal — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Tech Summit '25 - Evolutionary Architecture - New design patterns, Agents & MCP (Andy Masters)](agent-architectures/tech-summit-25-evolutionary-architecture-new-design-patterns-agents-mcp-andy-m-GVPcEo1g9Og.md) — Canterbury Tech — ⭐⭐⭐⭐
+- **2026-10-24** [Production Ready: Observability, Governance and Deployment](production-ai/production-ready-observability-governance-and-deployment-2cG98BhvWDU.md) — Microsoft Reactor — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Optimizar Ollama con IA 🚀 Configuración CORRECTA de Contexto y GPUs](production-ai/optimizar-ollama-con-ia-configuración-correcta-de-contexto-y-gpus-cbeJtLuh47o.md) — Nichonauta — ⭐⭐⭐
+- **2026-10-24** [Modelos de IA locales con llama.cpp 🚀 Cómo Optimizar Respuesta y Contexto](production-ai/modelos-de-ia-locales-con-llamacpp-cómo-optimizar-respuesta-y-contexto-1yMMi_4U1HM.md) — Nichonauta — ⭐⭐⭐⭐⭐
+- **2026-10-24** [Maximizar la Ventana de Contexto en Qwen Code 🚀 Cómo Optimizar el Procesamiento de TOKENS](production-ai/maximizar-la-ventana-de-contexto-en-qwen-code-cómo-optimizar-el-procesamiento-sS7ZtHtCIGE.md) — Nichonauta — ⭐⭐⭐
+- **2026-10-24** [Multi Agent Orchestration Explained in 18 Minutes](agent-architectures/multi-agent-orchestration-explained-in-18-minutes--nYnLDA0Vf0.md) — TeqTalk — ⭐⭐⭐⭐⭐
 - **2026-10-18** [Bhavin Parikh: Context Engineering for AI Agents: A Practical Architecture for Production Systems](memory-systems/bhavin-parikh-context-engineering-for-ai-agents-a-practical-architecture-for-J-L2jFwNJcU.md) — The AI Conference™ — ⭐⭐⭐
 - **2026-10-18** [Hindsight 记忆和图谱｜多智能体记忆 Hermes、Codex、Claude Code、Cursor、Antigravity...](memory-systems/hindsight-hermescodexclaude-codecursorantigravity-91-kpi1jC2c.md) — wow — ⭐⭐⭐⭐
 - **2026-10-18** [The AI Agent Memory Architecture Explained - From State to Long-Term Memory](memory-systems/the-ai-agent-memory-architecture-explained-from-state-to-long-term-memory-4KvVWNUTd9g.md) — Applied with AI - Sanjay Kumar — ⭐⭐⭐⭐⭐

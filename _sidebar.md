@@ -2,6 +2,7 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [📥 1 new entries from 2026-10-24 batch](memory-systems/)
   - [📥 4 new entries from 2026-10-18 batch](memory-systems/)
   - [📥 3 new entries from 2026-10-10 batch](memory-systems/)
   - [📥 2 new entries from 2026-09-12 batch](memory-systems/)
@@ -73,6 +74,7 @@
   - [RAG Strategy Selection & Composition Framework](memory-systems/rag-strategy-selection-framework.md)
   - [Context Window Limits & Stateless LLM API Calls](memory-systems/context-window-limits-stateless-llm-apis.md)
 - **Agent Architectures**
+  - [📥 9 new entries from 2026-10-24 batch](agent-architectures/)
   - [📥 3 new entries from 2026-10-18 batch](agent-architectures/)
   - [📥 7 new entries from 2026-10-10 batch](agent-architectures/)
   - [📥 7 new entries from 2026-09-12 batch](agent-architectures/)
@@ -218,6 +220,7 @@
   - [OpenAI Function Calling: Structured API Integration Pattern](tool-use/openai-function-calling-api-integration.md)
   - [Function Calling: LLM Tool Invocation Pattern](tool-use/function-calling-llm-tool-invocation.md)
 - **Production AI**
+  - [📥 7 new entries from 2026-10-24 batch](production-ai/)
   - [📥 2 new entries from 2026-10-10 batch](production-ai/)
   - [📥 3 new entries from 2026-09-12 batch](production-ai/)
 

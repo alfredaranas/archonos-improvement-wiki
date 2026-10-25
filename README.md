@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-25** [Agent Orchestration: Multi-Agent Delegation Pattern](agent-architectures/agent-orchestration-multi-agent-delegation.md) — Burke Holland
 
 - **2026-10-24** [Enterprise Agentic AI Architecture Explained | RAG, Tools, MCP & Multi-Agent Systems](agent-architectures/enterprise-agentic-ai-architecture-explained-rag-tools-mcp-multi-agent-systems--sPM5Gvj6NU.md) — Architect With Purpose — ⭐⭐⭐⭐⭐
 - **2026-10-24** [Building Self-Improving Agent Software Factories — Suraj Gupta, Warp](agent-architectures/building-self-improving-agent-software-factories-suraj-gupta-warp-TN3mj92oZ8I.md) — AI Engineer — ⭐⭐⭐⭐

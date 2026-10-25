@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-10-25** [RAG: Retrieval-Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md) — Redis
 - **2026-10-25** [Loop Engineering: Automated Agent Iteration Patterns](agent-architectures/loop-engineering-agentic-systems.md) — IBM Technology
 - **2026-10-25** [OpenAI Function Calling: LLM-Driven Local Tool Execution](tool-use/openai-function-calling-pattern.md) — Irtiza Hafiz
 - **2026-10-25** [Agent Orchestration: Multi-Agent Delegation Pattern](agent-architectures/agent-orchestration-multi-agent-delegation.md) — Burke Holland

@@ -227,6 +227,7 @@
   - [OpenAI Function Calling: Structured API Integration Pattern](tool-use/openai-function-calling-api-integration.md)
   - [Function Calling: LLM Tool Invocation Pattern](tool-use/function-calling-llm-tool-invocation.md)
   - [OpenAI Function Calling: LLM-Driven Local Tool Execution](tool-use/openai-function-calling-pattern.md)
+  - [LLM Function Calling: Structured Output for Tool Invocation](tool-use/llm-function-calling-basics.md)
 - **Production AI**
   - [📥 7 new entries from 2026-10-24 batch](production-ai/)
   - [📥 2 new entries from 2026-10-10 batch](production-ai/)

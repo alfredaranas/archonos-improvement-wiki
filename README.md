@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-01** [LLM Function Calling: Structured Output for Tool Invocation](tool-use/llm-function-calling-basics.md) — aixplain
 - **2026-11-01** [Self-Hosted Agent Viability: The Local-to-Rented Spectrum](production-ai/self-hosted-agent-viability-spectrum.md) — Simon Høiberg
 - **2026-11-01** [Agentic Memory: Long-Term vs Short-Term Memory Architecture](memory-systems/agentic-memory-ltm-stm-extraction.md) — Piyush Garg
 - **2026-11-01** [Core Agent Loop: Perception-Reasoning-Action Cycle](agent-architectures/core-agent-loop-perception-reasoning-action.md) — Tejas AI

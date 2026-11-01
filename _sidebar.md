@@ -279,6 +279,7 @@
   - [TubeOnAI `summary_generation_incomplete` Outage (2026-08-22 batch)](production-ai/tubeonai-summary-generation-incomplete-outage-2026-08-22.md)
   - [Streaming Tool Events for Agent Responsiveness](production-ai/streaming-agent-events-frontend-ux.md)
   - [Private Agentic Flows: Three-Layer Architecture for Sensitive Data](production-ai/private-agentic-flows-architecture.md)
+  - [Self-Hosted Agent Viability: The Local-to-Rented Spectrum](production-ai/self-hosted-agent-viability-spectrum.md)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)

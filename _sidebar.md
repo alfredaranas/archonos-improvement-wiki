@@ -75,6 +75,7 @@
   - [Context Window Limits & Stateless LLM API Calls](memory-systems/context-window-limits-stateless-llm-apis.md)
   - [RAG: Retrieval-Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md)
   - [Agent Memory Layers: Storage & Retrieval Patterns](memory-systems/agent-memory-layers-architecture.md)
+  - [Memory Palace: Spatial Memory Architecture for AI Agents](memory-systems/memory-palace-spatial-memory-architecture.md)
 - **Agent Architectures**
   - [📥 9 new entries from 2026-10-24 batch](agent-architectures/)
   - [📥 3 new entries from 2026-10-18 batch](agent-architectures/)

@@ -165,6 +165,7 @@
   - [Agent Orchestration: Multi-Agent Delegation Pattern](agent-architectures/agent-orchestration-multi-agent-delegation.md)
   - [Loop Engineering: Automated Agent Iteration Patterns](agent-architectures/loop-engineering-agentic-systems.md)
   - [Core Agent Loop: Perception-Reasoning-Action Cycle](agent-architectures/core-agent-loop-perception-reasoning-action.md)
+  - [Structured State Management: The Missing Layer in AI Agent Architectures](agent-architectures/structured-state-vs-chat-history.md)
 - **Tool Use & MCP**
   - [📥 4 new entries from 2026-10-18 batch](tool-use/)
   - [📥 1 new entries from 2026-10-10 batch](tool-use/)

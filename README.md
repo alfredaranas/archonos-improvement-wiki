@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-01** [Persistent Agent Tasks & Background Operations](production-ai/persistent-agent-tasks-and-background-operations.md) — TechWhistle
 - **2026-11-01** [Structured State Management: The Missing Layer in AI Agent Architectures](agent-architectures/structured-state-vs-chat-history.md) — NeuralCanvas
 - **2026-11-01** [LLM Function Calling: Structured Output for Tool Invocation](tool-use/llm-function-calling-basics.md) — aixplain
 - **2026-11-01** [Self-Hosted Agent Viability: The Local-to-Rented Spectrum](production-ai/self-hosted-agent-viability-spectrum.md) — Simon Høiberg

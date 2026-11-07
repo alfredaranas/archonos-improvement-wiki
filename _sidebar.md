@@ -2,6 +2,7 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [Reliable Multi-Agent Systems: Orchestration, State, and Human Approval](memory-systems/wmlHwo1zPMQ.md) — ⭐⭐⭐⭐
   - [📥 1 new entries from 2026-10-24 batch](memory-systems/)
   - [📥 4 new entries from 2026-10-18 batch](memory-systems/)
   - [📥 3 new entries from 2026-10-10 batch](memory-systems/)

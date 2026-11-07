@@ -23,6 +23,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **2026-11-01** [Core Agent Loop: Perception-Reasoning-Action Cycle](agent-architectures/core-agent-loop-perception-reasoning-action.md) — Tejas AI
 - **2026-11-01** [Memory Palace: Spatial Memory Architecture for AI Agents](memory-systems/memory-palace-spatial-memory-architecture.md) — Matthew Berman
 - **2026-11-01** [Agent Memory Layers: Storage & Retrieval Patterns](memory-systems/agent-memory-layers-architecture.md) — Sean‘s AI Stories
+- **2026-10-31** [Reliable Multi-Agent Systems: Orchestration, State, and Human Approval](memory-systems/wmlHwo1zPMQ.md) — Microsoft Reactor — ⭐⭐⭐⭐
 - **2026-10-25** [RAG: Retrieval-Augmented Generation](memory-systems/rag-retrieval-augmented-generation.md) — Redis
 - **2026-10-25** [Loop Engineering: Automated Agent Iteration Patterns](agent-architectures/loop-engineering-agentic-systems.md) — IBM Technology
 - **2026-10-25** [OpenAI Function Calling: LLM-Driven Local Tool Execution](tool-use/openai-function-calling-pattern.md) — Irtiza Hafiz

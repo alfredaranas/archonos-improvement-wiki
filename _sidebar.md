@@ -287,6 +287,7 @@
   - [Private Agentic Flows: Three-Layer Architecture for Sensitive Data](production-ai/private-agentic-flows-architecture.md)
   - [Self-Hosted Agent Viability: The Local-to-Rented Spectrum](production-ai/self-hosted-agent-viability-spectrum.md)
   - [Persistent Agent Tasks & Background Operations](production-ai/persistent-agent-tasks-and-background-operations.md)
+  - [Agent Memory Architecture: Short-Term vs Long-Term Storage in Production](production-ai/agent-memory-architecture-short-term-long-term.md)
 - **ArchonOS Notes**
   - [Overview](archonos-notes/)
   - [Hermes Agent Self-Improving Guide](archonos-notes/hermes-agent-self-improving-guide.md)

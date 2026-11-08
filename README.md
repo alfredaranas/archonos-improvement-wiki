@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-08** [Autonomy Earned Not Assumed: Agent Deployment Phases](agent-architectures/autonomy-earned-not-assumed-deployment-phases.md) — amir HONARMAND
 - **2026-11-08** [AI Agent vs Agentic AI: Definitions & System Scope](agent-architectures/ai-agent-vs-agentic-ai.md) — TechGik
 - **2026-11-08** [Multi-Agent Orchestration: Specialist Decomposition with Centralized Coordination](agent-architectures/multi-agent-orchestration-specialist-decomposition.md) — TeqTalk
 - **2026-11-08** [Agent Memory Architecture: Short-Term vs Long-Term Storage in Production](production-ai/agent-memory-architecture-short-term-long-term.md) — Applied with AI - Sanjay Kumar

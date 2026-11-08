@@ -171,6 +171,7 @@
   - [Structured State Management: The Missing Layer in AI Agent Architectures](agent-architectures/structured-state-vs-chat-history.md)
   - [Agentic Apps: Business Outcome-First Architecture Pattern](agent-architectures/agentic-apps-business-outcome-first.md)
   - [Multi-Agent Orchestration: Specialist Decomposition with Centralized Coordination](agent-architectures/multi-agent-orchestration-specialist-decomposition.md)
+  - [AI Agent vs Agentic AI: Definitions & System Scope](agent-architectures/ai-agent-vs-agentic-ai.md)
 - **Tool Use & MCP**
   - [📥 4 new entries from 2026-10-18 batch](tool-use/)
   - [📥 1 new entries from 2026-10-10 batch](tool-use/)

@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-08** [Four-Type Agent Memory Architecture: Design & Integration Patterns](memory-systems/agent-memory-four-types-design.md) — Amine DALY
 - **2026-11-08** [Dual Memory Architecture: Structured SQL + Semantic Vector Search](memory-systems/dual-memory-architecture-sql-vectors.md) — Google Cloud Tech
 - **2026-11-01** [Agentic Apps: Business Outcome-First Architecture Pattern](agent-architectures/agentic-apps-business-outcome-first.md) — Cole Medin
 - **2026-11-01** [Persistent Agent Tasks & Background Operations](production-ai/persistent-agent-tasks-and-background-operations.md) — TechWhistle

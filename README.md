@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-08** [Multi-Agent Orchestration: Specialist Decomposition with Centralized Coordination](agent-architectures/multi-agent-orchestration-specialist-decomposition.md) — TeqTalk
 - **2026-11-08** [Agent Memory Architecture: Short-Term vs Long-Term Storage in Production](production-ai/agent-memory-architecture-short-term-long-term.md) — Applied with AI - Sanjay Kumar
 - **2026-11-08** [Four-Type Agent Memory Architecture: Design & Integration Patterns](memory-systems/agent-memory-four-types-design.md) — Amine DALY
 - **2026-11-08** [Dual Memory Architecture: Structured SQL + Semantic Vector Search](memory-systems/dual-memory-architecture-sql-vectors.md) — Google Cloud Tech

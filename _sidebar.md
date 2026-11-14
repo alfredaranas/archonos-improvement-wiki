@@ -2,6 +2,9 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [Everything You Need To Know About Agentic Context In 26 Minutes 🧠](memory-systems/everything-you-need-to-know-about-agentic-context-in-26-minutes-nlYuDKdDvMY.md) — ⭐⭐⭐⭐⭐
+  - [LlamaIndex & Agentic RAG: Build AI RAG Applications & Agents](memory-systems/llamaindex-u0026-agentic-rag-build-ai-rag-applications-u0026-agents-ttZyEXOIrPQ.md) — ⭐⭐⭐⭐⭐
+  - [📥 2 new entries from 2026-11-14 batch](memory-systems/)
   - [CS329Z Lecture 7: Agent Memory Architectures — Engineering AI Agents (unofficial walkthrough)](memory-systems/cs329z-lecture-7-agent-memory-architectures-engineering-ai-agents-unofficial-walkthrough-2C5O6uguEp4.md) — ⭐⭐⭐⭐⭐
   - [CS2680 Lecture 6: Agents Design III: Agent Memory and Reliability (unofficial walkthrough)](memory-systems/cs2680-lecture-6-agents-design-iii-agent-memory-and-reliability-unofficial-walkthrough-lp3l62Ncwa0.md) — ⭐⭐⭐⭐⭐
   - [Where Your AI Agent's Memory Goes When You Walk Away: KV Cache Serving Deep Dive](memory-systems/where-your-ai-agent-s-memory-goes-when-you-walk-away-kv-cache-serving-deep-dive-w_i1b0QGf9I.md) — ⭐⭐⭐⭐⭐
@@ -85,6 +88,17 @@
   - [Dual Memory Architecture: Structured SQL + Semantic Vector Search](memory-systems/dual-memory-architecture-sql-vectors.md)
   - [Four-Type Agent Memory Architecture: Design & Integration Patterns](memory-systems/agent-memory-four-types-design.md)
 - **Agent Architectures**
+  - [End-to-End Agentic AI System Design in 20min: My 14-Layer Stack for Production AI Agents](agent-architectures/end-to-end-agentic-ai-system-design-in-20min-my-14-layer-stack-for-production-ai-agents-IkFQVJWW-fw.md) — ⭐⭐⭐⭐⭐
+  - [Multi Agent AI Architecture | Build a Multi-Agent Workflow](agent-architectures/multi-agent-ai-architecture-build-a-multi-agent-workflow-15_k2yZ3uMM.md) — ⭐⭐⭐⭐⭐
+  - [7 AI Agent Architecture Design Laws of Senior AI Engineers](agent-architectures/7-ai-agent-architecture-design-laws-of-senior-ai-engineers-GVq_MQH2CNA.md) — ⭐⭐⭐⭐⭐
+  - [A Practical Guide to AI Agents: ReAct, Tools, Planning, Memory, Multi-Agent Systems, and Failure](agent-architectures/a-practical-guide-to-ai-agents-react-tools-planning-memory-multi-agent-systems-and-failure-yl7UyFXROQI.md) — ⭐⭐⭐⭐⭐
+  - [Build an Agentic AI Research Assistant from Scratch | Multi-Agent Project (LangGraph, FastAPI, Groq)](agent-architectures/build-an-agentic-ai-research-assistant-from-scratch-multi-agent-project-langgraph-fastapi-qeyi7mIjdMc.md) — ⭐⭐⭐⭐
+  - [What Are AI Agents? Agentic Systems Explained | Stanford CS329Z Lecture 1 with Diyi Yang](agent-architectures/what-are-ai-agents-agentic-systems-explained-stanford-cs329z-lecture-1-with-diyi-yang-DGI4vucR71w.md) — ⭐⭐⭐⭐⭐
+  - [The 2-Plane Architecture for Reliable AI Agents](agent-architectures/the-2-plane-architecture-for-reliable-ai-agents-5epoxEt8l_U.md) — ⭐⭐⭐⭐
+  - [Make Your AI Agents Predictable With Graph Engineering - Zachary Blumenfeld, Neo4j](agent-architectures/make-your-ai-agents-predictable-with-graph-engineering-zachary-blumenfeld-neo4j-g_NgCLTibiM.md) — ⭐⭐⭐⭐⭐
+  - [Stop Prompting — Head of Claude Code Uses Opus 5.5 + Graphs + Harness](agent-architectures/stop-prompting-head-of-claude-code-uses-opus-5-5-graphs-harness-c4kYurm0hD8.md) — ⭐⭐⭐⭐⭐
+  - [How to Orchestrate 22 Supply Chain AI Agents](agent-architectures/how-to-orchestrate-22-supply-chain-ai-agents-RFP3frLkGrs.md) — ⭐⭐⭐⭐
+  - [📥 10 new entries from 2026-11-14 batch](agent-architectures/)
   - [Is the Agent Harness Dead? — Jediah Katz, SpaceXAI](agent-architectures/is-the-agent-harness-dead-jediah-katz-spacexai-7Y4sbZgBdnc.md) — ⭐⭐⭐⭐⭐
   - [Agentic AI E04 Agentic Design Patterns: ReAct, Planning, Reflection, Orchestrator & Evaluator](agent-architectures/agentic-ai-e04-agentic-design-patterns-react-planning-reflection-orchestrator-u0026-evalua-QUdPxZmhQh8.md) — ⭐⭐⭐⭐
   - [Google ADK Context Engineering - Compaction, Caching & Artifacts (Cut LLM Costs ) ( Tutorial- 10 )](agent-architectures/google-adk-context-engineering-compaction-caching-u0026-artifacts-cut-llm-costs-tutorial-1-MtBJw4cG6SI.md) — ⭐⭐⭐⭐
@@ -185,6 +199,9 @@
   - [Autonomy Earned Not Assumed: Agent Deployment Phases](agent-architectures/autonomy-earned-not-assumed-deployment-phases.md)
   - [Zero-Shot Agent Deployment: From Supervision Code to Multimodal Orchestration](agent-architectures/zero-shot-agent-deployment-multimodal-shift.md)
 - **Tool Use & MCP**
+  - [Building a Network Troubleshooting Agent: Architecture, Tools, Guardrails, and Lessons Learned](tool-use/building-a-network-troubleshooting-agent-architecture-tools-guardrails-and-lessons-learned-eC-W7yGgXC4.md) — ⭐⭐⭐⭐⭐
+  - [Enterprise LLM Architecture with Claude | Multi-Agent Systems, MCP & Cost Optimization](tool-use/enterprise-llm-architecture-with-claude-multi-agent-systems-mcp-u0026-cost-optimization-oFvpBzlZPxo.md) — ⭐⭐⭐⭐⭐
+  - [📥 2 new entries from 2026-11-14 batch](tool-use/)
   - [MCP Explained for AWS Engineers: Lambda, API Gateway & AgentCore](tool-use/mcp-explained-for-aws-engineers-lambda-api-gateway-u0026-agentcore-c2I0rzaUCE0.md) — ⭐⭐⭐⭐⭐
   - [Tool Use in LLMs: How AI Agents Call Tools | AI Engineering Design Patterns S01 E01](tool-use/tool-use-in-llms-how-ai-agents-call-tools-ai-engineering-design-patterns-s01-e01-HUPiSv_b3dw.md) — ⭐⭐⭐
   - [📥 4 new entries from 2026-10-18 batch](tool-use/)
@@ -250,6 +267,12 @@
   - [OpenAI Function Calling: LLM-Driven Local Tool Execution](tool-use/openai-function-calling-pattern.md)
   - [LLM Function Calling: Structured Output for Tool Invocation](tool-use/llm-function-calling-basics.md)
 - **Production AI**
+  - [The AI Memory Wall: Why LLMs & AI Accelerators Hit a Bottleneck](production-ai/the-ai-memory-wall-why-llms-u0026-ai-accelerators-hit-a-bottleneck-4b6KpFN7Rio.md) — ⭐⭐⭐
+  - [You Can Fix Production AI Agents in 19min: Loop Engineering & Evals | Organ Transplant Project](production-ai/you-can-fix-production-ai-agents-in-19min-loop-engineering-u0026-evals-organ-transplant-pr-37GWykiKEak.md) — ⭐⭐⭐⭐
+  - [Can You Actually Design Agentic AI for Production - Systems Thinking for Agentic AI](production-ai/can-you-actually-design-agentic-ai-for-production-systems-thinking-for-agentic-ai-VXh8N9TnxGE.md) — ⭐⭐⭐⭐⭐
+  - [Building Effective Agentic AI with Production Agentic Patterns](production-ai/building-effective-agentic-ai-with-production-agentic-patterns-cowWQk9TRVk.md) — ⭐⭐⭐⭐⭐
+  - [Everything New in Hermes Agent (Full Setup Guide)](production-ai/everything-new-in-hermes-agent-full-setup-guide-S8fc9na4pA8.md) — ⭐⭐⭐⭐
+  - [📥 5 new entries from 2026-11-14 batch](production-ai/)
   - [AI System Design Tutorial](production-ai/ai-system-design-tutorial-S6jy0T85DFs.md) — ⭐⭐⭐⭐⭐
   - [Build Your First Local AI Agent? 🧠 Hermes Agent Setup (Free & Private)](production-ai/build-your-first-local-ai-agent-hermes-agent-setup-free-u0026-private-aUVC9BwoLPg.md) — ⭐⭐⭐⭐
   - [Ollama vs vLLM vs Llama.cpp: Local LLM Engine Guide](production-ai/ollama-vs-vllm-vs-llama-cpp-local-llm-engine-guide-4S_8cYnvZCI.md) — ⭐⭐⭐⭐⭐

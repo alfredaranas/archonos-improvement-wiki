@@ -14,6 +14,25 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-14** [End-to-End Agentic AI System Design in 20min: My 14-Layer Stack for Production AI Agents](agent-architectures/end-to-end-agentic-ai-system-design-in-20min-my-14-layer-stack-for-production-ai-agents-IkFQVJWW-fw.md) — Dr. Maryam Miradi — ⭐⭐⭐⭐⭐
+- **2026-11-14** [The AI Memory Wall: Why LLMs & AI Accelerators Hit a Bottleneck](production-ai/the-ai-memory-wall-why-llms-u0026-ai-accelerators-hit-a-bottleneck-4b6KpFN7Rio.md) — IBM Technology — ⭐⭐⭐
+- **2026-11-14** [Multi Agent AI Architecture | Build a Multi-Agent Workflow](agent-architectures/multi-agent-ai-architecture-build-a-multi-agent-workflow-15_k2yZ3uMM.md) — TheTechMechanic — ⭐⭐⭐⭐⭐
+- **2026-11-14** [7 AI Agent Architecture Design Laws of Senior AI Engineers](agent-architectures/7-ai-agent-architecture-design-laws-of-senior-ai-engineers-GVq_MQH2CNA.md) — Cloud X Berry — ⭐⭐⭐⭐⭐
+- **2026-11-14** [A Practical Guide to AI Agents: ReAct, Tools, Planning, Memory, Multi-Agent Systems, and Failure](agent-architectures/a-practical-guide-to-ai-agents-react-tools-planning-memory-multi-agent-systems-and-failure-yl7UyFXROQI.md) — MartinHanderPhD — ⭐⭐⭐⭐⭐
+- **2026-11-14** [You Can Fix Production AI Agents in 19min: Loop Engineering & Evals | Organ Transplant Project](production-ai/you-can-fix-production-ai-agents-in-19min-loop-engineering-u0026-evals-organ-transplant-pr-37GWykiKEak.md) — Dr. Maryam Miradi — ⭐⭐⭐⭐
+- **2026-11-14** [Building a Network Troubleshooting Agent: Architecture, Tools, Guardrails, and Lessons Learned](tool-use/building-a-network-troubleshooting-agent-architecture-tools-guardrails-and-lessons-learned-eC-W7yGgXC4.md) — NANOG — ⭐⭐⭐⭐⭐
+- **2026-11-14** [Build an Agentic AI Research Assistant from Scratch | Multi-Agent Project (LangGraph, FastAPI, Groq)](agent-architectures/build-an-agentic-ai-research-assistant-from-scratch-multi-agent-project-langgraph-fastapi-qeyi7mIjdMc.md) — AmanAI Lab — ⭐⭐⭐⭐
+- **2026-11-14** [What Are AI Agents? Agentic Systems Explained | Stanford CS329Z Lecture 1 with Diyi Yang](agent-architectures/what-are-ai-agents-agentic-systems-explained-stanford-cs329z-lecture-1-with-diyi-yang-DGI4vucR71w.md) — Stanford Online — ⭐⭐⭐⭐⭐
+- **2026-11-14** [The 2-Plane Architecture for Reliable AI Agents](agent-architectures/the-2-plane-architecture-for-reliable-ai-agents-5epoxEt8l_U.md) — Shikha Bahirani - The AI Architect — ⭐⭐⭐⭐
+- **2026-11-14** [Everything You Need To Know About Agentic Context In 26 Minutes 🧠](memory-systems/everything-you-need-to-know-about-agentic-context-in-26-minutes-nlYuDKdDvMY.md) — Wanderloots — ⭐⭐⭐⭐⭐
+- **2026-11-14** [Make Your AI Agents Predictable With Graph Engineering - Zachary Blumenfeld, Neo4j](agent-architectures/make-your-ai-agents-predictable-with-graph-engineering-zachary-blumenfeld-neo4j-g_NgCLTibiM.md) — AI Engineer — ⭐⭐⭐⭐⭐
+- **2026-11-14** [Stop Prompting — Head of Claude Code Uses Opus 5.5 + Graphs + Harness](agent-architectures/stop-prompting-head-of-claude-code-uses-opus-5-5-graphs-harness-c4kYurm0hD8.md) — hyperfixation on AI | beamnxw — ⭐⭐⭐⭐⭐
+- **2026-11-14** [Can You Actually Design Agentic AI for Production - Systems Thinking for Agentic AI](production-ai/can-you-actually-design-agentic-ai-for-production-systems-thinking-for-agentic-ai-VXh8N9TnxGE.md) — Code With Ease - By Varsha — ⭐⭐⭐⭐⭐
+- **2026-11-14** [Building Effective Agentic AI with Production Agentic Patterns](production-ai/building-effective-agentic-ai-with-production-agentic-patterns-cowWQk9TRVk.md) — School of AI  — ⭐⭐⭐⭐⭐
+- **2026-11-14** [Everything New in Hermes Agent (Full Setup Guide)](production-ai/everything-new-in-hermes-agent-full-setup-guide-S8fc9na4pA8.md) — Tech With Tim — ⭐⭐⭐⭐
+- **2026-11-14** [Enterprise LLM Architecture with Claude | Multi-Agent Systems, MCP & Cost Optimization](tool-use/enterprise-llm-architecture-with-claude-multi-agent-systems-mcp-u0026-cost-optimization-oFvpBzlZPxo.md) — Coders Choice | Java, Cloud & AI — ⭐⭐⭐⭐⭐
+- **2026-11-14** [How to Orchestrate 22 Supply Chain AI Agents](agent-architectures/how-to-orchestrate-22-supply-chain-ai-agents-RFP3frLkGrs.md) — SCIQLab | Supply Chain AI — ⭐⭐⭐⭐
+- **2026-11-14** [LlamaIndex & Agentic RAG: Build AI RAG Applications & Agents](memory-systems/llamaindex-u0026-agentic-rag-build-ai-rag-applications-u0026-agents-ttZyEXOIrPQ.md) — Tech With Mala — ⭐⭐⭐⭐⭐
 - **2026-11-08** [Zero-Shot Agent Deployment: From Supervision Code to Multimodal Orchestration](agent-architectures/zero-shot-agent-deployment-multimodal-shift.md) — Krisvik AI
 - **2026-11-08** [Autonomy Earned Not Assumed: Agent Deployment Phases](agent-architectures/autonomy-earned-not-assumed-deployment-phases.md) — amir HONARMAND
 - **2026-11-08** [AI Agent vs Agentic AI: Definitions & System Scope](agent-architectures/ai-agent-vs-agentic-ai.md) — TechGik

@@ -2,6 +2,10 @@
 - **📋 TODO Tracker**
   - [Improvement TODO](archonos-notes/improvement-todo.md)
 - **Memory Systems**
+  - [CS329Z Lecture 7: Agent Memory Architectures — Engineering AI Agents (unofficial walkthrough)](memory-systems/cs329z-lecture-7-agent-memory-architectures-engineering-ai-agents-unofficial-walkthrough-2C5O6uguEp4.md) — ⭐⭐⭐⭐⭐
+  - [CS2680 Lecture 6: Agents Design III: Agent Memory and Reliability (unofficial walkthrough)](memory-systems/cs2680-lecture-6-agents-design-iii-agent-memory-and-reliability-unofficial-walkthrough-lp3l62Ncwa0.md) — ⭐⭐⭐⭐⭐
+  - [Where Your AI Agent's Memory Goes When You Walk Away: KV Cache Serving Deep Dive](memory-systems/where-your-ai-agent-s-memory-goes-when-you-walk-away-kv-cache-serving-deep-dive-w_i1b0QGf9I.md) — ⭐⭐⭐⭐⭐
+  - [AI Agent Memory Explained (Why Your AI Agent Forgets You)](memory-systems/ai-agent-memory-explained-why-your-ai-agent-forgets-you-ZnRKU7kyV8Y.md) — ⭐⭐⭐⭐⭐
   - [Reliable Multi-Agent Systems: Orchestration, State, and Human Approval](memory-systems/wmlHwo1zPMQ.md) — ⭐⭐⭐⭐
   - [📥 1 new entries from 2026-10-24 batch](memory-systems/)
   - [📥 4 new entries from 2026-10-18 batch](memory-systems/)
@@ -81,6 +85,12 @@
   - [Dual Memory Architecture: Structured SQL + Semantic Vector Search](memory-systems/dual-memory-architecture-sql-vectors.md)
   - [Four-Type Agent Memory Architecture: Design & Integration Patterns](memory-systems/agent-memory-four-types-design.md)
 - **Agent Architectures**
+  - [Is the Agent Harness Dead? — Jediah Katz, SpaceXAI](agent-architectures/is-the-agent-harness-dead-jediah-katz-spacexai-7Y4sbZgBdnc.md) — ⭐⭐⭐⭐⭐
+  - [Agentic AI E04 Agentic Design Patterns: ReAct, Planning, Reflection, Orchestrator & Evaluator](agent-architectures/agentic-ai-e04-agentic-design-patterns-react-planning-reflection-orchestrator-u0026-evalua-QUdPxZmhQh8.md) — ⭐⭐⭐⭐
+  - [Google ADK Context Engineering - Compaction, Caching & Artifacts (Cut LLM Costs ) ( Tutorial- 10 )](agent-architectures/google-adk-context-engineering-compaction-caching-u0026-artifacts-cut-llm-costs-tutorial-1-MtBJw4cG6SI.md) — ⭐⭐⭐⭐
+  - [Google ADK 2.0 Tutorial (Part 1): Multi-Agent Architecture & Local Setup (Branch 02b)](agent-architectures/google-adk-2-0-tutorial-part-1-multi-agent-architecture-u0026-local-setup-branch-02b-5Ov2_dlKUb0.md) — ⭐⭐⭐⭐⭐
+  - [AI Agent Failure: Why Your Autonomous Workflows Break Production! 🛑💥](agent-architectures/ai-agent-failure-why-your-autonomous-workflows-break-production-T7gcjZeaK9U.md) — ⭐⭐⭐⭐⭐
+  - [Agentic Engineering: 5 Terms Every AI Developer Should Know](agent-architectures/agentic-engineering-5-terms-every-ai-developer-should-know-SIZsFGvtClM.md) — ⭐⭐⭐⭐⭐
   - [📥 9 new entries from 2026-10-24 batch](agent-architectures/)
   - [📥 3 new entries from 2026-10-18 batch](agent-architectures/)
   - [📥 7 new entries from 2026-10-10 batch](agent-architectures/)
@@ -175,6 +185,8 @@
   - [Autonomy Earned Not Assumed: Agent Deployment Phases](agent-architectures/autonomy-earned-not-assumed-deployment-phases.md)
   - [Zero-Shot Agent Deployment: From Supervision Code to Multimodal Orchestration](agent-architectures/zero-shot-agent-deployment-multimodal-shift.md)
 - **Tool Use & MCP**
+  - [MCP Explained for AWS Engineers: Lambda, API Gateway & AgentCore](tool-use/mcp-explained-for-aws-engineers-lambda-api-gateway-u0026-agentcore-c2I0rzaUCE0.md) — ⭐⭐⭐⭐⭐
+  - [Tool Use in LLMs: How AI Agents Call Tools | AI Engineering Design Patterns S01 E01](tool-use/tool-use-in-llms-how-ai-agents-call-tools-ai-engineering-design-patterns-s01-e01-HUPiSv_b3dw.md) — ⭐⭐⭐
   - [📥 4 new entries from 2026-10-18 batch](tool-use/)
   - [📥 1 new entries from 2026-10-10 batch](tool-use/)
   - [📥 4 new entries from 2026-09-12 batch](tool-use/)
@@ -190,7 +202,7 @@
 
   - [📥 1 new entries from 2026-08-29 batch](tool-use/)
 
-  - [Claude Architect Track — Month 2: Tool Design \u0026 MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
+  - [Claude Architect Track — Month 2: Tool Design & MCP](tool-use/claude-architect-track-month-2-tool-design-u0026-mcp-eEF-wHXjHso.md) — ⭐⭐⭐⭐⭐
   - [Building Enterprise AI Agents with MCP and Production Gov…](tool-use/building-enterprise-ai-agents-with-mcp-and-production-governance-satish-chandra-_hLFmEZJ3RE.md) — ⭐⭐⭐⭐⭐
   - [Agent Orchestration Frameworks](tool-use/agent-orchestration-frameworks-TtzBQmOk2TE.md) — ⭐⭐⭐⭐⭐
   - [MCP Architecture EXPLAINED: The Stateless Rebuild (July U…](tool-use/mcp-architecture-explained-the-stateless-rebuild-july-update-X6wyLCmpuo0.md) — ⭐⭐⭐⭐
@@ -238,6 +250,14 @@
   - [OpenAI Function Calling: LLM-Driven Local Tool Execution](tool-use/openai-function-calling-pattern.md)
   - [LLM Function Calling: Structured Output for Tool Invocation](tool-use/llm-function-calling-basics.md)
 - **Production AI**
+  - [AI System Design Tutorial](production-ai/ai-system-design-tutorial-S6jy0T85DFs.md) — ⭐⭐⭐⭐⭐
+  - [Build Your First Local AI Agent? 🧠 Hermes Agent Setup (Free & Private)](production-ai/build-your-first-local-ai-agent-hermes-agent-setup-free-u0026-private-aUVC9BwoLPg.md) — ⭐⭐⭐⭐
+  - [Ollama vs vLLM vs Llama.cpp: Local LLM Engine Guide](production-ai/ollama-vs-vllm-vs-llama-cpp-local-llm-engine-guide-4S_8cYnvZCI.md) — ⭐⭐⭐⭐⭐
+  - [EfficientML.ai Lecture 15 - Long-Context LLM (MIT 6.5940 Fall 2026)](production-ai/efficientml-ai-lecture-15-long-context-llm-mit-6-5940-fall-2026-q0WQyW1inqk.md) — ⭐⭐⭐⭐⭐
+  - [AI Engineering PART3:  Dataset Engineering, Inference Optimization, and AI Engineering Architecture.](production-ai/ai-engineering-part3-dataset-engineering-inference-optimization-and-ai-engineering-archite-9TgICIKp5wo.md) — ⭐⭐⭐⭐⭐
+  - [Who governs an AI SRE agent that fixes production?](production-ai/who-governs-an-ai-sre-agent-that-fixes-production-da-XUVimLYk.md) — ⭐⭐⭐⭐⭐
+  - [Optimizing KV Cache in AI 🚀 Double your CONTEXT WINDOW without losing quality](production-ai/optimizing-kv-cache-in-ai-double-your-context-window-without-losing-quality-4Q0qYGFUCEE.md) — ⭐⭐⭐⭐
+  - [From Training to Tokens Revolutionizing AI Inference with In Network Compute](production-ai/from-training-to-tokens-revolutionizing-ai-inference-with-in-network-compute-8UzNifcZsZE.md) — ⭐⭐⭐
   - [📥 7 new entries from 2026-10-24 batch](production-ai/)
   - [📥 2 new entries from 2026-10-10 batch](production-ai/)
   - [📥 3 new entries from 2026-09-12 batch](production-ai/)
@@ -316,6 +336,7 @@
   - [TubeOnAI API Playground](resources/tubeonai-api-playground.md)
   - [TubeOnAI OpenAPI JSON](resources/tubeonai-openapi.json)
 - **General**
+  - [ELITE Agentic Engineers Are LEAVING THE LOOP... Here’s why](general/elite-agentic-engineers-are-leaving-the-loop-heres-why-52JX83rGPLc.md) — ⭐⭐⭐⭐⭐
   - [📥 1 new entries from 2026-10-18 batch](general/)
   - [📥 1 new entries from 2026-09-12 batch](general/)
 

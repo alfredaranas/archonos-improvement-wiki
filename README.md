@@ -21,6 +21,27 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **2026-11-08** [Agent Memory Architecture: Short-Term vs Long-Term Storage in Production](production-ai/agent-memory-architecture-short-term-long-term.md) — Applied with AI - Sanjay Kumar
 - **2026-11-08** [Four-Type Agent Memory Architecture: Design & Integration Patterns](memory-systems/agent-memory-four-types-design.md) — Amine DALY
 - **2026-11-08** [Dual Memory Architecture: Structured SQL + Semantic Vector Search](memory-systems/dual-memory-architecture-sql-vectors.md) — Google Cloud Tech
+- **2026-11-07** [AI System Design Tutorial](production-ai/ai-system-design-tutorial-S6jy0T85DFs.md) — codebasics — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Is the Agent Harness Dead? — Jediah Katz, SpaceXAI](agent-architectures/is-the-agent-harness-dead-jediah-katz-spacexai-7Y4sbZgBdnc.md) — AI Engineer — ⭐⭐⭐⭐⭐
+- **2026-11-07** [CS329Z Lecture 7: Agent Memory Architectures — Engineering AI Agents (unofficial walkthrough)](memory-systems/cs329z-lecture-7-agent-memory-architectures-engineering-ai-agents-unofficial-walkthrough-2C5O6uguEp4.md) — KatrinaDataING — ⭐⭐⭐⭐⭐
+- **2026-11-07** [CS2680 Lecture 6: Agents Design III: Agent Memory and Reliability (unofficial walkthrough)](memory-systems/cs2680-lecture-6-agents-design-iii-agent-memory-and-reliability-unofficial-walkthrough-lp3l62Ncwa0.md) — KatrinaDataING — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Build Your First Local AI Agent? 🧠 Hermes Agent Setup (Free & Private)](production-ai/build-your-first-local-ai-agent-hermes-agent-setup-free-u0026-private-aUVC9BwoLPg.md) — Wanderloots — ⭐⭐⭐⭐
+- **2026-11-07** [Ollama vs vLLM vs Llama.cpp: Local LLM Engine Guide](production-ai/ollama-vs-vllm-vs-llama-cpp-local-llm-engine-guide-4S_8cYnvZCI.md) — Misar AI — ⭐⭐⭐⭐⭐
+- **2026-11-07** [MCP Explained for AWS Engineers: Lambda, API Gateway & AgentCore](tool-use/mcp-explained-for-aws-engineers-lambda-api-gateway-u0026-agentcore-c2I0rzaUCE0.md) — Dear AWS — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Tool Use in LLMs: How AI Agents Call Tools | AI Engineering Design Patterns S01 E01](tool-use/tool-use-in-llms-how-ai-agents-call-tools-ai-engineering-design-patterns-s01-e01-HUPiSv_b3dw.md) — Gensoku Devs — ⭐⭐⭐
+- **2026-11-07** [EfficientML.ai Lecture 15 - Long-Context LLM (MIT 6.5940 Fall 2026)](production-ai/efficientml-ai-lecture-15-long-context-llm-mit-6-5940-fall-2026-q0WQyW1inqk.md) — MIT HAN Lab — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Where Your AI Agent's Memory Goes When You Walk Away: KV Cache Serving Deep Dive](memory-systems/where-your-ai-agent-s-memory-goes-when-you-walk-away-kv-cache-serving-deep-dive-w_i1b0QGf9I.md) — XOR — ⭐⭐⭐⭐⭐
+- **2026-11-07** [AI Agent Memory Explained (Why Your AI Agent Forgets You)](memory-systems/ai-agent-memory-explained-why-your-ai-agent-forgets-you-ZnRKU7kyV8Y.md) — AI Build Along — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Agentic AI E04 Agentic Design Patterns: ReAct, Planning, Reflection, Orchestrator & Evaluator](agent-architectures/agentic-ai-e04-agentic-design-patterns-react-planning-reflection-orchestrator-u0026-evalua-QUdPxZmhQh8.md) — RoboSathi — ⭐⭐⭐⭐
+- **2026-11-07** [Google ADK Context Engineering - Compaction, Caching & Artifacts (Cut LLM Costs ) ( Tutorial- 10 )](agent-architectures/google-adk-context-engineering-compaction-caching-u0026-artifacts-cut-llm-costs-tutorial-1-MtBJw4cG6SI.md) — AI Tech With Ravi — ⭐⭐⭐⭐
+- **2026-11-07** [ELITE Agentic Engineers Are LEAVING THE LOOP... Here’s why](general/elite-agentic-engineers-are-leaving-the-loop-heres-why-52JX83rGPLc.md) — IndyDevDan — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Google ADK 2.0 Tutorial [Part 1]: Multi-Agent Architecture & Local Setup (Branch 02b)](agent-architectures/google-adk-2-0-tutorial-part-1-multi-agent-architecture-u0026-local-setup-branch-02b-5Ov2_dlKUb0.md) — Zelda Ailine Luconi — ⭐⭐⭐⭐⭐
+- **2026-11-07** [AI Engineering PART3:  Dataset Engineering, Inference Optimization, and AI Engineering Architecture.](production-ai/ai-engineering-part3-dataset-engineering-inference-optimization-and-ai-engineering-archite-9TgICIKp5wo.md) — Shahanawaj Mulla — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Who governs an AI SRE agent that fixes production?](production-ai/who-governs-an-ai-sre-agent-that-fixes-production-da-XUVimLYk.md) — AgentGlass, Inc. — ⭐⭐⭐⭐⭐
+- **2026-11-07** [AI Agent Failure: Why Your Autonomous Workflows Break Production! 🛑💥](agent-architectures/ai-agent-failure-why-your-autonomous-workflows-break-production-T7gcjZeaK9U.md) — Parag Dhawan — ⭐⭐⭐⭐⭐
+- **2026-11-07** [Optimizing KV Cache in AI 🚀 Double your CONTEXT WINDOW without losing quality](production-ai/optimizing-kv-cache-in-ai-double-your-context-window-without-losing-quality-4Q0qYGFUCEE.md) — Nichonauta — ⭐⭐⭐⭐
+- **2026-11-07** [From Training to Tokens Revolutionizing AI Inference with In Network Compute](production-ai/from-training-to-tokens-revolutionizing-ai-inference-with-in-network-compute-8UzNifcZsZE.md) — Open Compute Project — ⭐⭐⭐
+- **2026-11-07** [Agentic Engineering: 5 Terms Every AI Developer Should Know](agent-architectures/agentic-engineering-5-terms-every-ai-developer-should-know-SIZsFGvtClM.md) — IBM Technology and IBM Developer — ⭐⭐⭐⭐⭐
 - **2026-11-01** [Agentic Apps: Business Outcome-First Architecture Pattern](agent-architectures/agentic-apps-business-outcome-first.md) — Cole Medin
 - **2026-11-01** [Persistent Agent Tasks & Background Operations](production-ai/persistent-agent-tasks-and-background-operations.md) — TechWhistle
 - **2026-11-01** [Structured State Management: The Missing Layer in AI Agent Architectures](agent-architectures/structured-state-vs-chat-history.md) — NeuralCanvas
@@ -57,7 +78,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **2026-10-18** [Hindsight 记忆和图谱｜多智能体记忆 Hermes、Codex、Claude Code、Cursor、Antigravity...](memory-systems/hindsight-hermescodexclaude-codecursorantigravity-91-kpi1jC2c.md) — wow — ⭐⭐⭐⭐
 - **2026-10-18** [The AI Agent Memory Architecture Explained - From State to Long-Term Memory](memory-systems/the-ai-agent-memory-architecture-explained-from-state-to-long-term-memory-4KvVWNUTd9g.md) — Applied with AI - Sanjay Kumar — ⭐⭐⭐⭐⭐
 - **2026-10-18** [Building the Document Context Layer for AI Agents — Jerry Liu, LlamaIndex](memory-systems/building-the-document-context-layer-for-ai-agents-jerry-liu-llamaindex-RQi7x-navxU.md) — AI Engineer — ⭐⭐⭐⭐⭐
-- **2026-10-18** [Agentic Architecture & Orchestration](agent-architectures/agentic-architecture-orchestration-3JtjCuewm8E.md) — Code, AI \u0026 Beyond — ⭐⭐⭐
+- **2026-10-18** [Agentic Architecture & Orchestration](agent-architectures/agentic-architecture-orchestration-3JtjCuewm8E.md) — Code, AI & Beyond — ⭐⭐⭐
 - **2026-10-18** [Why AI Coding Agents Need a Memory Pipeline](agent-architectures/why-ai-coding-agents-need-a-memory-pipeline-mAKUL12h1n8.md) — Boundary and HumanLayer — ⭐⭐⭐⭐⭐
 - **2026-10-18** [Multi-Agent Orchestrator with Jev, LangGraph & OpenAI](agent-architectures/multi-agent-orchestrator-with-jev-langgraph-openai-Ugj5GjWA-ww.md) — AgenticAI-Tech — ⭐⭐⭐⭐⭐
 - **2026-10-18** [Top 7 AI Agent Tools That Actually Work](tool-use/top-7-ai-agent-tools-that-actually-work-84-sHkG4AQU.md) — Tech With Tim — ⭐⭐⭐⭐
@@ -194,8 +215,8 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **2026-08-16** [Building Openkode Devlog#3: AI Coding Agent | Multi-Agent Orchestration | Observability | Langfuse](agent-architectures/building-openkode-devlog3-ai-coding-agent-multi-agent-orches-B3aK3luoeKU.md) — Oracle batch
 - **2026-08-16** [Building Resilient Multi-Agent Systems](agent-architectures/building-resilient-multi-agent-systems-kWM41c6tu80.md) — Oracle batch
 - **2026-08-16** [System Design for AI Agents – Building a Multi-Agent PR Reviewer](agent-architectures/system-design-for-ai-agents-building-a-multi-agent-pr-review-iqRcGCah0Kw.md) — Oracle batch
-- **2026-08-16** [Building MCP at the Speed of Hype: Principles That Outlast the Trends [PyCon DE \u0026 PyData 2026]](tool-use/building-mcp-at-the-speed-of-hype-principles-that-outlast-th-hTkJ-Hm8_1Q.md) — Oracle batch
-- **2026-08-16** [GHAI-606 – Agent Architecture \u0026 SDLC Integration (2026)](agent-architectures/ghai-606-agent-architecture-u0026-sdlc-integration-2026-Z0ZRoVvC1R8.md) — Oracle batch
+- **2026-08-16** [Building MCP at the Speed of Hype: Principles That Outlast the Trends [PyCon DE & PyData 2026]](tool-use/building-mcp-at-the-speed-of-hype-principles-that-outlast-th-hTkJ-Hm8_1Q.md) — Oracle batch
+- **2026-08-16** [GHAI-606 – Agent Architecture & SDLC Integration (2026)](agent-architectures/ghai-606-agent-architecture-u0026-sdlc-integration-2026-Z0ZRoVvC1R8.md) — Oracle batch
 - **2026-08-16** [Cognitive Tool Use Pattern - Tool Augmented Agent Part 2](agent-architectures/cognitive-tool-use-pattern-tool-augmented-agent-part-2-8zsPO_fOlHY.md) — Oracle batch
 - **2026-08-16** [The 2026-07-28 MCP Specification Update: Stateless Protocol, No More Sessions](tool-use/the-2026-07-28-mcp-specification-update-stateless-protocol-n-IoDFcbRsvkc.md) — Oracle batch
 - **2026-08-16** [How Does Claude Code Actually Work? Let's Make Our Own](agent-architectures/how-does-claude-code-actually-work-lets-make-our-own-vp6Dlx5aHDU.md) — Oracle batch

@@ -14,6 +14,7 @@ This wiki auto-updates weekly. A cron job searches YouTube for state-of-the-art 
 - **[General](general/)** — Cross-cutting talks, lessons learned, conference highlights
 
 ## Latest Additions
+- **2026-11-15** [Session State & Persistence Tiers for Agent Fleets](production-ai/agent-scale-session-state-persistence.md) — Plain Systems
 - **2026-11-14** [End-to-End Agentic AI System Design in 20min: My 14-Layer Stack for Production AI Agents](agent-architectures/end-to-end-agentic-ai-system-design-in-20min-my-14-layer-stack-for-production-ai-agents-IkFQVJWW-fw.md) — Dr. Maryam Miradi — ⭐⭐⭐⭐⭐
 - **2026-11-14** [The AI Memory Wall: Why LLMs & AI Accelerators Hit a Bottleneck](production-ai/the-ai-memory-wall-why-llms-u0026-ai-accelerators-hit-a-bottleneck-4b6KpFN7Rio.md) — IBM Technology — ⭐⭐⭐
 - **2026-11-14** [Multi Agent AI Architecture | Build a Multi-Agent Workflow](agent-architectures/multi-agent-ai-architecture-build-a-multi-agent-workflow-15_k2yZ3uMM.md) — TheTechMechanic — ⭐⭐⭐⭐⭐
